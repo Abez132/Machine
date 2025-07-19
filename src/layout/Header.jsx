@@ -10,44 +10,20 @@ const Head=()=>{
                 <ul className="flex space-x-4">
                     <li 
                         onClick={() => setSelected("Home")}
-                        className={`hover:border-b-2 text-cyan-50 transition ease-in-out hover:cursor-pointer hover:border-blue-100 ${selected === "Home" ? "border-b-2 border-blue-100" : ""}`}>Home</li>
+                        className={`hover:border-b-2 text-cyan-50 transition-colors origin-left transform rounded-l ease-in-out hover:cursor-pointer hover:border-blue-100 ${selected === "Home" ? "border-b-2 border-blue-100" : ""}`}>Home</li>
                     <li 
                         onClick={() => setSelected("About Us")}
                         className={`hover:border-b-2 text-cyan-50 transition-colors origin-left transform rounded-l ease-in-out hover:cursor-pointer hover:border-blue-100 ${selected === "About Us" ? "border-b-2 border-blue-100" : ""}`}>About Us</li>
                     <li 
                         onClick={() => setSelected("Services")}
-                        className={`hover:border-b-2 text-cyan-50 transition ease-in-out duration-300 hover:cursor-pointer hover:border-blue-100 ${selected === "Services" ? "border-b-2 border-blue-100" : ""}`}>Services</li>
+                        className={`hover:border-b-2 text-cyan-50 transition-colors origin-left transform rounded-l ease-in-out hover:cursor-pointer hover:border-blue-100 ${selected === "Services" ? "border-b-2 border-blue-100" : ""}`}>Services</li>
                     <li 
                         onClick={() => setSelected("Contact")}
-                        className={`hover:border-b-2 text-cyan-50 transition ease-in-out duration-300 hover:cursor-pointer hover:border-blue-100 ${selected === "Contact" ? "border-b-2 border-blue-100" : ""}`}>Contact</li>
+                        className={`hover:border-b-2 text-cyan-50 transition-colors origin-left transform rounded-l ease-in-out hover:cursor-pointer hover:border-blue-100 ${selected === "Contact" ? "border-b-2 border-blue-100" : ""}`}>Contact</li>
                 </ul>
             </div>
         </div>
     );
 };
-// const Chip = ({
-//   text,
-//   selected,
-//   setSelected,
-//     }) => {
-//   return (
-//     <button
-//       onClick={() => setSelected(text)}
-//       className={`${
-//         selected
-//           ? "text-white"
-//           : "text-slate-300 hover:border-b-2 hover:border-r-2 hover:border-blue-500 transition duration-300"
-//       } text-sm transition-colors px-2.5 py-0.5 rounded-md relative`}
-//     >
-//       <span className="relative z-10">{text}</span>
-//       {selected && (
-//         <_motion.span
-//           layoutId="pill-tab"
-//           transition={{ type: "spring", duration: 0.5 }}
-//           className="absolute inset-0 z-0 bg-gradient-to-r from-gray-400 to-gray-600 rounded-md"
-//         ></_motion.span>
-//       )}
-//     </button>
-//   );
-// };
+
 export default Head;
