@@ -1,6 +1,15 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Head=()=>{
+
+      const scrollToAbout = () => {
+    const formSection = document.getElementById("about");
+    if (formSection) {
+      formSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
     const [selected, setSelected] = useState("Home");
 
     return(
@@ -8,22 +17,25 @@ const Head=()=>{
             <div>LOGO-DESCRIPTION</div>
             <div className=" w-1/3 h-10  backdrop-blur-3xl rounded-3xl flex justify-center p-2 flex-wrap sticky top-4 z-50 gap-2">
                 <ul className="flex space-x-4">
-                    <li 
-                        onClick={() => setSelected("Home")}
+                    <Link to="/"><li 
+                        onClick={() =>{setSelected("Home")}}
                         className={`hover:border-b-2 text-cyan-50 transition-colors origin-left transform rounded-l ease-in-out hover:cursor-pointer hover:border-blue-100 ${selected === "Home" ? "border-b-2 border-blue-100" : ""}`}>Home</li>
+                    </Link>
                     <li 
-                        onClick={() => setSelected("About Us")}
+                        onClick={() => { scrollToAbout(); setSelected("About Us")}}
                         className={`hover:border-b-2 text-cyan-50 transition-colors origin-left transform rounded-l ease-in-out hover:cursor-pointer hover:border-blue-100 ${selected === "About Us" ? "border-b-2 border-blue-100" : ""}`}>About Us</li>
-                    <li 
+                    
+                    <Link to="/services"><li 
                         onClick={() => setSelected("Services")}
                         className={`hover:border-b-2 text-cyan-50 transition-colors origin-left transform rounded-l ease-in-out hover:cursor-pointer hover:border-blue-100 ${selected === "Services" ? "border-b-2 border-blue-100" : ""}`}>Services</li>
-                    <li 
+                    </Link>
+                    <Link to="/contact"><li 
                         onClick={() => setSelected("Contact")}
                         className={`hover:border-b-2 text-cyan-50 transition-colors origin-left transform rounded-l ease-in-out hover:cursor-pointer hover:border-blue-100 ${selected === "Contact" ? "border-b-2 border-blue-100" : ""}`}>Contact</li>
+                    </Link>
                 </ul>
             </div>
         </div>
     );
 };
-
 export default Head;

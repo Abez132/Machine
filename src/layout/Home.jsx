@@ -4,13 +4,16 @@ const Home=()=>{
     return(
         <div>
             <Hero/>
-            <div className="flex flex-col p-4 text-gray-100 m-16 justify-center items-center border-2">
-                <h1 className="text-2xl font-bold mb-4 italic ">About Us</h1>
+            <div className="flex flex-col p-4 text-gray-100 m-16 justify-center items-center ">
+                <h1 className="text-2xl font-bold m-4 italic " id="about">About Us</h1>
                 <p>We are a company dedicated to providing the best services to our customers.
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum ea maxime porro doloribus praesentium ipsa vero possimus hic modi voluptatem esse, fugiat itaque saepe quia, obcaecati iusto quam, qui facilis.lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ea maxime porro doloribus praesentium ipsa vero possimus hic modi voluptatem esse, fugiat itaque saepe quia, obcaecati iusto quam, qui facilis.
                 </p>
             </div>
+            <h1 className="text-2xl font-bold m-4 italic">Our Services</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+               
+
                 <Cards
                     title="Card 1"
                     description="This is the description for Card 1."
