@@ -1,16 +1,51 @@
 import Hero from "./components/Hero";
 import Cards from "./components/Cards";
+import image1 from "../assets/infocards1.png";
+import image2 from "../assets/infocards2.png";
+import image3 from "../assets/infocards3.png";
 const Home=()=>{
+                const cards = [
+    {
+      image: image1,
+      title: "Great team work",
+      desc:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempor nunc non neque euismod porttitor. Nullam lacus est, tincidunt eget sapien eget, maximus convallis massa. Curabitur quis tellus a tortor egestas viverra.",
+    },
+    {
+      image: image2,
+      title: "Our vision",
+      desc:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+    },
+    {
+      image: image3,
+      title: "Our mission",
+      desc:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+    },
+  ];
     return(
         <div>
             <Hero/>
-            <div className="flex flex-col p-4 text-gray-100 m-16 justify-center items-center ">
-                <h1 className="text-2xl font-bold m-4 italic " id="about">About Us</h1>
+            <div className="flex flex-col p-4 text-gray-100 m-16 justify-center items-center " id="about">
+                <h1 className="text-2xl font-bold m-4 italic " >About Us</h1>
                 <p>We are a company dedicated to providing the best services to our customers.
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum ea maxime porro doloribus praesentium ipsa vero possimus hic modi voluptatem esse, fugiat itaque saepe quia, obcaecati iusto quam, qui facilis.lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ea maxime porro doloribus praesentium ipsa vero possimus hic modi voluptatem esse, fugiat itaque saepe quia, obcaecati iusto quam, qui facilis.
                 </p>
             </div>
             <h1 className="text-2xl font-bold m-4 italic">Our Services</h1>
+
+
+  
+    <div className="flex flex-wrap justify-center gap-16 px-6 py-16 bg-white text-center">
+      {cards.map((card, index) => (
+        <div key={index} className="max-w-sm space-y-4">
+          <img src={card.image} alt={card.title} className="w-16 h-16 mx-auto" />
+          <h3 className="text-xl font-semibold text-gray-800">{card.title}</h3>
+          <p className="text-gray-600 text-sm leading-relaxed">{card.desc}</p>
+        </div>
+      ))}
+    </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                
 

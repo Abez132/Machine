@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const Head=()=>{
@@ -11,11 +11,14 @@ const Head=()=>{
   };
 
     const [selected, setSelected] = useState("Home");
+      
+
+  
 
     return(
-        <div className="flex justify-between items-center p-4 bg-gradient-to-r from-indigo-400 to-indigo-800  text-gray-500">
+        <div className="flex justify-between items-center p-4 transition-colors  bg-gray-950/70 text-gray-500  duration-300">
             <div>LOGO-DESCRIPTION</div>
-            <div className=" w-1/3 h-10  backdrop-blur-3xl rounded-3xl flex justify-center p-2 flex-wrap sticky top-4 z-50 gap-2">
+            <div className=" w-1/3 h-10  rounded-3xl flex justify-center p-2 flex-wrap sticky top-4 z-50 gap-2">
                 <ul className="flex space-x-4">
                     <Link to="/"><li 
                         onClick={() =>{setSelected("Home")}}
