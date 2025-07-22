@@ -1,8 +1,9 @@
-import { FaArrowRight } from "react-icons/fa6";
+import { MdEmail } from "react-icons/md";
+import { FaPhone } from "react-icons/fa6";
 const Contact=()=>{
     return(
-        <div className="bg-white flex flex-wrap justify-center items-center rounded p-4">
-          <div className="w-2xl">
+        <div className="bg-white flex flex-wrap justify-center items-center  p-4">
+          <div className="w-2xl shadow-lg p-4">
             <form  className="w-full  ">
               <label htmlFor="comment">Contact:</label>
               <br />
@@ -37,41 +38,41 @@ const Contact=()=>{
                 value="Post Comment"/>
             </form>
           </div>
-          <div className="rounded w-xl shadow-lg mx-14 my-14 mr-0">
-            <h3 className="text-left font-bold mt-3 mb-3 text-4xl">Direct Contact</h3>
+          <div className="rounded w-xl p-4 shadow-lg mx-14 my-14 mr-0">
+            <h3 className="text-left font-bold  m-3 text-4xl">Direct Contact</h3>
 
-            <div className="flex items-center rounded hover:bg-gray-300 hover:cursor-pointer transform hover:scale-110 transition duration-150 active:scale-100" >
-              <FaArrowRight className="m-5" />
-              <p className="m-3">Travel</p>
+            <div className="flex items-center rounded hover:bg-gray-300 hover:cursor-pointer  transition duration-150 active:scale-95" >
+              <MdEmail className="m-5 text-xl" />
+              <p className="m-3">habyattradingplc@gmail.com</p>
             </div>
 
-            <hr className="opacity-15" />
+            
 
             <div
-              className="flex items-center rounded hover:bg-gray-300 hover:cursor-pointer transform hover:scale-110 transition duration-150 cursor-pointer active:scale-100"
+              className="flex items-center rounded hover:bg-gray-300   transition duration-150 active:scale-95"
               
             >
-              <FaArrowRight className="m-5" />
-              <p className="m-3">Tips</p>
+              <FaPhone className="m-5 text-xl" />
+              <p className="m-3">+251 912 397 422</p>
             </div>
 
-            <hr className="opacity-15" />
+            
             <div
-              className="flex items-center rounded hover:bg-gray-300 hover:cursor-pointer transform hover:scale-110 transition duration-150 active:scale-100"
+              className="flex items-center rounded hover:bg-gray-300   transition duration-150  active:scale-95"
               
             >
-              <FaArrowRight className="m-5" />
-              <p>Stories</p>
+              <FaPhone className="m-5 text-xl" />
+              <p className="m-3">+251 940 190 896</p>
             </div>
-            <hr className="opacity-15" />
+            
             <div
-              className="flex items-center rounded hover:bg-gray-300 hover:cursor-pointer transform hover:scale-110 transition duration-150 active:scale-100"
+              className="flex items-center rounded hover:bg-gray-300   transition duration-150 active:scale-95"
             
             >
-              <FaArrowRight className="m-5" />
-              <p>Destination</p>
+              <FaPhone className="m-5 text-xl" />
+              <p className="m-3">+251 911 649 706</p>
             </div>
-            <hr className="opacity-15" />
+            
           </div>
         </div>
     )

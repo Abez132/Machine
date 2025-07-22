@@ -12,7 +12,7 @@ const Cards=({ title, description, image, detail }) => {
 
     return (
 
-        <div className="group relative h-70 w-100 overflow-hidden rounded-xl shadow-lg transition-transform duration-500 m-3">
+        <div className="group relative h-70 md:w-100 sm:w-72 overflow-hidden rounded-xl shadow-lg transition-transform duration-500 m-3">
 
             <img className="w-full h-full object-cover" src={image} alt="places" />
             <Link to="/contact"><div
