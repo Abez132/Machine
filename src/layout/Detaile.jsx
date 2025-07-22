@@ -1,11 +1,15 @@
-const Detail=({image,description,name})=>{
+const Detail=({image,detail,name})=>{
     return(
-        <div>
-            <img src={image} alt="image" />
-            <h1>{name}</h1>
-            <p>{description}</p>
+        <div className="flex flex-row items-center  justify-center  w-full">
 
+            <div className="w-1/2 m-8">
+                <img src={image} alt="image" className=" object-cover h-screen rounded-lg" />
+            </div>
 
+            <div className="w-1/2 ">
+                <h1 className="text-2xl font-bold">{name}</h1>
+                <p className="text-white">{detail}</p>
+            </div>
         </div>
     )
 }

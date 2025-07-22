@@ -17,19 +17,28 @@ function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+    const scrollUp = () => {
+      const formSection = document.getElementById("top");
+      if (formSection) {
+        formSection.scrollIntoView({ behavior: "smooth" });
+      }
+    };
+
   return (
-    <div className="relative bg-gradient-to-r from-black to-zinc-700">
+    <div id="top" className="relative  bg-gradient-to-r from-black to-zinc-700">
       <Router>
         <div className="sticky top-0 left-0 w-full z-20"><Head /></div>
-
+        <div onClick={scrollUp} className={`absolute right-0 bottom-0 rounded-full text-3xl text-center hover:bg-stone-600 m-2 w-9 bg-stone-900 text-white opacity-0
+          ${isScrolled?"opacity-100":""}`}>^</div>
         <Routes>
           <Route path="/" element={<Home />} />
+          
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact/>}/>
           
+          
         </Routes>
-        <div className={`absolute right-0 bottom-0 rounded-full text-3xl text-center hover:bg-stone-600 m-2 w-9 bg-stone-900 text-white opacity-0
-          ${isScrolled?"opacity-100":""}`}>^</div>
+        
         <Footer />
       </Router>
     </div>

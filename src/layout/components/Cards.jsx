@@ -1,20 +1,18 @@
-import Detail from "../Detaile";
 import { TfiEmail } from "react-icons/tfi";
-import { Link } from "react-router-dom";
-const Cards=({ title, description, image }) => {
-    // const detailed=()=>{
-    //     return(
-    //         <div className="border-2 absolute">
-    //             <Detail 
-    //                 image={image}
-    //                 description={description}
-    //                 name={title}/>
-    //         </div>
-    //     )
-    // }
+import { Link, useNavigate } from "react-router-dom";
+import { MdMoreVert } from "react-icons/md";
+const Cards=({ title, description, image, detail }) => {
+    const navigate = useNavigate();
+
+    const handleDetailClick = () => {
+        navigate("/services", {
+            state: { title, detail, image }
+        });
+    };
+
     return (
 
-        <div className="group relative h-70 w-100 overflow-hidden rounded-xl shadow-lg transition-transform duration-500 hover:scale-105 m-3">
+        <div className="group relative h-70 w-100 overflow-hidden rounded-xl shadow-lg transition-transform duration-500 m-3">
 
             <img className="w-full h-full object-cover" src={image} alt="places" />
             <Link to="/contact"><div
@@ -32,10 +30,12 @@ const Cards=({ title, description, image }) => {
                     {description}
                 </span>
                 <br />
-                <button className="absolute bg-blue-300 m-3 bottom-1 opacity-0 rounded right-0 group-hover:opacity-100 hover:scale-110 active:scale-100" onClick={()=>{<Detail 
-                    image={image}
-                    description={description}
-                    name={title}/>}}>Detail</button>
+                <button
+                    className="absolute flex justify-center items-center p-1 bg-blue-300 m-3 bottom-1 opacity-0 rounded right-0 group-hover:opacity-100 hover:scale-110 active:scale-100"
+                    onClick={handleDetailClick}
+                >
+                   <MdMoreVert className="m-1 text-l" /> More
+                </button>
             </div>
         </div>
     );
