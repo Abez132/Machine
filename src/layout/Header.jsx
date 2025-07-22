@@ -1,4 +1,4 @@
-import { useState,useEffect } from "react";
+import { useState} from "react";
 import { Link } from "react-router-dom";
 
 const Head=()=>{
@@ -24,9 +24,10 @@ const Head=()=>{
                         onClick={() =>{setSelected("Home")}}
                         className={`hover:border-b-2 text-cyan-50 transition-colors origin-left transform rounded-l ease-in-out hover:cursor-pointer hover:border-blue-100 ${selected === "Home" ? "border-b-2 border-blue-100" : ""}`}>Home</li>
                     </Link>
-                    <li 
+                    <Link to="/"><li 
                         onClick={() => { scrollToAbout(); setSelected("About Us")}}
                         className={`hover:border-b-2 text-cyan-50 transition-colors origin-left transform rounded-l ease-in-out hover:cursor-pointer hover:border-blue-100 ${selected === "About Us" ? "border-b-2 border-blue-100" : ""}`}>About Us</li>
+                    </Link>
                     
                     <Link to="/services"><li 
                         onClick={() => setSelected("Services")}

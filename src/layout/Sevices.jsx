@@ -1,7 +1,7 @@
 import Cards from "./components/Cards"
 const Services=()=>{
     return(
-        <div className="flex flex-col justify-center items-center  bg-gradient-to-r from-indigo-400 to-orange-300 text-gray-500">
+        <div className="flex flex-col justify-center items-center  text-gray-500">
             <h1 className="text-4xl font-bold">Services Page</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-2">
                 <Cards title="Card 1"
