@@ -1,16 +1,17 @@
-import onePiece from "../../assets/onePiece.jpg"
+import onePiece from "../../assets/N1.webp"
 // filepath: c:\Users\hp\Desktop\Projects\Machine\src\layout\components\Hero.jsx
 const Hero=()=>{
     return(
         <div className="flex  flex-wrap items-center justify-center lg:flex-row h-screen " 
-            //   style={{
-            //     backgroundImage:`url(${onePiece})`,
-            //     backgroundSize: "cover",
-            //     backgroundRepeat: "no-repeat",
-            //     backgroundPosition: "center",
-              //}}
+              style={{
+                 backgroundImage:`url(${onePiece})`,
+                 backgroundSize: "cover",
+                 backgroundRepeat: "no-repeat",
+                 backgroundPosition: "center",
+                 imageRendering: "auto"
+              }}
               >
-                <img src={onePiece} alt="pic" className="w-2xl m-7 rounded" />
+                {/* <img src={onePiece} loading="lazy" alt="pic" className="w-2xl m-7 rounded" /> */}
             <div className="text-center text-zinc-400">
                 <h1 className="text-5xl font-bold mb-4">Welcome to Our Website</h1>
                 <p className="text-lg mb-8">Discover amazing content and connect with us</p>

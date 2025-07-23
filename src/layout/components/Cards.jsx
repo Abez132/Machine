@@ -14,7 +14,7 @@ const Cards=({ title, description, image, detail }) => {
 
         <div className="group relative h-70 md:w-100 sm:w-72 overflow-hidden rounded-xl shadow-lg transition-transform duration-500 m-3">
 
-            <img className="w-full h-full object-cover" src={image} alt="places" />
+            <img className="w-full h-full object-cover" src={image} loading="lazy" alt="places" />
             <Link to="/contact"><div
                 className="absolute top-[58%] z-10 right-4 w-10 h-10 bg-white rounded-full 
                 flex items-center justify-center text-4xl opacity-0 group-hover:opacity-100 
