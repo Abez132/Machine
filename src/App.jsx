@@ -26,11 +26,11 @@ function App() {
 
   return (
     <div id="top" className="relative  bg-gradient-to-r from-sky-950 to-sky-900">
-      <Router>
+      <Router basename="/Machine">
         <div className="top-0 left-0 w-full z-20"><Head /></div>
         
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="*" element={<Home />} />
           
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact/>}/>
