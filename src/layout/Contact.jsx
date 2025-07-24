@@ -2,7 +2,7 @@ import { MdEmail } from "react-icons/md";
 import { FaPhone } from "react-icons/fa6";
 const Contact=()=>{
     return(
-        <div className="bg-white flex flex-wrap justify-center items-center  p-4">
+        <div className=" flex flex-wrap justify-center items-center  p-4">
           <div className="w-2xl shadow-lg p-4">
             <form  className="w-full  ">
               <label htmlFor="comment">Contact:</label>

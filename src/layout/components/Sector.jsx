@@ -12,11 +12,11 @@ const sector = () => {
             title: "Manifacturing"
         },
         {
-            image: "src/assets/IMG_7658.webp",
+            image: "src/assets/cat.jpg",
             title: "Import"
         },
         {
-            image: "src/assets/IMG_7658.webp",
+            image: "src/assets/export.jpg",
             title: "Export"
         },
     ];
@@ -41,6 +41,7 @@ const sector = () => {
                             {main.title}
                         </p>
                         <br />
+                        <Link to="/sevice"></Link>
                         <button
                             className="absolute flex justify-center items-center p-1 bg-blue-300 m-3 bottom-1 opacity-0 rounded right-0 group-hover:opacity-100 hover:scale-110 active:scale-100"
                             onClick={() => {}}

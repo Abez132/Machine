@@ -11,7 +11,7 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50); // Change 50 to your desired scroll threshold
+      setIsScrolled(window.scrollY > 90); // Change 50 to your desired scroll threshold
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -28,8 +28,7 @@ function App() {
     <div id="top" className="relative  bg-gradient-to-r from-sky-950 to-sky-900">
       <Router>
         <div className="top-0 left-0 w-full z-20"><Head /></div>
-        <div onClick={scrollUp} className={`absolute right-0 bottom-0 rounded-full text-3xl text-center hover:bg-stone-600 m-2 w-9 bg-stone-900 text-white opacity-0
-          ${isScrolled?"opacity-100":""}`}>^</div>
+        
         <Routes>
           <Route path="/" element={<Home />} />
           
@@ -38,7 +37,8 @@ function App() {
           
           
         </Routes>
-        
+        <div onClick={scrollUp} className={`fixed right-4 bottom-4 rounded-full text-3xl z-100 backdrop-blur-3xl text-center hover:bg-stone-600 m-2 w-9  text-white opacity-0
+          ${isScrolled?"opacity-100":""}`}>^</div>
         <Footer />
       </Router>
     </div>
