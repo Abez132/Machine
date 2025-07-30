@@ -22,7 +22,7 @@ const Cards=({ title, description, image, detail }) => {
                     <TfiEmail className="m-2 text-gray-900 font-extrabold text-4xl" />
                 </div>
             </Link>
-            <div className="flex-col font-['poppins'] text-[#000000] text-600 text-start justify-center p-4 h-auto  absolute bottom-0 left-0 w-full backdrop-blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div className="flex-col font-['poppins'] text-[#000000] text-600 text-start justify-center p-4 h-auto  absolute bottom-0 left-0 w-full backdrop-blur-xl opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300">
                 <p className="flex-start font-['poppins'] text-lg font-semibold text-gray-800">
                     {title}
                 </p>
