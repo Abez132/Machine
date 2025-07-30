@@ -19,7 +19,7 @@ const Services = () => {
                 <div id="top" className="transition-all">
                     <div className="absolute m-4 text-4xl backdrop-blur-3xl hover:scale-105 hover:cursor-pointer right-4 " 
                     onClick={()=>setShowDetail(false)}
-                    >x</div>Thank you. Nothing. I. 
+                    >x</div>
                     <Detail
                         image={state.image}
                         detail={state.detail}
