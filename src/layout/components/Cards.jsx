@@ -16,13 +16,13 @@ const Cards=({ title, description, image, detail }) => {
 
             <img className="w-full h-full object-cover" src={image} loading="lazy" alt="places" />
             <Link to="/contact"><div
-                className="absolute top-[43%] z-10 right-4 w-10 h-10 bg-cyan-100 rounded-full 
-                flex items-center justify-center text-4xl opacity-0 group-hover:opacity-100 
+                className="absolute top-[43%]  z-10 right-4 w-10 h-10 bg-cyan-100 rounded-full 
+                flex items-center justify-center text-4xl lg:opacity-0 md:group-hover:opacity-100 sm:opacity-100 
                 hover:scale-110 hover:text-sky-700 hover:cursor-pointer  transition duration-300">
                     <TfiEmail className="m-2 text-gray-900 font-extrabold text-4xl" />
                 </div>
             </Link>
-            <div className="flex-col font-['poppins'] text-[#000000] text-600 text-start justify-center p-4 h-auto  absolute bottom-0 left-0 w-full backdrop-blur-xl opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300">
+            <div className="flex-col font-['poppins'] text-[#000000] text-600 text-start justify-center p-4 h-auto  absolute bottom-0 left-0 w-full backdrop-blur-xl lg:opacity-0 sm:opacity-100 md:group-hover:opacity-100 transition-opacity duration-300">
                 <p className="flex-start font-['poppins'] text-lg font-semibold text-gray-800">
                     {title}
                 </p>
