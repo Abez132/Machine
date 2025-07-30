@@ -26,7 +26,7 @@ function App() {
 
   return (
     <div id="top" className="relative  bg-gradient-to-r from-sky-950 to-sky-900">
-      <Router basename="/Machine">
+      <Router>
         <div className="top-0 left-0 w-full z-20"><Head /></div>
         
         <Routes>
