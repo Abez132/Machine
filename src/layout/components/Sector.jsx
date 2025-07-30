@@ -1,22 +1,23 @@
 import { TfiEmail } from "react-icons/tfi";
-import { HiUserGroup } from "react-icons/hi";
-import { FaRegEye } from "react-icons/fa";
-import { GiStairsGoal } from "react-icons/gi";
+
 import { MdMoreVert } from "react-icons/md";
 import { Link } from "react-router-dom";
+import image1 from "../../assets/IMG_7658.webp";
+import image2 from "../../assets/cat.jpg";
+import image3 from "../../assets/export.jpg";
 
 const sector = () => {
     const mains = [
         {
-            image:"src/assets/IMG_7658.webp",
+            image:image1,
             title: "Manifacturing"
         },
         {
-            image: "src/assets/cat.jpg",
+            image: image2,
             title: "Import"
         },
         {
-            image: "src/assets/export.jpg",
+            image: image3,
             title: "Export"
         },
     ];
