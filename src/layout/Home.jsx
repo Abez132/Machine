@@ -72,7 +72,7 @@ const Home=()=>{
                 //               }}
             >
                 <div className="m-8 w-full  ">
-                    <img src={onePiece} alt="picture" className="h-80 w-full md:" />
+                    <img src={onePiece} alt="picture" className="h-80 w-full object-cover" />
                 </div>
                 <div className="p-8">
                     <h1 className="text-2xl text-amber-400 font-bold m-4 italic " >About Us</h1>
