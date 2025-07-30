@@ -1,6 +1,6 @@
 import { useState} from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/HABYAT LOGO3.png";
+import logo from "../assets/LOGO.png";
 
 
 const Head=()=>{

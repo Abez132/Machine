@@ -1,6 +1,7 @@
 // import foot from "../assets/foot.jpg"
 import { MdEmail } from "react-icons/md";
 import { FaPhone } from "react-icons/fa6";
+import logo from "../assets/LOGO.png";
 
 const Footer=()=>{
     return(
@@ -15,7 +16,7 @@ const Footer=()=>{
         // }}
         >
             <div className="flex justify-center items-center" >
-                <img className="h-24" src="src/assets/HABYAT LOGO3.PNG" alt="logo" />
+                <img className="h-24" src={logo} alt="logo" />
                 <p>HABYAT trading PLC</p>
             </div>
             <div className="flex flex-col  ">     
