@@ -1,5 +1,7 @@
 import { useState} from "react";
 import { Link } from "react-router-dom";
+import logo from "../assets/HABYAT LOGO3.png";
+
 
 const Head=()=>{
 
@@ -16,7 +18,7 @@ const Head=()=>{
     return(
         <div className="flex justify-between items-center p-2 transition-colors  bg-gray-800/70 text-gray-500  duration-300">
             <div className="w-1/3 px-4 flex italic items-center justify-start gap-2 text-white">
-                <img src="src/assets/HABYAT LOGO3.png" alt="LOGO" loading="lazy" className="w-24   h-16 "/>
+                <img src={logo} alt="LOGO" loading="lazy" className="w-24   h-16 "/>
                 <span> Trading PLC</span>
                 </div>
             <div className=" w-1/3 h-10  rounded-3xl flex justify-center p-2 flex-wrap sticky top-4 z-50 gap-2">
