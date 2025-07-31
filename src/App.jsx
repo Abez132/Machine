@@ -5,6 +5,7 @@ import Home from "./layout/Home";
 import Services from "./layout/Sevices";
 import Contact from "./layout/Contact"; 
 import { useState,useEffect } from "react";
+import { Analytics } from "@vercel/analytics/next"
 
 function App() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -26,6 +27,7 @@ function App() {
 
   return (
     <div id="top" className="relative  bg-gradient-to-r from-sky-950 to-sky-900">
+      <Analytics/>
       <Router>
         <div className="top-0 left-0 w-full z-20"><Head /></div>
         
