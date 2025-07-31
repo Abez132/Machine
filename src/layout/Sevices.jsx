@@ -2,7 +2,7 @@ import Cards from "./components/Cards";
 import Detail from "./Detaile";
 import { useLocation } from "react-router-dom";
 import { useEffect,useState } from "react";
-import { cards } from "./data/mani";
+import { cards } from "./data/cards";
 import {imports} from "./data/import";
 import {exports} from "./data/export";
 

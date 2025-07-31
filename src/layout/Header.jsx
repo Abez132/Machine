@@ -4,7 +4,7 @@ import logo from "../assets/LOGO.png";
 import { RxHamburgerMenu } from "react-icons/rx";
 
 
-const Head=()=>{
+const Head=({state})=>{
 
       const scrollToAbout = () => {
     const formSection = document.getElementById("about");
@@ -13,8 +13,8 @@ const Head=()=>{
     }
   };
 
-    const [selected, setSelected] = useState("Home");
     const [isOpen, setIsOpen] = useState(false);
+    const[hide,setHide]=useState(false);
   
 
     return(
@@ -26,21 +26,20 @@ const Head=()=>{
             <div className=" w-1/3 h-10  rounded-3xl flex justify-center p-2 flex-wrap sticky top-4 z-50 gap-2">
                 <ul className="space-x-4 hidden md:opacity-100 md:flex md:items-center md:justify-center">
                     <Link to="/"><li 
-                        onClick={() =>{setSelected("Home")}}
-                        className={`hover:border-b-2 text-xs md:text-base lg:text-lg text-cyan-50 transition-colors origin-left transform rounded-l ease-in-out hover:cursor-pointer hover:border-blue-100 ${selected === "Home" ? "border-b-2 border-blue-100" : ""}`}>Home</li>
+                        onClick={() =>{ setHide(false)}}
+                        className={`hover:border-b-2 text-xs md:text-base lg:text-lg text-cyan-50 transition-colors origin-left transform rounded-l ease-in-out hover:cursor-pointer hover:border-blue-100 ${state === "Home" ? "border-b-2 border-blue-100" : ""}`}>Home</li>
                     </Link>
                     <Link to="/"><li 
-                        onClick={() => { scrollToAbout(); setSelected("About Us")}}
-                        className={`hover:border-b-2 text-xs md:text-base lg:text-lg text-cyan-50 transition-colors origin-left transform rounded-l ease-in-out hover:cursor-pointer hover:border-blue-100 ${selected === "About Us" ? "border-b-2 border-blue-100" : ""}`}>About Us</li>
+                        onClick={() => { scrollToAbout();  setHide(false)}}
+                        className={`hover:border-b-2 text-xs md:text-base lg:text-lg text-cyan-50 transition-colors origin-left transform rounded-l ease-in-out hover:cursor-pointer hover:border-blue-100 ${state === "About Us" ? "border-b-2 border-blue-100" : ""} ${hide?"hidden":""}`}>About Us</li>
                     </Link>
-                    
                     <Link to="/services"><li 
-                        onClick={() => setSelected("Services")}
-                        className={`hover:border-b-2 text-xs md:text-base lg:text-lg text-cyan-50 transition-colors origin-left transform rounded-l ease-in-out hover:cursor-pointer hover:border-blue-100 ${selected === "Services" ? "border-b-2 border-blue-100" : ""}`}>Services</li>
+                        onClick={() => {  setHide(true)}}
+                        className={`hover:border-b-2 text-xs md:text-base lg:text-lg text-cyan-50 transition-colors origin-left transform rounded-l ease-in-out hover:cursor-pointer hover:border-blue-100 ${state === "Services" ? "border-b-2 border-blue-100" : ""}`}>Services</li>
                     </Link>
                     <Link to="/contact"><li 
-                        onClick={() => setSelected("Contact")}
-                        className={`hover:border-b-2 text-xs md:text-base lg:text-lg text-cyan-50 transition-colors origin-left transform rounded-l ease-in-out hover:cursor-pointer hover:border-blue-100 ${selected === "Contact" ? "border-b-2 border-blue-100" : ""}`}>Contact</li>
+                        onClick={() => { setHide(true)}}
+                        className={`hover:border-b-2 text-xs md:text-base lg:text-lg text-cyan-50 transition-colors origin-left transform rounded-l ease-in-out hover:cursor-pointer hover:border-blue-100 ${state === "Contact" ? "border-b-2 border-blue-100" : ""}`}>Contact</li>
                     </Link>
                 </ul>
                 <div className="flex items-center justify-center md:hidden">
