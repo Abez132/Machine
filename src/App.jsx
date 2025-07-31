@@ -5,7 +5,7 @@ import Home from "./layout/Home";
 import Services from "./layout/Sevices";
 import Contact from "./layout/Contact"; 
 import { useState,useEffect } from "react";
-import { Analytics } from "@vercel/analytics/next"
+// import { Analytics } from "@vercel/analytics/next"
 
 function App() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -27,7 +27,7 @@ function App() {
 
   return (
     <div id="top" className="relative  bg-gradient-to-r from-sky-950 to-sky-900">
-      <Analytics/>
+      {/* <Analytics/> */}
       <Router>
         <div className="top-0 left-0 w-full z-20"><Head /></div>
         
@@ -39,7 +39,7 @@ function App() {
           
           
         </Routes>
-        <div onClick={scrollUp} className={`fixed right-4 bottom-4 rounded-full text-3xl z-100 backdrop-blur-3xl text-center hover:bg-blue-600 active:bg-blue-600 active:scale-x-85 transition m-2 w-9  text-white opacity-0 hover:cursor-pointer
+        <div onClick={scrollUp} className={`fixed right-4 bottom-4 rounded-full text-3xl z-100 backdrop-blur-3xl text-center hover:bg-blue-600 active:bg-blue-600 active:scale-x-85 transition m-2 w-9  text-black opacity-0 hover:cursor-pointer
           ${isScrolled?"opacity-100":""}`}>^</div>
         <Footer />
       </Router>

@@ -2,11 +2,14 @@ import Cards from "./components/Cards";
 import Detail from "./Detaile";
 import { useLocation } from "react-router-dom";
 import { useEffect,useState } from "react";
-import { cards } from "./data/cards";
+import { cards } from "./data/mani";
+import {imports} from "./data/import";
+import {exports} from "./data/export";
 
 const Services = () => {
     const { state } = useLocation();
     const[showDetail,setShowDetail]=useState(true);
+    const[category,setCategory]=useState("mani");
 
     useEffect(() => {
         window.scrollTo({ top: 0, behavior: "smooth" });
@@ -28,17 +31,53 @@ const Services = () => {
                 </div>
             )}
             <h1 className="text-4xl font-extrabold italic">OUR PRODUCTS</h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-2">
-                {cards.map((card, index) => ( 
-                    <Cards 
-                        key={index}
-                        title={card.title}
-                        description={card.desc}
-                        image={card.image}
-                        detail={card.detail}
-                    />
-               ))}
+            <div>
+                <div>
+                    <button onClick={()=>setCategory("mani")}>m</button> <button onClick={()=>setCategory("import")}>m</button> <button onClick={()=>setCategory("export")}>m</button>
+                </div>
+               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-2">
+
+                {
+                    category==="mani" && cards.map((card, index) => ( 
+                        <Cards 
+                            key={index}
+                            title={card.title}
+                            description={card.desc}
+                            image={card.image}
+                            detail={card.detail}
+                        />
+                ))
+                    
+                }
+                {
+                    category==="import" && imports.map((imp, index) => ( 
+                        <Cards 
+                            key={index}
+                            title={imp.title}
+                            description={imp.desc}
+                            image={imp.image}
+                            detail={imp.detail}
+                        />
+                ))
+                    
+                }
+                {
+                    category==="export" && exports.map((exp, index) => ( 
+                        <Cards 
+                            key={index}
+                            title={exp.title}
+                            description={exp.desc}
+                            image={exp.image}
+                            detail={exp.detail}
+                        />
+                ))
+                    
+                }
+                
+                    
+                </div> 
             </div>
+            
             
 
 
