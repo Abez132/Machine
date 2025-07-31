@@ -10,6 +10,7 @@ const Services = () => {
     const { state } = useLocation();
     const[showDetail,setShowDetail]=useState(true);
     const[category,setCategory]=useState("mani");
+    const[active,setActive]=useState("mani");
 
     useEffect(() => {
         window.scrollTo({ top: 0, behavior: "smooth" });
@@ -32,8 +33,10 @@ const Services = () => {
             )}
             <h1 className="text-4xl font-extrabold italic">OUR PRODUCTS</h1>
             <div>
-                <div>
-                    <button onClick={()=>setCategory("mani")}>m</button> <button onClick={()=>setCategory("import")}>m</button> <button onClick={()=>setCategory("export")}>m</button>
+                <div className="flex justify-center items-center gap-4 p-4">
+                    <button className={`hover:bg-gray-400 rounded p-1 ${active==="mani"?"bg-gray-600 ":""}`} onClick={()=>{setCategory("mani"); setActive("mani")}}>manifucturing</button> 
+                    <button onClick={()=>{setCategory("import"); setActive("import")}}>import</button> 
+                    <button onClick={()=>{setCategory("export"); setActive("export")}}>export</button>
                 </div>
                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-2">
 
