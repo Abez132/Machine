@@ -31,12 +31,12 @@ const Services = () => {
                     />
                 </div>
             )}
-            <h1 className="text-4xl font-extrabold italic">OUR PRODUCTS</h1>
+            
             <div>
                 <div className="flex justify-center items-center gap-4 p-4">
                     <button className={`hover:bg-gray-400 rounded p-1 ${active==="mani"?"bg-gray-600 ":""}`} onClick={()=>{setCategory("mani"); setActive("mani")}}>manifucturing</button> 
-                    <button onClick={()=>{setCategory("import"); setActive("import")}}>import</button> 
-                    <button onClick={()=>{setCategory("export"); setActive("export")}}>export</button>
+                    <button onClick={()=>{setCategory("import"); setActive("import")}} className={`hover:bg-gray-400 rounded p-1 ${active==="import"?"bg-gray-600 ":""}`}>import</button> 
+                    <button onClick={()=>{setCategory("export"); setActive("export")}} className={`hover:bg-gray-400 rounded p-1 ${active==="export"?"bg-gray-600 ":""}`}>export</button>
                 </div>
                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-2">
 
