@@ -95,10 +95,7 @@ const Home=()=>{
   
     
 
-    <div className="flex flex-col w-ful justify-center items-center text-gray-500 m-8 ">
-        <h2 className="text-amber-400  italic text-4xl  font-bold">What We DO</h2>
-        <Sector />
-    </div>
+    
             
         </div>
     )

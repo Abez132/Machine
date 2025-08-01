@@ -41,7 +41,7 @@ function App() {
           
           
         </Routes>
-        <div onClick={scrollUp} className={`fixed right-4 bottom-4 rounded-full text-3xl z-100 backdrop-blur-3xl text-center hover:bg-blue-600 active:bg-blue-600 active:scale-x-85 transition m-2 w-9  text-black opacity-0 hover:cursor-pointer
+        <div onClick={scrollUp} className={`fixed right-4 bottom-4 rounded-full text-3xl z-100 backdrop-blur-3xl text-center hover:bg-blue-600 active:bg-blue-600 active:scale-x-85 active:translate-y-2/6 transition m-2 w-9  text-black opacity-0 hover:cursor-pointer
           ${isScrolled?"opacity-100":""}`}>^</div>
         <Footer />
       </Router>

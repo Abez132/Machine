@@ -31,10 +31,10 @@ const Cards=({ title, description, image, detail }) => {
                 </span>
                 <br />
                 <button
-                    className=" w-full flex justify-center items-center p-1 bg-blue-300 mt-4 mb-2 opacity-0 rounded right-0 group-hover:opacity-100 transition hover:scale-105 active:scale-100"
+                    className=" group w-full flex justify-center items-center p-1 bg-blue-300 mt-4 mb-2  rounded right-0  transition hover:scale-105 active:scale-100"
                     onClick={handleDetailClick}
                 >
-                    More  <FaArrowRight className="right-0 text-l" />
+                    More  <FaArrowRight className="right-0 text-l group-active:translate-x-36 transition duration-700" />
                 </button>
             </div>
         </div>
