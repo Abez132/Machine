@@ -12,7 +12,7 @@ const Cards=({ title, description, image, detail }) => {
 
     return (
 
-        <div className="group relative h-70 w-full md:w-100 sm:w-72 overflow-hidden rounded-xl shadow-lg duration-500 m-3 hover:shadow-sky-600 transition">
+        <div className="group relative h-70 flex-grow w-full md:w-96  overflow-hidden rounded-xl shadow-lg duration-500 m-2 hover:shadow-sky-600 transition">
 
             <img className="w-full h-full object-cover" src={image} loading="lazy" alt="places" />
             <Link to="/contact"><div

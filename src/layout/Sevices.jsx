@@ -38,7 +38,7 @@ const Services = () => {
                     <button onClick={()=>{setCategory("import"); setActive("import")}} className={`hover:bg-gray-400 rounded p-1 ${active==="import"?"bg-gray-600 ":""}`}>import</button> 
                     <button onClick={()=>{setCategory("export"); setActive("export")}} className={`hover:bg-gray-400 rounded p-1 ${active==="export"?"bg-gray-600 ":""}`}>export</button>
                 </div>
-               <div className="flex flex-row flex-wrap gap-4 p-2">
+               <div className="flex w-screen flex-row flex-wrap gap-4 p-2">
 
                 {
                     category==="mani" && cards.map((card, index) => ( 

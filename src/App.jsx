@@ -28,7 +28,7 @@ function App() {
     
 
   return (
-    <div id="top" className="relative  bg-gradient-to-r from-sky-950 to-sky-900">
+    <div id="top" className="relative p-0 m-0 bg-gradient-to-r from-sky-950 to-sky-900">
       {/* <Analytics/> */}
       <Router>
         <div className="top-0 left-0 w-full z-20"><Head /></div>
