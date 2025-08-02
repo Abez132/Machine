@@ -6,12 +6,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 
 const Head=()=>{
 
-      const scrollToAbout = () => {
-    const formSection = document.getElementById("about");
-    if (formSection) {
-      formSection.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+    
 
     const [selected, setSelected] = useState("Home");
     const [isOpen, setIsOpen] = useState(false);
@@ -36,8 +31,8 @@ const Head=()=>{
                         onClick={() => { setSelected("Services"); }}
                         className={`hover:border-b-2 text-xs md:text-base lg:text-lg text-cyan-50 transition-colors origin-left transform rounded-l ease-in-out hover:cursor-pointer hover:border-blue-100 ${selected === "Services" ? "border-b-2 border-blue-100" : ""}`}>Services</li>
                     </Link>
-                    <Link to="/"><li 
-                        onClick={() => { scrollToAbout(); setSelected("About Us"); }}
+                    <Link to="/about"><li 
+                        onClick={() => { setSelected("About Us"); }}
                         className={`hover:border-b-2 text-xs md:text-base lg:text-lg text-cyan-50 transition-colors origin-left transform rounded-l ease-in-out hover:cursor-pointer hover:border-blue-100 ${selected === "About Us" ? "border-b-2 border-blue-100" : ""} `}>About Us</li>
                     </Link>
                     <Link to="/contact"><li 
@@ -63,7 +58,7 @@ const Head=()=>{
                         </button>
                         <ul className="flex flex-col items-center justify-center h-full space-y-6 pt-20">
                             <Link to="/" onClick={() => setIsOpen(false)}><li className="py-2 text-white active:scale-95 active:bg-sky-800 transition rounded-2xl text-xl ">Home</li></Link>
-                            <Link to="/" onClick={() => { scrollToAbout(); setIsOpen(false); }}><li className="py-2 text-white active:scale-95
+                            <Link to="/about" onClick={() => setIsOpen(false)}><li className="py-2 text-white active:scale-95
                             active:bg-sky-800 rounded-2xl text-xl  ">About Us</li></Link>
                             <Link to="/services" onClick={() => setIsOpen(false)}><li className="py-2 text-white active:scale-95
                             active:bg-sky-800 rounded-2xl text-xl   ">Services</li></Link>

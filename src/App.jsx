@@ -4,7 +4,9 @@ import Footer from "./layout/Footer";
 import Home from "./layout/Home";
 import Services from "./layout/Sevices";
 import Contact from "./layout/Contact"; 
+import AboutUs from "./layout/AboutUs";
 import { useState,useEffect } from "react";
+
 // import { Analytics } from "@vercel/analytics/next"
 
 function App() {
@@ -34,8 +36,8 @@ function App() {
         <div className="top-0 left-0 w-full z-20"><Head /></div>
         
         <Routes>
-          <Route path="*" element={<Home />} />
-          
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<AboutUs />} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact/>}/>
           

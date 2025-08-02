@@ -1,6 +1,4 @@
 import Hero from "./components/Hero";
-import onePiece from "../assets/N2.jpg"
-import Sector from "./components/Sector";
 
 // import { cards } from "./data/cards";
 import { HiUserGroup } from "react-icons/hi";
@@ -62,33 +60,7 @@ const Home=()=>{
                     </div>
                 ))}
             </div>
-            <div className="flex flex-col md:flex-row  w-full p-20 text-gray-100  justify-center items-center " id="about" 
-                // style={{
-                //                  backgroundImage:`url(${onePiece})`,
-                //                  backgroundSize: "cover",
-                //                  backgroundRepeat: "no-repeat",
-                //                  backgroundPosition: "center",
-                //                  imageRendering: "auto"
-                //               }}
-            >
-                <div className="m-8 w-full  ">
-                    <img src={onePiece} alt="picture" className="h-80 w-full object-cover" />
-                </div>
-                <div className="p-8">
-                    <h1 className="text-2xl text-amber-400 font-bold m-4 italic " >About Us</h1>
-                    <p><span className="text-4xl">O</span>ur company which was established in 2022 has set its self the goal of completing the works it has undertaken in a timely quality controlled & complete manner by doing the job effectively.
-                        <br />
-                        <br />
-                        Our personal working on our organizations are experts,
-                        researchers & talented people and aim to prevent
-                        monopolization by providing a competitive environment
-                        in the sector by producing importing & exporting quality
-                        & economic products in detail solution.
-
-                    </p>
-                </div>
-                
-            </div>
+            
             {/* <h1 className="text-2xl font-bold m-4 italic">Our Services</h1> */}
 
 
