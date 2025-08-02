@@ -1,76 +1,37 @@
 import { MdEmail } from "react-icons/md";
 import { FaPhone } from "react-icons/fa6";
+import { FaFacebookF } from "react-icons/fa6";
+import { RiTwitterXFill } from "react-icons/ri";
+import { FaInstagram } from "react-icons/fa6";
+import image from "../assets/cons.jpg"
 const Contact=()=>{
     return(
-        <div className=" flex flex-wrap justify-center items-center  p-4">
+        <div className=" flex flex-col justify-center items-center  p-4">
           <div className="w-2xl shadow-lg p-4">
-            <form  className="w-full  ">
-              <label htmlFor="comment">Contact:</label>
-              <br />
-              <textarea
-                id="comment"
-                name="comment"        
-                className="w-full border border-gray-300 h-32 mb-3 rounded resize-none">
-              </textarea>
-              <br />
-
-              <label htmlFor="name">Name:</label>
-              <br />
-              <input
-                type="text"
-                id="name"
-                name="name"
-                className="w-full h-10 mb-3 border-gray-300 border"/>
-              <br />
-
-              <label htmlFor="email">Email:</label>
-              <br />
-              <input
-                type="email"
-                id="email"
-                name="email"
-                className="w-full h-10 mb-3 border-gray-300 border"/>
-              <br />
-
-              <input
-                type="submit"
-                className="bg-black text-white m-3 ml-0 rounded-3xl w-40 h-10 hover:bg-gray-900 hover:cursor-pointer"
-                value="Post Comment"/>
-            </form>
+            <h1 className="text-3xl font-bold text-center mb-4">Contact Us</h1>
+            <p className="text-lg text-gray-700 mb-4">We would love to hear from you! Please reach us through the provided contact details.</p>
           </div>
-          <div className="rounded w-xl p-4 shadow-lg mx-14 my-14 mr-0">
-            <h3 className="text-left font-bold  m-3 text-4xl">Direct Contact</h3>
-
-            <div className="flex items-center rounded hover:bg-gray-300 hover:cursor-pointer  transition duration-150 active:scale-95" >
-              <MdEmail className="m-5 text-xl" />
-              <p className="m-3">habyattradingplc@gmail.com</p>
+          <div className="flex w-11/12 justify-center gap-4  items-center rounded p-4 shadow-lg mx-14 my-14 mr-0">
+            <div className="flex flex-col border-2 p-4">
+              <h1>Get in Touch</h1>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, alias laborum rem deleniti distinctio voluptates amet tempore eveniet fuga? Minima numquam dolorem suscipit laudantium voluptatibus repudiandae ut dolor quas adipisci!</p>
+              <div className="flex flex-col gap-2 mt-4">
+                <ul>
+                  <li className="flex"><MdEmail /> Email: info@habayat.com</li>
+                  <li><FaPhone /> Phone: +251 911 123 456</li>
+                  <li>Address: Addis Ababa, Ethiopia</li>
+                </ul>
+                <hr />
+                <h2>follow us:</h2>
+                <div className="flex gap-4">
+                  <a href="#" className="flex items-center rounded-full bg-white p-2    text-xl text-blue-600"><FaFacebookF /></a>
+                  <a href="#" className="flex items-center rounded-full bg-white p-2    text-xl"><RiTwitterXFill /></a>
+                  <a href="#" className="flex items-center rounded-full bg-white p-2    text-xl  text-pink-600"><FaInstagram /></a>
+                </div>
+              </div>
             </div>
-
-            
-
-            <div
-              className="flex items-center rounded hover:bg-gray-300   transition duration-150 active:scale-95"
-              
-            >
-              <FaPhone className="m-5 text-xl" />
-              <p className="m-3">+251 912 397 422</p>
-            </div>
-
-            
-            <div
-              className="flex items-center rounded hover:bg-gray-300   transition duration-150  active:scale-95"
-              
-            >
-              <FaPhone className="m-5 text-xl" />
-              <p className="m-3">+251 940 190 896</p>
-            </div>
-            
-            <div
-              className="flex items-center rounded hover:bg-gray-300   transition duration-150 active:scale-95"
-            
-            >
-              <FaPhone className="m-5 text-xl" />
-              <p className="m-3">+251 911 649 706</p>
+            <div>
+              <img src={image} alt="contact image" />
             </div>
             
           </div>
