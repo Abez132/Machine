@@ -19,7 +19,7 @@ const Footer=()=>{
                 <img className="h-16 md:h-24" src={logo} alt="logo" />
                 <p className="ml-2 text-sm md:text-base lg:text-lg">HABYAT trading PLC</p>
             </div>
-            <div className="flex flex-col">
+            {/* <div className="flex flex-col">
                 <div className="flex items-center rounded">
                     <FaPhone className="m-2 text-base md:text-lg" />
                     <p className="m-3 text-xs md:text-sm lg:text-base">+251 912 397 422</p>
@@ -36,7 +36,7 @@ const Footer=()=>{
                     <MdEmail className="m-2 text-base md:text-lg" />
                     <p className="m-3 text-xs md:text-sm lg:text-base">habyattradingplc@gmail.com</p>
                 </div>
-            </div>
+            </div> */}
             <div></div>
         </footer>
     );
