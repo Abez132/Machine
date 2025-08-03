@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const AboutUs = () => {
 
     return(
-        <div className="flex flex-col md:flex-row  w-full p-20 text-gray-100  justify-center items-center " id="about" 
+        <div className="flex flex-col md:flex-row  w-full min-h-screen p-20 text-gray-100  justify-center items-center " id="about" 
                 // style={{
                 //                  backgroundImage:`url(${onePiece})`,
                 //                  backgroundSize: "cover",
@@ -17,7 +17,7 @@ const AboutUs = () => {
                     <img src={onePiece} alt="picture" className="h-80 w-full object-cover" />
                 </div>
                 <div className="p-8">
-                    <h1 className="text-2xl text-amber-400 font-bold m-4 italic " >About Us</h1>
+                    <h1 className="text-2xl text-black font-bold m-4 italic " >About Us</h1>
                     <p><span className="text-4xl">O</span>ur company which was established in 2022 has set its self the goal of completing the works it has undertaken in a timely quality controlled & complete manner by doing the job effectively.
                         <br />
                         <br />

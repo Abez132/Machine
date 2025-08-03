@@ -7,7 +7,7 @@ const Detail=({image,detail,name})=>{
             </div>
 
             <div className="w-1/2 ">
-                <h1 className="text-2xl font-bold">{name}</h1>
+                <h1 className="text-2xl text-black font-bold">{name}</h1>
                 <p className="text-white">{detail}</p>
             </div>
         </div>

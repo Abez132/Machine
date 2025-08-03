@@ -30,7 +30,7 @@ function App() {
     
 
   return (
-    <div id="top" className="relative p-0 m-0 bg-gradient-to-r from-sky-950 to-sky-900">
+    <div id="top" className="relative p-0 m-0 text-gray-400 bg-gradient-to-r from-amber-200 to-amber-500">
       {/* <Analytics/> */}
       <Router>
         <div className="top-0 left-0 w-full z-20"><Head /></div>
@@ -43,7 +43,7 @@ function App() {
           
           
         </Routes>
-        <div onClick={scrollUp} className={`fixed right-4 bottom-4 rounded-full text-3xl z-100 backdrop-blur-3xl text-center hover:bg-blue-600 active:bg-blue-600 active:scale-x-85 active:translate-y-2/6 transition m-2 w-9  text-black opacity-0 hover:cursor-pointer
+        <div onClick={scrollUp} className={`fixed right-4 bottom-4 rounded-full text-3xl z-100 backdrop-blur-3xl text-center bg-amber-300 active:bg-amber-200 active:scale-x-85 active:translate-y-2/6 transition m-2 w-9  text-black opacity-0 hover:cursor-pointer hover:bg-amber-200
           ${isScrolled?"opacity-100":""}`}>^</div>
         <Footer />
       </Router>

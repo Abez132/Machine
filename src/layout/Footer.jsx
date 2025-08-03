@@ -6,7 +6,7 @@ import logo from "../assets/LOGO.png";
 const Footer=()=>{
     return(
         
-        <footer className="flex flex-col md:flex-row bottom-0 w-full justify-between bg-gradient-to-r from-sky-900 to-sky-950 p-4 text-center text-amber-50" 
+        <footer className="flex flex-col md:flex-row bottom-0 w-full bg-amber-700/40 justify-between border-t-2 border-black p-4 text-center text-amber-50" 
         // style={{
         //     backgroundImage:`url(${foot})`,
         //     backgroundSize: "cover",

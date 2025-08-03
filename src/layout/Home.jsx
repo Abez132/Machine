@@ -48,27 +48,17 @@ const Home=()=>{
     },
   ];
     return(
-        <div >
+        <div className="flex flex-col" >
             <Hero/>
-            <div className="flex flex-wrap justify-center gap-16 px-6 py-16   text-center ">
+            <div className="flex flex-wrap justify-center gap-16 px-6 py-16 text-center ">
                 {acards.map((card, index) => (
-                    <div key={index} className="max-w-sm flex  shadow-2xl rounded p-2 flex-col justify-center items-center text-amber-400
-                    space-y-4">
+                    <div key={index} className="max-w-sm flex bg-amber-500  hover:shadow-amber-200 transition delay-1  shadow-2xl shadow-gray-400 rounded p-2 flex-col justify-center items-center space-y-4">
                         <div className="text-6xl text-gray-950 ">{card.image}</div>
-                            <h3 className="text-2xl   font-bold">{card.title}</h3>
-                            <p className="text-amber-50 text-sm leading-relaxed">{card.desc}</p>
+                            <h3 className="text-2xl  text-black font-bold">{card.title}</h3>
+                            <p className="text-gray-200 text-sm font-medium leading-relaxed">{card.desc}</p>
                     </div>
                 ))}
-            </div>
-            
-            {/* <h1 className="text-2xl font-bold m-4 italic">Our Services</h1> */}
-
-
-  
-    
-
-    
-            
+            </div>            
         </div>
     )
 }
