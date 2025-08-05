@@ -30,29 +30,13 @@ export const imports = [
         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         detail:"lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ea maxime porro doloribus praesentium ipsa vero possimus hic modi voluptatem esse, fugiat itaque saepe quia, obcaecati iusto quam, qui facilis."
     },
-     {
-        image: "https://i.pinimg.com/736x/c4/d3/33/c4d33358727871ad845ddb9e5ababe75.jpg",
-        title: "Great team work",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        detail:"lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ea maxime porro doloribus praesentium ipsa vero possimus hic modi voluptatem esse, fugiat itaque saepe quia, obcaecati iusto quam, qui facilis."
-    },
+     
      {
         image: "https://i.pinimg.com/1200x/e7/9e/85/e79e8518106c63dfe4868e36f5323527.jpg",
         title: "Great team work",
         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         detail:"lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ea maxime porro doloribus praesentium ipsa vero possimus hic modi voluptatem esse, fugiat itaque saepe quia, obcaecati iusto quam, qui facilis."
     },
-    {
-        image: "https://i.pinimg.com/1200x/51/a3/db/51a3db4957ef11243e1991da572ca59f.jpg",
-        title: "Great team work",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        detail:"lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ea maxime porro doloribus praesentium ipsa vero possimus hic modi voluptatem esse, fugiat itaque saepe quia, obcaecati iusto quam, qui facilis."
-    },
-    {
-        image: "https://i.pinimg.com/736x/cf/7a/d5/cf7ad597665570058072a9cd48dc14e9.jpg",
-        title: "Great team work",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        detail:"lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ea maxime porro doloribus praesentium ipsa vero possimus hic modi voluptatem esse, fugiat itaque saepe quia, obcaecati iusto quam, qui facilis."
-    },
+ 
     
 ];

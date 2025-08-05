@@ -14,7 +14,7 @@ const AboutUs = () => {
                 //               }}
             >
                 <div className="m-8 w-full  ">
-                    <img src={onePiece} alt="picture" className="h-80 w-full object-cover" />
+                    <img src={onePiece} alt="picture" className="h-96 w-full object-cover" />
                 </div>
                 <div className="p-8">
                     <h1 className="text-2xl text-black font-bold m-4 italic " >About Us</h1>
