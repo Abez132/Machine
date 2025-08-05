@@ -12,16 +12,16 @@ const Hero=()=>{
             //      imageRendering: "auto"
             //   }}
               >
-                
-               <div className="m-2 w-full h-full   ">
-                    <img src={onePiece} loading="lazy" alt="pic" className="w-full md:w-xl md:h-screen h-full rounded" />
-                </div>
-            <div className="text-center w-8/12  rounded p-2">
+                <div className="text-center m-16 mb-4 w-full rounded p-2">
                 <h1 className="text-5xl font-bold mb-4 justify-start items-start">Delivering Excellence Since 2022 </h1>
                 <p className="text-lg text-gray-300 font-medium  mb-8">At HABYAT Trading PLC, we unite expertise, innovation, and integrity to deliver timely, detail-oriented solutions. By fostering a competitive edge, we import, export, and produce economic, high-quality products—breaking monopolies and setting new standards.</p>
                 
                 
             </div>
+               <div className="m-2 w-full h-xl md:h-screen rounded-lg shadow-lg overflow-hidden">
+                    <img src={onePiece} loading="lazy" alt="pic" className="w-full md:w-xl md:h-screen h-full rounded" />
+                </div>
+            
              
 
         </div>
