@@ -3,6 +3,7 @@ import { FaPhone } from "react-icons/fa6";
 import { FaFacebookF } from "react-icons/fa6";
 import { RiTwitterXFill } from "react-icons/ri";
 import { FaInstagram } from "react-icons/fa6";
+import { FaLocationDot } from "react-icons/fa6";
 // import image from "../assets/cons.jpg"
 const Contact=()=>{
     const scrollToForm = () => {
@@ -79,15 +80,15 @@ const Contact=()=>{
             />
           </form>
         </div>
-        <span><b>OR</b></span>
+        
               <div className="flex w-11/12 justify-center items-center rounded  ">
                 <div className="flex flex-col  ">
-                  <h1 className="text-3xl font-extrabold justify-center flex m-2 items-center">Use This :-</h1>
+                  
                   <div className="flex flex-col gap-2 mt-4">
-                    <ul>
-                      <li className="flex justify-center items-center gap-x-2 font-medium "><MdEmail /><b>Email:</b>  info@habayat.com</li>
+                    <ul className="flex flex-col justify-start items-start">
+                      <li className="flex justify-center items-center gap-x-2 font-medium "><MdEmail /><b>Your Email:</b>  info@habayat.com</li>
                       <li className="flex justify-center items-center gap-x-2 font-medium"><FaPhone /><b>Phone:</b>  +251 911 123 456</li>
-                      <li className="flex justify-center items-center gap-x-2 font-medium"><b>Address:</b> Addis Ababa, Ethiopia</li>
+                      <li className="flex justify-center items-center gap-x-2 font-medium"><FaLocationDot/><b>Address:</b> Addis Ababa, Ethiopia</li>
                     </ul>
                     <hr />
                     <h2><b>Follow Us:</b></h2>
