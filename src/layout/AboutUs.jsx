@@ -1,10 +1,10 @@
-import onePiece from "../assets/N2.jpg"
-import { Link } from "react-router-dom";
+import onePiece from "../assets/N23.jpg"
+// import { Link } from "react-router-dom";
 
 const AboutUs = () => {
 
     return(
-        <div className="flex flex-col md:flex-row  w-full min-h-screen p-20 text-gray-100  justify-center items-center " id="about" 
+        <div className="flex flex-col md:flex-row  w-full min-h-screen p-4 text-gray-100  justify-center items-center " id="about" 
                 // style={{
                 //                  backgroundImage:`url(${onePiece})`,
                 //                  backgroundSize: "cover",
@@ -13,12 +13,12 @@ const AboutUs = () => {
                 //                  imageRendering: "auto"
                 //               }}
             >
-                <div className="m-8 w-full  ">
-                    <img src={onePiece} alt="picture" className="h-96 w-full object-cover" />
+                <div className="m-2 w-full md:w-dvw h-full md:h-svh  ">
+                    <img src={onePiece} alt="picture" className="h-full w-full rounded object-cover" />
                 </div>
-                <div className="p-8">
-                    <h1 className="text-2xl text-black font-bold m-4 italic " >About Us</h1>
-                    <p><span className="text-4xl">O</span>ur company which was established in 2022 has set its self the goal of completing the works it has undertaken in a timely quality controlled & complete manner by doing the job effectively.
+                <div className="p-8 ">
+                    <h1 className="text-4xl text-center  font-bold m-4 mt-0 italic " >About Us</h1>
+                    <p className="text-xl"><span className="text-6xl">O</span>ur company which was established in 2022 has set its self the goal of completing the works it has undertaken in a timely quality controlled & complete manner by doing the job effectively.
                         <br />
                         <br />
                         Our personal working on our organizations are experts,

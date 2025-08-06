@@ -30,7 +30,7 @@ function App() {
     
 
   return (
-    <div id="top" className="relative p-0 m-0 text-white bg-black">
+    <div id="top" className="relative p-0 m-0 text-white bg-gray-950">
       {/* <Analytics/> */}
       <Router>
         <div className="top-0 left-0 w-full z-20"><Head /></div>

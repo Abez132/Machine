@@ -2,6 +2,10 @@ import { useState} from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/LOGO.png";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { TiHomeOutline } from "react-icons/ti";
+import { IoPeople } from "react-icons/io5";
+import { LuPackage2 } from "react-icons/lu";
+import { RiContactsBook2Fill } from "react-icons/ri";
 
 
 const Head=()=>{
@@ -12,7 +16,7 @@ const Head=()=>{
 
     return(
         <div className="flex justify-between items-center p-2 transition-colors   text-gray-100  duration-300">
-            <div className="w-1/2 px-4 flex italic items-center justify-start gap-2 text-white">
+            <div className="w-1/2 px-4 flex items-center justify-start gap-2 text-white">
                 <Link to=""><img src={logo} alt="LOGO" loading="lazy" className="w-24 h-14 "/></Link>
                 <span className="   "> Trading PLC</span>
             </div>
@@ -52,13 +56,13 @@ const Head=()=>{
                             x
                         </button>
                         <ul className="flex flex-col items-center justify-center h-full space-y-4 ">
-                            <Link to="/" onClick={() => setIsOpen(false)}><li className=" text-white active:scale-95 active:bg-sky-800 transition rounded-2xl text-xl ">H</li></Link>
+                            <Link to="/" onClick={() => setIsOpen(false)}><li className=" text-white active:scale-95 active:bg-sky-800 transition rounded-2xl text-3xl m-2 "><TiHomeOutline/></li></Link>
                             <Link to="/about" onClick={() => setIsOpen(false)}><li className="text-white active:scale-95
-                            active:bg-sky-800 rounded-2xl text-xl  ">A</li></Link>
+                            active:bg-sky-800 rounded-2xl text-3xl m-2  "><IoPeople/></li></Link>
                             <Link to="/services" onClick={() => setIsOpen(false)}><li className="text-white active:scale-95
-                            active:bg-sky-800 rounded-2xl text-xl   ">S</li></Link>
+                            active:bg-sky-800 rounded-2xl text-3xl m-2   "><LuPackage2/></li></Link>
                             <Link to="/contact" onClick={() => setIsOpen(false)}><li className="text-white active:scale-95
-                            active:bg-sky-800 rounded-2xl text-xl ">C</li></Link>
+                            active:bg-sky-800 rounded-2xl text-3xl m-2 "><RiContactsBook2Fill/></li></Link>
                         </ul>
                     </div>
                 </div>
