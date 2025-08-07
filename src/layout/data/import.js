@@ -33,8 +33,26 @@ export const imports = [
     },
      
      {
-        image: "https://i.pinimg.com/1200x/e7/9e/85/e79e8518106c63dfe4868e36f5323527.jpg",
-        title: "Electronic Equipment & IT Solutions",
+        image: "https://i.pinimg.com/736x/8e/c4/9f/8ec49f130ffdc33635e9a97d3271e8a6.jpg",
+        title: "Office Equipment",
+        desc: "We supply computers, printers, and office electronics for all business needs.",
+        detail:"We offer a wide range of imported electronics and IT equipment, including computers, printers, servers, networking tools, and office gadgets. Our electronics are sourced from globally trusted brands, supporting your digital and operational needs in corporate, governmental, and educational environments."
+    },
+     {
+        image: "https://images.pexels.com/photos/116675/pexels-photo-116675.jpeg",
+        title: "Luxury Car",
+        desc: "We supply computers, printers, and office electronics for all business needs.",
+        detail:"We offer a wide range of imported electronics and IT equipment, including computers, printers, servers, networking tools, and office gadgets. Our electronics are sourced from globally trusted brands, supporting your digital and operational needs in corporate, governmental, and educational environments."
+    },
+     {
+        image: "https://i.pinimg.com/1200x/d1/a6/64/d1a66442e241ede2c085c2eb40ceb4a6.jpg",
+        title: "Electro mechanical fixtures  ",
+        desc: "We supply computers, printers, and office electronics for all business needs.",
+        detail:"We offer a wide range of imported electronics and IT equipment, including computers, printers, servers, networking tools, and office gadgets. Our electronics are sourced from globally trusted brands, supporting your digital and operational needs in corporate, governmental, and educational environments."
+    },
+    {
+        image: "destoner.jpg",
+        title: "Distoner",
         desc: "We supply computers, printers, and office electronics for all business needs.",
         detail:"We offer a wide range of imported electronics and IT equipment, including computers, printers, servers, networking tools, and office gadgets. Our electronics are sourced from globally trusted brands, supporting your digital and operational needs in corporate, governmental, and educational environments."
     },

@@ -61,9 +61,9 @@ const Services = () => {
                 {
                     category==="import" && (
                         <div className="flex flex-col w-full">
-                            <div className="flex justify-center items-center gap-4 p-4"> 
+                            <div className="flex justify-center items-center gap-4 p-4 "> 
                                 <button className={`hover:bg-gray-600 text-stone-200  p-1 pr-4 rounded-tr-full rounded-bl-36 overflow-hidden ${activeImport==="havi"?"bg-gray-800 text-sky-300 ":""}`} onClick={()=>{setCategory("import"); setActiveImport("havi")}}>HEAVEY MACHINERY </button> 
-                    <button onClick={()=>{setCategory("import"); setActiveImport("bul")}} className={`hover:bg-gray-600 rounded text-stone-200 p-1 pr-4 rounded-tr-full rounded-bl-36 overflow-hidden ${activeImport==="bul"?"bg-gray-800 text-sky-300 ":""}`}>BUILDING FINISHING PRODUCT</button>
+                            <button onClick={()=>{setCategory("import"); setActiveImport("bul")}} className={`hover:bg-gray-600 rounded text-stone-200 p-1 pr-4 rounded-tr-full rounded-bl-36 overflow-hidden ${activeImport==="bul"?"bg-gray-800 text-sky-300 ":""}`}>BUILDING FINISHING PRODUCT</button>
                             </div>
                             <div className="flex flex-wrap">
 
