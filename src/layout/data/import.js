@@ -19,7 +19,7 @@ export const imports = [
         detail:"We supply robust dump trucks for the fast and efficient transportation of bulk materials such as gravel, sand, and demolition waste. With powerful engines and durable hydraulic systems, our dump trucks are built to handle the toughest terrains and heaviest loads in construction and mining sectors."
     },
      {
-        image: "https://images.pexels.com/photos/34693/escalator-metro-stairs-subway.jpg",
+        image: "https://images.pexels.com/photos/1838112/pexels-photo-1838112.jpeg",
         title: "Elevators & Escalators",
         desc: "Modern vertical transport systems for buildings of all types and sizes.",
         detail:"HABYAT Trading PLC imports modern elevator and escalator systems that prioritize safety, efficiency, and user comfort. Designed for residential, commercial, and industrial buildings, our solutions enhance vertical mobility while adhering to international safety and accessibility standards."

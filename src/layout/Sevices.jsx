@@ -43,7 +43,7 @@ const Services = () => {
                     <button onClick={()=>{setCategory("import"); setActive("import")}} className={`hover:bg-gray-600 rounded text-stone-200 p-1 pr-4 rounded-tr-full rounded-bl-36 overflow-hidden ${active==="import"?"bg-gray-800 text-sky-300 ":""}`}>IMPORT ITEMS</button> 
                     <button onClick={()=>{setCategory("export"); setActive("export")}} className={`hover:bg-gray-600 rounded text-stone-200 p-1 pr-4 rounded-tr-full rounded-bl-36 overflow-hidden ${active==="export"?"bg-gray-800 text-sky-300":""}`}>EXPORT ITEMS</button>
                 </div>
-               <div className="flex w-full flex-row justify-center items-center flex-wrap min-h-screen gap-4 ">
+               <div className="flex w-full flex-row justify-center flex-wrap min-h-screen gap-4 ">
 
                 {
                     category==="mani" && cards.map((card, index) => (
@@ -60,7 +60,7 @@ const Services = () => {
                 }
                 {
                     category==="import" && (
-                        <div>
+                        <div className="flex flex-col w-full">
                             <div className="flex justify-center items-center gap-4 p-4"> 
                                 <button className={`hover:bg-gray-600 text-stone-200  p-1 pr-4 rounded-tr-full rounded-bl-36 overflow-hidden ${activeImport==="havi"?"bg-gray-800 text-sky-300 ":""}`} onClick={()=>{setCategory("import"); setActiveImport("havi")}}>HEAVEY MACHINERY </button> 
                     <button onClick={()=>{setCategory("import"); setActiveImport("bul")}} className={`hover:bg-gray-600 rounded text-stone-200 p-1 pr-4 rounded-tr-full rounded-bl-36 overflow-hidden ${activeImport==="bul"?"bg-gray-800 text-sky-300 ":""}`}>BUILDING FINISHING PRODUCT</button>

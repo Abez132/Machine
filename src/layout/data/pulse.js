@@ -1,6 +1,6 @@
 export const pulses=[
      {
-        image: "https://i.pinimg.com/1200x/bd/71/fa/bd71fa6e420ee40a3106a6b24403fbd6.jpg",
+        image: "export.jpg",
         title: "Kidney Beans",
         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         detail:"Kidney beans are nutrient-rich legumes known for their characteristic shape and deep red color. They are high in protein, dietary fiber, and essential minerals, making them a staple in vegetarian and vegan diets around the world."
