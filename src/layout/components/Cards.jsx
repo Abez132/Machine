@@ -22,11 +22,11 @@ const Cards=({ title, description, image, detail }) => {
                     <TfiEmail className="m-2 text-gray-900 font-extrabold text-4xl" />
                 </div>
             </Link>
-            <div className="flex-col font-['poppins'] text-[#000000] text-600 text-start justify-center p-4 h-auto  absolute bottom-0 left-0 w-full backdrop-blur-xl lg:opacity-0 sm:opacity-100 md:group-hover:opacity-100 transition-opacity duration-300">
-                <p className="flex-start font-['poppins'] text-lg font-semibold text-gray-800">
+            <div className="flex-col font-['poppins'] text-[#000000] text-600 text-start justify-center p-4 h-auto  absolute bottom-0 left-0 w-full backdrop-blur-3xl lg:opacity-0 sm:opacity-100 md:group-hover:opacity-100 transition-opacity duration-300">
+                <p className="flex-start  font-['poppins'] md:text-xl text-lg font-semibold">
                     {title}
                 </p>
-                <span className="text-xs font-['poppins'] flex-start text-gray-400">
+                <span className="md:text-md text-l font-medium font-['poppins'] flex-start text-gray-900">
                     {description}
                 </span>
                 <br />
@@ -34,7 +34,7 @@ const Cards=({ title, description, image, detail }) => {
                     className=" group w-full flex justify-center items-center p-1 bg-blue-300 mt-4 mb-2  rounded right-0  transition hover:scale-105 active:scale-100"
                     onClick={handleDetailClick}
                 >
-                    More  <FaArrowRight className="right-0 text-l group-active:translate-x-36 transition duration-700" />
+                    More  <FaArrowRight className="right-0 text-l active:translate-x-36 transition duration-700" />
                 </button>
             </div>
         </div>
