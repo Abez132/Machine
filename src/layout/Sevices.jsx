@@ -4,13 +4,18 @@ import { useLocation } from "react-router-dom";
 import { useEffect,useState } from "react";
 import { cards } from "./data/cards";
 import {imports} from "./data/import";
+import { buildings } from "./data/bulding";
 import {exports} from "./data/export";
+import { pulses } from "./data/pulse";
+import { coffees } from "./data/coffee";
 
 const Services = () => {
     const { state } = useLocation();
     const[showDetail,setShowDetail]=useState(true);
     const[category,setCategory]=useState("mani");
     const[active,setActive]=useState("mani");
+    const[activeImport,setActiveImport]=useState("havi");
+    const[activeExport,setActiveExport]=useState("pu");
 
     useEffect(() => {
         window.scrollTo({ top: 0, behavior: "smooth" });
@@ -42,46 +47,99 @@ const Services = () => {
 
                 {
                     category==="mani" && cards.map((card, index) => (
-
-                        <div>
-                            <div>
-                                
-                            </div>
-                            <Cards 
+                         
+                        <Cards 
                             key={index}
                             title={card.title}
                             description={card.desc}
                             image={card.image}
                             detail={card.detail}
                         />
+                ))
+                    
+                }
+                {
+                    category==="import" && (
+                        <div>
+                            <div className="flex justify-center items-center gap-4 p-4"> 
+                                <button className={`hover:bg-gray-600 text-stone-200  p-1 pr-4 rounded-tr-full rounded-bl-36 overflow-hidden ${activeImport==="havi"?"bg-gray-800 text-sky-300 ":""}`} onClick={()=>{setCategory("import"); setActiveImport("havi")}}>HEAVEY MACHINERY </button> 
+                    <button onClick={()=>{setCategory("import"); setActiveImport("bul")}} className={`hover:bg-gray-600 rounded text-stone-200 p-1 pr-4 rounded-tr-full rounded-bl-36 overflow-hidden ${activeImport==="bul"?"bg-gray-800 text-sky-300 ":""}`}>BUILDING FINISHING PRODUCT</button>
+                            </div>
+                            <div className="flex flex-wrap">
+
+                                {category==="import" && activeImport==="havi" &&imports.map((imp, index) => ( 
+                                        <Cards 
+                                            key={index}
+                                            title={imp.title}
+                                            description={imp.desc}
+                                            image={imp.image}
+                                            detail={imp.detail}
+                                        />
+                                    ))
+                                }
+                                {
+                                    category==="import" && activeImport==="bul" && buildings.map((imp, index) => (
+                                        <Cards 
+                                            key={index}
+                                            title={imp.title}
+                                            description={imp.desc}
+                                            image={imp.image}
+                                            detail={imp.detail}
+                                        />
+                                    ))
+                                }
+                            </div>
+                            
                         </div>
-                         
-                        
-                ))
+                    ) 
                     
                 }
                 {
-                    category==="import" && imports.map((imp, index) => ( 
-                        <Cards 
-                            key={index}
-                            title={imp.title}
-                            description={imp.desc}
-                            image={imp.image}
-                            detail={imp.detail}
-                        />
-                ))
-                    
-                }
-                {
-                    category==="export" && exports.map((exp, index) => ( 
-                        <Cards 
-                            key={index}
-                            title={exp.title}
-                            description={exp.desc}
-                            image={exp.image}
-                            detail={exp.detail}
-                        />
-                ))
+                    category==="export" && (
+                        <div>
+                            <div className="flex justify-center items-center gap-4 p-4"> 
+                                <button className={`hover:bg-gray-600 text-stone-200  p-1 pr-4 rounded-tr-full rounded-bl-36 overflow-hidden ${activeExport==="pu"?"bg-gray-800 text-sky-300 ":""}`} onClick={()=>{setCategory("export"); setActiveExport("pu")}}>PULSES </button> 
+                    <button onClick={()=>{setCategory("export"); setActiveExport("oil")}} className={`hover:bg-gray-600 rounded text-stone-200 p-1 pr-4 rounded-tr-full rounded-bl-36 overflow-hidden ${activeExport==="oil"?"bg-gray-800 text-sky-300 ":""}`}>OIL SEEDS</button>
+                    <button onClick={()=>{setCategory("export"); setActiveExport("cof")}} className={`hover:bg-gray-600 rounded text-stone-200 p-1 pr-4 rounded-tr-full rounded-bl-36 overflow-hidden ${activeExport==="cof"?"bg-gray-800 text-sky-300 ":""}`}>PROCCESSED COFFEE</button>
+                            </div>
+                            <div className="flex flex-wrap">
+
+                                {category==="export" && activeExport==="pu" &&pulses.map((imp, index) => ( 
+                                        <Cards 
+                                            key={index}
+                                            title={imp.title}
+                                            description={imp.desc}
+                                            image={imp.image}
+                                            detail={imp.detail}
+                                        />
+                                    ))
+                                }
+                                {
+                                    category==="export" && activeExport==="oil" && exports.map((imp, index) => (
+                                        <Cards 
+                                            key={index}
+                                            title={imp.title}
+                                            description={imp.desc}
+                                            image={imp.image}
+                                            detail={imp.detail}
+                                        />
+                                    ))
+                                }
+                                {
+                                    category==="export" && activeExport==="cof" && coffees.map((imp, index) => (
+                                        <Cards 
+                                            key={index}
+                                            title={imp.title}
+                                            description={imp.desc}
+                                            image={imp.image}
+                                            detail={imp.detail}
+                                        />
+                                    ))
+                                }
+                            </div>
+                            
+                        </div>
+                    ) 
                     
                 }
                 
