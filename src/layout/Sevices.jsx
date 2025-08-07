@@ -48,19 +48,19 @@ const Services = () => {
                     <button onClick={()=>{setCategory("import"); setActive("import")}} className={`hover:bg-gray-600 rounded text-stone-200 p-1 pr-4 rounded-tr-full rounded-bl-36 overflow-hidden ${active==="import"?"bg-gray-800 text-sky-300 ":""}`}>IMPORT ITEMS</button> 
                     <button onClick={()=>{setCategory("export"); setActive("export")}} className={`hover:bg-gray-600 rounded text-stone-200 p-1 pr-4 rounded-tr-full rounded-bl-36 overflow-hidden ${active==="export"?"bg-gray-800 text-sky-300":""}`}>EXPORT ITEMS</button>
                 </div>
-               <div className="flex w-full flex-row justify-center flex-wrap min-h-screen gap-4 ">
+               <div className="flex  flex-row justify-center flex-wrap min-h-screen  gap-4 ">
 
                 {
                     category==="mani" && (
-                        <div className="flex flex-col   h-full">
-                            <div className="flex justify-center items-center gap-4 p-4 "> 
+                        <div className="flex flex-col w-full   h-full">
+                            <div className="flex flex-wrap w-full justify-center items-center gap-4  p-4 "> 
                                 <button className={`hover:bg-gray-600 text-stone-200  p-1 pr-4 rounded-tr-full rounded-bl-36 overflow-hidden ${activeProduction==="win"?"bg-gray-800 text-sky-300 ":""}`} onClick={()=>{setCategory("mani"); setActiveProduction("win")}}>WINNOWING MACHINE </button> 
                             <button onClick={()=>{setCategory("mani"); setActiveProduction("dis")}} className={`hover:bg-gray-600 rounded text-stone-200 p-1 pr-4 rounded-tr-full rounded-bl-36 overflow-hidden ${activeProduction==="dis"?"bg-gray-800 text-sky-300 ":""}`}>DISTONER</button>
                             <button onClick={()=>{setCategory("mani"); setActiveProduction("plus")}} className={`hover:bg-gray-600 rounded text-stone-200 p-1 pr-4 rounded-tr-full rounded-bl-36 overflow-hidden ${activeProduction==="plus"?"bg-gray-800 text-sky-300 ":""}`}>WINNOWING + DISTONER</button>
                             <button onClick={()=>{setCategory("mani"); setActiveProduction("cofff")}} className={`hover:bg-gray-600 rounded text-stone-200 p-1 pr-4 rounded-tr-full rounded-bl-36 overflow-hidden ${activeProduction==="cofff"?"bg-gray-800 text-sky-300 ":""}`}>COFFEE ROASTER AND GRINDER</button>
                            
                             </div>
-                            <div className="flex flex-wrap w-2xl">
+                            <div className="flex flex-wrap ">
 
                                 {category==="mani" && activeProduction==="win" &&cards.map((imp, index) => ( 
                                         <Cards 
@@ -74,34 +74,31 @@ const Services = () => {
                                 }
                                 {
                                     category==="mani" && activeProduction==="dis" && destones.map((imp, index) => (
-                                        <Cards 
+                                        <Detail
                                             key={index}
-                                            title={imp.title}
-                                            description={imp.desc}
                                             image={imp.image}
                                             detail={imp.detail}
+                                            name={imp.title}
                                         />
                                     ))
                                 }
                                 {
                                     category==="mani" && activeProduction==="plus" && pluses.map((imp, index) => (
-                                        <Cards 
+                                        <Detail
                                             key={index}
-                                            title={imp.title}
-                                            description={imp.desc}
                                             image={imp.image}
                                             detail={imp.detail}
+                                            name={imp.title}
                                         />
                                     ))
                                 }
                                 {
                                     category==="mani" && activeProduction==="cofff" && roasts.map((imp, index) => (
-                                        <Cards 
+                                        <Detail
                                             key={index}
-                                            title={imp.title}
-                                            description={imp.desc}
                                             image={imp.image}
                                             detail={imp.detail}
+                                            name={imp.title}
                                         />
                                     ))
                                 }

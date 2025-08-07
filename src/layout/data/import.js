@@ -35,26 +35,26 @@ export const imports = [
      {
         image: "https://i.pinimg.com/736x/8e/c4/9f/8ec49f130ffdc33635e9a97d3271e8a6.jpg",
         title: "Office Equipment",
-        desc: "We supply computers, printers, and office electronics for all business needs.",
-        detail:"We offer a wide range of imported electronics and IT equipment, including computers, printers, servers, networking tools, and office gadgets. Our electronics are sourced from globally trusted brands, supporting your digital and operational needs in corporate, governmental, and educational environments."
+        desc: "Modern office furniture and equipment to support organized and efficient workspaces.",
+        detail:"Our imports include ergonomic office furniture, desks, chairs, cabinets, and functional workspace solutions to create productive and modern office environments."
     },
      {
         image: "https://images.pexels.com/photos/116675/pexels-photo-116675.jpeg",
         title: "Luxury Car",
-        desc: "We supply computers, printers, and office electronics for all business needs.",
-        detail:"We offer a wide range of imported electronics and IT equipment, including computers, printers, servers, networking tools, and office gadgets. Our electronics are sourced from globally trusted brands, supporting your digital and operational needs in corporate, governmental, and educational environments."
+        desc: "We import high-end luxury vehicles that combine performance, comfort, and prestige.",
+        detail:"We import premium luxury vehicles from renowned global brands, offering elegant design, cutting-edge technology, and top-tier performance for clients seeking comfort and class."
     },
      {
         image: "https://i.pinimg.com/1200x/d1/a6/64/d1a66442e241ede2c085c2eb40ceb4a6.jpg",
         title: "Electro mechanical fixtures  ",
-        desc: "We supply computers, printers, and office electronics for all business needs.",
-        detail:"We offer a wide range of imported electronics and IT equipment, including computers, printers, servers, networking tools, and office gadgets. Our electronics are sourced from globally trusted brands, supporting your digital and operational needs in corporate, governmental, and educational environments."
+        desc: "We supply reliable electrical and mechanical components for industrial and building systems.",
+        detail:"We import a wide range of electrical and mechanical fixtures, such as cables, switches, sockets, and control systems, essential for building installations and industrial applications."
     },
     {
         image: "destoner.jpg",
         title: "Distoner",
-        desc: "We supply computers, printers, and office electronics for all business needs.",
-        detail:"We offer a wide range of imported electronics and IT equipment, including computers, printers, servers, networking tools, and office gadgets. Our electronics are sourced from globally trusted brands, supporting your digital and operational needs in corporate, governmental, and educational environments."
+        desc: "Heavy-duty machines used for cleaning grains and seeds by removing stones and impurities.",
+        detail:"These machines are used in agriculture and food processing to separate stones and heavy impurities from grains like wheat, rice, and maize, ensuring cleaner and safer final products."
     },
  
     
