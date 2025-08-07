@@ -3,11 +3,15 @@ import Detail from "./Detaile";
 import { useLocation } from "react-router-dom";
 import { useEffect,useState } from "react";
 import { cards } from "./data/cards";
+import {destones} from "./data/destone.js"
+
 import {imports} from "./data/import";
 import { buildings } from "./data/bulding";
 import {exports} from "./data/export";
 import { pulses } from "./data/pulse";
 import { coffees } from "./data/coffee";
+import { pluses } from "./data/pluse.js";
+import { roasts } from "./data/coffeeRoast.js";
 
 const Services = () => {
     const { state } = useLocation();
@@ -16,6 +20,7 @@ const Services = () => {
     const[active,setActive]=useState("mani");
     const[activeImport,setActiveImport]=useState("havi");
     const[activeExport,setActiveExport]=useState("pu");
+    const[activeProduction,setActiveProduction]=useState("win");
 
     useEffect(() => {
         window.scrollTo({ top: 0, behavior: "smooth" });
@@ -46,16 +51,64 @@ const Services = () => {
                <div className="flex w-full flex-row justify-center flex-wrap min-h-screen gap-4 ">
 
                 {
-                    category==="mani" && cards.map((card, index) => (
-                         
-                        <Cards 
-                            key={index}
-                            title={card.title}
-                            description={card.desc}
-                            image={card.image}
-                            detail={card.detail}
-                        />
-                ))
+                    category==="mani" && (
+                        <div className="flex flex-col   h-full">
+                            <div className="flex justify-center items-center gap-4 p-4 "> 
+                                <button className={`hover:bg-gray-600 text-stone-200  p-1 pr-4 rounded-tr-full rounded-bl-36 overflow-hidden ${activeProduction==="win"?"bg-gray-800 text-sky-300 ":""}`} onClick={()=>{setCategory("mani"); setActiveProduction("win")}}>WINNOWING MACHINE </button> 
+                            <button onClick={()=>{setCategory("mani"); setActiveProduction("dis")}} className={`hover:bg-gray-600 rounded text-stone-200 p-1 pr-4 rounded-tr-full rounded-bl-36 overflow-hidden ${activeProduction==="dis"?"bg-gray-800 text-sky-300 ":""}`}>DISTONER</button>
+                            <button onClick={()=>{setCategory("mani"); setActiveProduction("plus")}} className={`hover:bg-gray-600 rounded text-stone-200 p-1 pr-4 rounded-tr-full rounded-bl-36 overflow-hidden ${activeProduction==="plus"?"bg-gray-800 text-sky-300 ":""}`}>WINNOWING + DISTONER</button>
+                            <button onClick={()=>{setCategory("mani"); setActiveProduction("cofff")}} className={`hover:bg-gray-600 rounded text-stone-200 p-1 pr-4 rounded-tr-full rounded-bl-36 overflow-hidden ${activeProduction==="cofff"?"bg-gray-800 text-sky-300 ":""}`}>COFFEE ROASTER AND GRINDER</button>
+                           
+                            </div>
+                            <div className="flex flex-wrap w-2xl">
+
+                                {category==="mani" && activeProduction==="win" &&cards.map((imp, index) => ( 
+                                        <Cards 
+                                            key={index}
+                                            title={imp.title}
+                                            description={imp.desc}
+                                            image={imp.image}
+                                            detail={imp.detail}
+                                        />
+                                    ))
+                                }
+                                {
+                                    category==="mani" && activeProduction==="dis" && destones.map((imp, index) => (
+                                        <Cards 
+                                            key={index}
+                                            title={imp.title}
+                                            description={imp.desc}
+                                            image={imp.image}
+                                            detail={imp.detail}
+                                        />
+                                    ))
+                                }
+                                {
+                                    category==="mani" && activeProduction==="plus" && pluses.map((imp, index) => (
+                                        <Cards 
+                                            key={index}
+                                            title={imp.title}
+                                            description={imp.desc}
+                                            image={imp.image}
+                                            detail={imp.detail}
+                                        />
+                                    ))
+                                }
+                                {
+                                    category==="mani" && activeProduction==="cofff" && roasts.map((imp, index) => (
+                                        <Cards 
+                                            key={index}
+                                            title={imp.title}
+                                            description={imp.desc}
+                                            image={imp.image}
+                                            detail={imp.detail}
+                                        />
+                                    ))
+                                }
+                            </div>
+                            
+                        </div>
+                    ) 
                     
                 }
                 {

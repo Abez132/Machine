@@ -1,6 +1,4 @@
-
-
-export const cards = [
+export const roasts = [
     {
         image: "img.webp",
         title: "Great team work",
