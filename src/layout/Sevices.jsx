@@ -3,7 +3,13 @@ import Detail from "./Detaile";
 import { useLocation } from "react-router-dom";
 import { useEffect,useState } from "react";
 import { cards } from "./data/cards";
-import {destones} from "./data/destone.js"
+import {destones} from "./data/destone.js";
+// import onePiece from "../../public/img.webp";
+// import onePiece2 from "../../public/dis.jpg";
+import { FaArrowRight } from "react-icons/fa";
+import { FaArrowLeft } from "react-icons/fa";
+
+
 
 import {imports} from "./data/import";
 import { buildings } from "./data/bulding";
@@ -12,6 +18,7 @@ import { pulses } from "./data/pulse";
 import { coffees } from "./data/coffee";
 import { pluses } from "./data/pluse.js";
 import { roasts } from "./data/coffeeRoast.js";
+import { DiJava } from "react-icons/di";
 
 const Services = () => {
     const { state } = useLocation();
@@ -21,14 +28,28 @@ const Services = () => {
     const[activeImport,setActiveImport]=useState("havi");
     const[activeExport,setActiveExport]=useState("pu");
     const[activeProduction,setActiveProduction]=useState("win");
+    const [index, setIndex] = useState(0);
 
     useEffect(() => {
         window.scrollTo({ top: 0, behavior: "smooth" });
         if (state) setShowDetail(true);
     }, [state]);
 
+    const images=[
+        {url:'img.webp' },
+        {url:'dis.jpg' },
+
+    ];
+
+    const goToRight = () => {
+        index < images.length - 1 ? setIndex(index + 1) : setIndex(0);
+    };
+    const goToLeft = () => {
+        index > 0 ? setIndex(index - 1) : setIndex(images.length - 1);
+    };
+
     return (
-        <div className="flex flex-col justify-center transition-all duration-300 items-center text-amber-400">
+        <div className="flex flex-col justify-center transition-all duration-300 items-center">
             {state && showDetail && (
                 <div id="top" className="transition-all">
                     <div className="absolute m-4 text-4xl text-red-100 hover:text-red-600 backdrop-blur-3xl hover:scale-105 hover:cursor-pointer transition right-4 " 
@@ -60,17 +81,42 @@ const Services = () => {
                             <button onClick={()=>{setCategory("mani"); setActiveProduction("cofff")}} className={`hover:bg-gray-600 rounded text-stone-200 p-1 pr-4 rounded-tr-full rounded-bl-36 overflow-hidden ${activeProduction==="cofff"?"bg-gray-800 text-sky-300 ":""}`}>COFFEE ROASTER AND GRINDER</button>
                            
                             </div>
-                            <div className="flex flex-wrap ">
+                            <div className="flex flex-wrap w-full justify-center items-center gap-4 p-4">
 
-                                {category==="mani" && activeProduction==="win" &&cards.map((imp, index) => ( 
-                                        <Cards 
-                                            key={index}
-                                            title={imp.title}
-                                            description={imp.desc}
-                                            image={imp.image}
-                                            detail={imp.detail}
-                                        />
-                                    ))
+                                {category==="mani" && activeProduction==="win" &&(<div className="w-full">
+                                    <div className="w-full h-full  flex justify-start">
+                                        <div className="relative m-4 flex flex-col  ">
+                                            <div className="absolute text-3xl text-sky-950 active:scale-100 hover:scale-110 p-1 rounded-full bg-gray-600/40 cursor-pointer top-1/2 right-8" onClick={goToRight}><FaArrowRight/>
+                                            </div>
+                                            <div className="absolute text-3xl text-sky-950 active:scale-100 hover:scale-110 p-1 rounded-full bg-gray-600/40 cursor-pointer top-1/2 left-8" onClick={goToLeft}><FaArrowLeft/></div>
+                                            <div className="flex flex-col h-full w-full p-74" 
+                                                          style={{
+                                                              backgroundImage:`url(${images[index].url})`,
+                                                              backgroundSize: "cover",
+                                                              backgroundRepeat: "no-repeat",
+                                                              backgroundPosition: "center",
+                                                              imageRendering: "auto"
+                                                           }}
+                                                          ></div> 
+                                            <div className="flex gap-4 justify-center text-2xl">
+                                                {
+                                                images.map((image, idx) => (
+                                                    <div key={idx}>
+                                                        .
+                                                    </div>
+                                                ))
+                                            }
+                                            </div>
+                                            
+                                        </div>
+                                        
+                                        <div className="m-4">
+                                            <h1>llllllll</h1>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste praesentium amet soluta eum necessitatibus voluptatem deleniti, quo at accusantium alias placeat expedita sed dicta iure ducimus doloribus sunt ipsa cupiditate.lore Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus ducimus, in eaque porro reprehenderit commodi officia aliquam non quod repellat totam accusantium ab numquam, quasi alias doloribus! Itaque, eligendi architecto? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum, unde inventore. Aut, temporibus earum ex vero quos id dignissimos omnis exercitationem iure soluta perspiciatis eveniet, facilis, cumque cum natus eaque!</p>
+                                            <button className="bg-sky-300 p-2">jjjjjj</button>
+                                        </div>
+                                    </div>
+                                </div>)
                                 }
                                 {
                                     category==="mani" && activeProduction==="dis" && destones.map((imp, index) => (
