@@ -38,7 +38,7 @@ const Services = () => {
 
     const images=[
         {url:'img.webp' },
-        {url:'dis.jpg' },
+        {url:'img2.jpg' },
 
     ];
 
@@ -85,15 +85,15 @@ const Services = () => {
                             <div className="flex flex-wrap w-full justify-center items-center gap-4 p-4">
 
                                 {category==="mani" && activeProduction==="win" &&(<div className="w-full">
-                                    <div className="w-full h-full  flex  flex-col md:flex-row justify-center items-center">
+                                    <div className="w-full h-full  flex  flex-col md:flex-row justify-center ">
                                         <div className="relative m-4 flex flex-col h-full w-full ">
-                                            <div className="absolute opacity-0 md:opacity-100 text-2xl text-sky-950 active:scale-100 hover:scale-110 p-1 rounded-full bg-gray-600/40 cursor-pointer top-1/2 right-8" onClick={goToRight}><FaChevronRight/>
+                                            <div className="absolute z-1 opacity-0 md:opacity-100 text-2xl text-sky-950 active:scale-100 hover:scale-110 p-1 rounded-full bg-gray-600/40 cursor-pointer top-1/2 right-8" onClick={goToRight}><FaChevronRight/>
                                             </div>
-                                            <div className="absolute opacity-0 md:opacity-100 text-2xl text-sky-950 active:scale-100 hover:scale-110 p-1 rounded-full bg-gray-600/40 cursor-pointer top-1/2 left-8" onClick={goToLeft}><FaChevronLeft/></div>
-                                            <div className="flex flex-col h-full w-full md:w-2xl " 
+                                            <div className="absolute z-1 opacity-0 md:opacity-100 text-2xl text-sky-950 active:scale-100 hover:scale-110 p-1 rounded-full bg-gray-600/40 cursor-pointer top-1/2 left-8" onClick={goToLeft}><FaChevronLeft/></div>
+                                            <div className="flex flex-col transition h-full w-full md:w-2xl " 
                                                           style={{
                                                               backgroundImage:`url(${images[index].url})`,
-                                                              backgroundSize: "cover",
+                                                              backgroundSize: "contain",
                                                               backgroundRepeat: "no-repeat",
                                                               backgroundPosition: "center",
                                                               imageRendering: "auto",
@@ -111,6 +111,7 @@ const Services = () => {
                                             }
                                             </div>
                                             
+                                            
                                         </div>
                                         
                                         <div className="m-4">
@@ -119,6 +120,11 @@ const Services = () => {
                                             <button className="bg-sky-300 p-2">jjjjjj</button>
                                         </div>
                                     </div>
+                                    <div className="flex flex-col justify-center w-full h-full items-center">
+                                        <video src="vid1.MOV" className="w-full h-screen" controls></video>
+                                        <video src="vid2.MOV"  className="w-full  h-screen" controls></video>
+                                    </div>
+                                    
                                 </div>)
                                 }
                                 {
