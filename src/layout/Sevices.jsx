@@ -2,12 +2,13 @@ import Cards from "./components/Cards";
 import Detail from "./Detaile";
 import { useLocation } from "react-router-dom";
 import { useEffect,useState } from "react";
-import { cards } from "./data/cards";
+// import { cards } from "./data/cards";
 import {destones} from "./data/destone.js";
 // import onePiece from "../../public/img.webp";
 // import onePiece2 from "../../public/dis.jpg";
-import { FaArrowRight } from "react-icons/fa";
-import { FaArrowLeft } from "react-icons/fa";
+import { FaChevronRight } from "react-icons/fa";
+
+import { FaChevronLeft } from "react-icons/fa";
 
 
 
@@ -84,18 +85,20 @@ const Services = () => {
                             <div className="flex flex-wrap w-full justify-center items-center gap-4 p-4">
 
                                 {category==="mani" && activeProduction==="win" &&(<div className="w-full">
-                                    <div className="w-full h-full  flex justify-start">
-                                        <div className="relative m-4 flex flex-col  ">
-                                            <div className="absolute text-3xl text-sky-950 active:scale-100 hover:scale-110 p-1 rounded-full bg-gray-600/40 cursor-pointer top-1/2 right-8" onClick={goToRight}><FaArrowRight/>
+                                    <div className="w-full h-full  flex  flex-col md:flex-row justify-center items-center">
+                                        <div className="relative m-4 flex flex-col h-full w-full ">
+                                            <div className="absolute opacity-0 md:opacity-100 text-2xl text-sky-950 active:scale-100 hover:scale-110 p-1 rounded-full bg-gray-600/40 cursor-pointer top-1/2 right-8" onClick={goToRight}><FaChevronRight/>
                                             </div>
-                                            <div className="absolute text-3xl text-sky-950 active:scale-100 hover:scale-110 p-1 rounded-full bg-gray-600/40 cursor-pointer top-1/2 left-8" onClick={goToLeft}><FaArrowLeft/></div>
-                                            <div className="flex flex-col h-full w-full p-74" 
+                                            <div className="absolute opacity-0 md:opacity-100 text-2xl text-sky-950 active:scale-100 hover:scale-110 p-1 rounded-full bg-gray-600/40 cursor-pointer top-1/2 left-8" onClick={goToLeft}><FaChevronLeft/></div>
+                                            <div className="flex flex-col h-full w-full md:w-2xl " 
                                                           style={{
                                                               backgroundImage:`url(${images[index].url})`,
                                                               backgroundSize: "cover",
                                                               backgroundRepeat: "no-repeat",
                                                               backgroundPosition: "center",
-                                                              imageRendering: "auto"
+                                                              imageRendering: "auto",
+                                                               
+                                                              height: "80vh" 
                                                            }}
                                                           ></div> 
                                             <div className="flex gap-4 justify-center text-2xl">
