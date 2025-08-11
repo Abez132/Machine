@@ -88,7 +88,7 @@ const Contact=()=>{
                     <ul className="flex flex-col justify-start items-start">
                       <li className="flex justify-center items-center gap-x-2 font-medium "><MdEmail /><b>Your Email:</b>  info@habayat.com</li>
                       <li className="flex justify-center items-center gap-x-2 font-medium"><FaPhone /><b>Phone:</b>  +251 911 123 456</li>
-                      <li className="flex justify-center items-center gap-x-2 font-medium"><FaLocationDot/><b>Address:</b> Addis Ababa, Ethiopia</li>
+                      <li className="flex justify-center items-center gap-x-2 font-medium"><FaLocationDot/><b>Address:</b> Addis Ababa Around Wingete, Hewan Building</li>
                     </ul>
                     <hr />
                     <h2><b>Follow Us:</b></h2>
