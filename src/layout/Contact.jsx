@@ -75,7 +75,7 @@ const Contact=()=>{
 
             <input
               type="submit"
-              className="bg-stone-700 text-white m-3 ml-0 rounded-3xl w-40 h-10 hover:bg-sky-700 hover:cursor-pointer"
+              className="bg-sky-700 text-white m-3 ml-0 rounded-3xl w-40 h-10 hover:bg-sky-400 transition active:scale-95 hover:cursor-pointer"
               value="Post Comment" onSubmit={scrollToForm}
             />
           </form>
