@@ -26,7 +26,7 @@ const Cards=({ title, description, image, detail }) => {
                 <p className="flex-start  font-['poppins'] md:text-xl text-lg font-semibold">
                     {title}
                 </p>
-                <span className="md:text-md text-l font-medium font-['poppins'] flex-start text-gray-900">
+                <span className="md:text-md text-l font-medium font-['poppins'] flex-start text-black text-shadow-sm text-shadow-stone-700">
                     {description}
                 </span>
                 <br />

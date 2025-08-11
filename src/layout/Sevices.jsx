@@ -86,7 +86,7 @@ const Services = () => {
 
                                 {category==="mani" && activeProduction==="win" &&(<div className="w-full">
                                     <div className="w-full h-full  flex  flex-col md:flex-row justify-center ">
-                                        <div className="relative m-4 flex flex-col h-full w-full ">
+                                        <div className="relative  flex flex-col h-full w-full ">
                                             <div className="absolute z-1 opacity-0 md:opacity-100 text-2xl text-sky-950 active:scale-100 hover:scale-110 p-1 rounded-full bg-gray-600/40 cursor-pointer top-1/2 right-8" onClick={goToRight}><FaChevronRight/>
                                             </div>
                                             <div className="absolute z-1 opacity-0 md:opacity-100 text-2xl text-sky-950 active:scale-100 hover:scale-110 p-1 rounded-full bg-gray-600/40 cursor-pointer top-1/2 left-8" onClick={goToLeft}><FaChevronLeft/></div>
