@@ -1,6 +1,6 @@
 export const exports=[
      {
-        image: "https://i.pinimg.com/736x/be/7e/4d/be7e4ddb6b374c0acc441974ccb6ea11.jpg",
+        image: "https://i.pinimg.com/736x/30/25/1b/30251bbef57cd2cb68b3ea035d06c2da.jpg",
         title: "Sesame Brown",
         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         detail:"Brown sesame seeds have a strong, nutty flavor and are often used in oil extraction. They are rich in antioxidants, fiber, and essential fatty acids."
