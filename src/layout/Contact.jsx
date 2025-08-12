@@ -108,7 +108,7 @@ const Contact=()=>{
                   
                   <div className="flex flex-col gap-2 mt-4">
                     <ul className="flex flex-col justify-start items-start">
-                      <li className="flex justify-center items-center gap-x-2 font-medium "><MdEmail /><b>Your Email:</b>  info@habayat.com</li>
+                      <li className="flex justify-center items-center gap-x-2 font-medium "><MdEmail /><b>Your Email:</b>  habyattradingplc@gmail.com</li>
                       <li className="flex justify-center items-center gap-x-2 font-medium"><FaPhone /><b>Phone:</b>  +251 94 019 0896</li>
                       <li className="flex justify-center items-center gap-x-2 font-medium"><FaPhone /><b>Phone:</b>  +251 91 164 9706</li>
                       <li className="flex justify-center items-center gap-x-2 font-medium"><FaLocationDot/><b>Address:</b> Addis Ababa Around Wingete, Hewan Building</li>
