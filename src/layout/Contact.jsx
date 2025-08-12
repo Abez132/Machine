@@ -1,3 +1,6 @@
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+
 import { MdEmail } from "react-icons/md";
 import { FaPhone } from "react-icons/fa6";
 import { FaFacebookF } from "react-icons/fa6";
@@ -6,6 +9,25 @@ import { FaInstagram } from "react-icons/fa6";
 import { FaLocationDot } from "react-icons/fa6";
 // import image from "../assets/cons.jpg"
 const Contact=()=>{
+    const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_ti545rg', 'template_fyqgezd', form.current, {
+        publicKey: 'mLlDs01dae9N7lk9L',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          alert('Failed to send: ' + error.text);
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
     const scrollToForm = () => {
     const formSection = document.getElementById("form-section");
     if (formSection) {
@@ -36,7 +58,7 @@ const Contact=()=>{
             </div>
           )} */}
 
-          <form  className="w-full ">
+          <form  className="w-full " onSubmit={sendEmail} ref={form}>
             <label htmlFor="comment">Comment:</label>
             <br />
             <textarea
@@ -59,12 +81,12 @@ const Contact=()=>{
             />
             <br />
 
-            <label htmlFor="email">Email*</label>
+            <label htmlFor="user_email">Email*</label>
             <br />
             <input
               type="email"
               id="email"
-              name="email"
+              name="user_email"
               className="w-full h-10 mb-3 border-gray-300 border"
               
             />
