@@ -1,7 +1,8 @@
 import Cards from "./components/Cards";
 import Detail from "./Detaile";
-import { useLocation } from "react-router-dom";
+import { useLocation,Link } from "react-router-dom";
 import { useEffect,useState } from "react";
+
 // import { cards } from "./data/cards";
 import {destones} from "./data/destone.js";
 // import onePiece from "../../public/img.webp";
@@ -66,9 +67,9 @@ const Services = () => {
             
             <div>
                 <div className="flex justify-center items-center gap-4 p-4">
-                    <button className={`hover:bg-gray-600 text-stone-200  p-1 pr-4 rounded-tr-full rounded-bl-36 overflow-hidden ${active==="mani"?"bg-gray-800 text-sky-300 ":""}`} onClick={()=>{setCategory("mani"); setActive("mani")}}>PRODUCTION</button> 
-                    <button onClick={()=>{setCategory("import"); setActive("import")}} className={`hover:bg-gray-600 rounded text-stone-200 p-1 pr-4 rounded-tr-full rounded-bl-36 overflow-hidden ${active==="import"?"bg-gray-800 text-sky-300 ":""}`}>IMPORT ITEMS</button> 
-                    <button onClick={()=>{setCategory("export"); setActive("export")}} className={`hover:bg-gray-600 rounded text-stone-200 p-1 pr-4 rounded-tr-full rounded-bl-36 overflow-hidden ${active==="export"?"bg-gray-800 text-sky-300":""}`}>EXPORT ITEMS</button>
+                    <button className={`hover:text-shadow-sm rounded hover:text-shadow-stone-300 text-stone-200  p-1 overflow-hidden ${active==="mani"?"bg-gray-800 text-sky-300 ":""}`} onClick={()=>{setCategory("mani"); setActive("mani")}}>PRODUCTION</button> 
+                    <button onClick={()=>{setCategory("import"); setActive("import")}} className={`hover:text-shadow-sm hover:text-shadow-stone-300 transition rounded text-stone-200 p-1 overflow-hidden ${active==="import"?"bg-gray-800 text-sky-300 ":""}`}>IMPORT ITEMS</button> 
+                    <button onClick={()=>{setCategory("export"); setActive("export")}} className={`hover:text-shadow-sm hover:text-shadow-stone-300 transition rounded text-stone-200 p-1 overflow-hidden ${active==="export"?"bg-gray-800 text-sky-300":""}`}>EXPORT ITEMS</button>
                 </div>
                <div className="flex  flex-row justify-center flex-wrap min-h-screen  gap-4 ">
 
@@ -76,10 +77,10 @@ const Services = () => {
                     category==="mani" && (
                         <div className="flex flex-col w-full   h-full">
                             <div className="flex flex-wrap w-full justify-center items-center gap-4  p-4 "> 
-                                <button className={`hover:bg-gray-600 text-stone-200  p-1 pr-4 rounded-tr-full rounded-bl-36 overflow-hidden ${activeProduction==="win"?"bg-gray-800 text-sky-300 ":""}`} onClick={()=>{setCategory("mani"); setActiveProduction("win")}}>WINNOWING MACHINE </button> 
-                            <button onClick={()=>{setCategory("mani"); setActiveProduction("dis")}} className={`hover:bg-gray-600 rounded text-stone-200 p-1 pr-4 rounded-tr-full rounded-bl-36 overflow-hidden ${activeProduction==="dis"?"bg-gray-800 text-sky-300 ":""}`}>DISTONER</button>
-                            <button onClick={()=>{setCategory("mani"); setActiveProduction("plus")}} className={`hover:bg-gray-600 rounded text-stone-200 p-1 pr-4 rounded-tr-full rounded-bl-36 overflow-hidden ${activeProduction==="plus"?"bg-gray-800 text-sky-300 ":""}`}>WINNOWING + DISTONER</button>
-                            <button onClick={()=>{setCategory("mani"); setActiveProduction("cofff")}} className={`hover:bg-gray-600 rounded text-stone-200 p-1 pr-4 rounded-tr-full rounded-bl-36 overflow-hidden ${activeProduction==="cofff"?"bg-gray-800 text-sky-300 ":""}`}>COFFEE ROASTER AND GRINDER</button>
+                                <button className={`hover:text-shadow-sm hover:text-shadow-stone-300 transition text-stone-200 rounded   p-1 overflow-hidden ${activeProduction==="win"?"bg-gray-800 text-sky-300 ":""}`} onClick={()=>{setCategory("mani"); setActiveProduction("win")}}>WINNOWING MACHINE </button> 
+                            <button onClick={()=>{setCategory("mani"); setActiveProduction("dis")}} className={`hover:text-shadow-sm hover:text-shadow-stone-300 transition rounded text-stone-200 p-1  overflow-hidden ${activeProduction==="dis"?"bg-gray-800 text-sky-300 ":""}`}>DISTONER</button>
+                            <button onClick={()=>{setCategory("mani"); setActiveProduction("plus")}} className={`hover:text-shadow-sm hover:text-shadow-stone-300 transition rounded text-stone-200 p-1 overflow-hidden ${activeProduction==="plus"?"bg-gray-800 text-sky-300 ":""}`}>WINNOWING + DISTONER</button>
+                            <button onClick={()=>{setCategory("mani"); setActiveProduction("cofff")}} className={`hover:text-shadow-sm hover:text-shadow-stone-300 transition rounded text-stone-200 p-1 overflow-hidden ${activeProduction==="cofff"?"bg-gray-800 text-sky-300 ":""}`}>COFFEE ROASTER AND GRINDER</button>
                            
                             </div>
                             <div className="flex flex-wrap w-full justify-center items-center gap-4 p-4">
@@ -115,14 +116,20 @@ const Services = () => {
                                         </div>
                                         
                                         <div className="m-4">
-                                            <h1>llllllll</h1>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste praesentium amet soluta eum necessitatibus voluptatem deleniti, quo at accusantium alias placeat expedita sed dicta iure ducimus doloribus sunt ipsa cupiditate.lore Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus ducimus, in eaque porro reprehenderit commodi officia aliquam non quod repellat totam accusantium ab numquam, quasi alias doloribus! Itaque, eligendi architecto? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum, unde inventore. Aut, temporibus earum ex vero quos id dignissimos omnis exercitationem iure soluta perspiciatis eveniet, facilis, cumque cum natus eaque!</p>
-                                            <button className="bg-sky-300 p-2">jjjjjj</button>
+                                           
+                                            <p>A specialized seed-cleaning machine that uses controlled airflow and vibration to separate seeds from lighter impurities such as husks, dried leaves, broken shells, and dust. The process works by allowing lighter materials to be blown away while the heavier, clean seeds fall into a collection chamber. This ensures high-quality seed output, reduces contamination, and prepares seeds for further processing, storage, or packaging. It is widely used for grains, pulses, and oil seeds to maintain purity and improve market value.</p>
+                                            <Link to="/contact"><button className="bg-sky-700 hover:bg-sky-400 hover:scale-105 active:scale-95 transition text-white px-4 py-2 m-2 rounded">Contact Us</button></Link>
                                         </div>
                                     </div>
-                                    <div className="flex flex-col justify-center w-full h-full items-center">
-                                        <video src="vid1.MOV" className="w-full h-screen" controls></video>
-                                        <video src="vid2.MOV"  className="w-full  h-screen" controls></video>
+                                    <div className="flex flex-col md:flex-row justify-center m-4 w-full h-full items-start">
+                                        <div>
+                                            <video src="vid1.MOV" className="w-124 h-96" controls></video>
+                                            <video src="vid2.MOV"  className="w-124  h-96" controls></video>
+                                        </div>
+                                        <div>
+                                            <p>This are a demo of our winnowing machine in action</p>
+                                        </div>
+                                        
                                     </div>
                                     
                                 </div>)
@@ -167,8 +174,8 @@ const Services = () => {
                     category==="import" && (
                         <div className="flex flex-col w-full">
                             <div className="flex justify-center items-center gap-4 p-4 "> 
-                                <button className={`hover:bg-gray-600 text-stone-200  p-1 pr-4 rounded-tr-full rounded-bl-36 overflow-hidden ${activeImport==="havi"?"bg-gray-800 text-sky-300 ":""}`} onClick={()=>{setCategory("import"); setActiveImport("havi")}}>HEAVEY MACHINERY </button> 
-                            <button onClick={()=>{setCategory("import"); setActiveImport("bul")}} className={`hover:bg-gray-600 rounded text-stone-200 p-1 pr-4 rounded-tr-full rounded-bl-36 overflow-hidden ${activeImport==="bul"?"bg-gray-800 text-sky-300 ":""}`}>BUILDING FINISHING PRODUCT</button>
+                                <button className={`hover:text-shadow-sm hover:text-shadow-stone-300 transition text-stone-200  p-1 overflow-hidden rounded ${activeImport==="havi"?"bg-gray-800 text-sky-300 ":""}`} onClick={()=>{setCategory("import"); setActiveImport("havi")}}>HEAVEY MACHINERY </button> 
+                            <button onClick={()=>{setCategory("import"); setActiveImport("bul")}} className={`hover:text-shadow-sm hover:text-shadow-stone-300 transition rounded text-stone-200 p-1 overflow-hidden ${activeImport==="bul"?"bg-gray-800 text-sky-300 ":""}`}>BUILDING FINISHING PRODUCT</button>
                             </div>
                             <div className="flex flex-wrap">
 
@@ -203,9 +210,9 @@ const Services = () => {
                     category==="export" && (
                         <div>
                             <div className="flex justify-center items-center gap-4 p-4"> 
-                                <button className={`hover:bg-gray-600 text-stone-200  p-1 pr-4 rounded-tr-full rounded-bl-36 overflow-hidden ${activeExport==="pu"?"bg-gray-800 text-sky-300 ":""}`} onClick={()=>{setCategory("export"); setActiveExport("pu")}}>PULSES </button> 
-                    <button onClick={()=>{setCategory("export"); setActiveExport("oil")}} className={`hover:bg-gray-600 rounded text-stone-200 p-1 pr-4 rounded-tr-full rounded-bl-36 overflow-hidden ${activeExport==="oil"?"bg-gray-800 text-sky-300 ":""}`}>OIL SEEDS</button>
-                    <button onClick={()=>{setCategory("export"); setActiveExport("cof")}} className={`hover:bg-gray-600 rounded text-stone-200 p-1 pr-4 rounded-tr-full rounded-bl-36 overflow-hidden ${activeExport==="cof"?"bg-gray-800 text-sky-300 ":""}`}>PROCCESSED COFFEE</button>
+                                <button className={`hover:text-shadow-sm rounded hover:text-shadow-stone-300 text-stone-200  p-1 overflow-hidden ${activeExport==="pu"?"bg-gray-800 text-sky-300 ":""}`} onClick={()=>{setCategory("export"); setActiveExport("pu")}}>PULSES </button> 
+                    <button onClick={()=>{setCategory("export"); setActiveExport("oil")}} className={`hover:text-shadow-sm hover:text-shadow-stone-300 transition rounded text-stone-200 p-1 overflow-hidden ${activeExport==="oil"?"bg-gray-800 text-sky-300 ":""}`}>OIL SEEDS</button>
+                    <button onClick={()=>{setCategory("export"); setActiveExport("cof")}} className={`hover:text-shadow-sm hover:text-shadow-stone-300 transition rounded text-stone-200 p-1 overflow-hidden ${activeExport==="cof"?"bg-gray-800 text-sky-300 ":""}`}>PROCCESSED COFFEE</button>
                             </div>
                             <div className="flex flex-wrap">
 
