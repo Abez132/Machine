@@ -2,6 +2,8 @@ import Cards from "./components/Cards";
 import Detail from "./Detaile";
 import { useLocation,Link } from "react-router-dom";
 import { useEffect,useState } from "react";
+import {motion as _motions} from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 
 // import { cards } from "./data/cards";
 import {destones} from "./data/destone.js";
@@ -71,11 +73,17 @@ const Services = () => {
                     <button onClick={()=>{setCategory("import"); setActive("import")}} className={`hover:text-shadow-sm hover:text-shadow-stone-300 transition rounded text-stone-200 p-1 overflow-hidden ${active==="import"?"bg-gray-800 text-sky-300 ":""}`}>IMPORT ITEMS</button> 
                     <button onClick={()=>{setCategory("export"); setActive("export")}} className={`hover:text-shadow-sm hover:text-shadow-stone-300 transition rounded text-stone-200 p-1 overflow-hidden ${active==="export"?"bg-gray-800 text-sky-300":""}`}>EXPORT ITEMS</button>
                 </div>
+                <AnimatePresence mode="wait">
+                    
                <div className="flex  flex-row justify-center flex-wrap min-h-screen  gap-4 ">
 
                 {
                     category==="mani" && (
-                        <div className="flex flex-col w-full   h-full">
+                        <_motions.div initial={{ opacity: 0, x: 20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            exit={{ opacity: 0, x: -20 }}
+                            transition={{ duration:0.8 }}
+                            className="flex flex-col w-full   h-full">
                             <div className="flex flex-wrap w-full justify-center items-center gap-4  p-4 "> 
                                 <button className={`hover:text-shadow-sm hover:text-shadow-stone-300 transition text-stone-200 rounded   p-1 overflow-hidden ${activeProduction==="win"?"bg-gray-800 text-sky-300 ":""}`} onClick={()=>{setCategory("mani"); setActiveProduction("win")}}>WINNOWING MACHINE </button> 
                             <button onClick={()=>{setCategory("mani"); setActiveProduction("dis")}} className={`hover:text-shadow-sm hover:text-shadow-stone-300 transition rounded text-stone-200 p-1  overflow-hidden ${activeProduction==="dis"?"bg-gray-800 text-sky-300 ":""}`}>DISTONER</button>
@@ -166,13 +174,17 @@ const Services = () => {
                                 }
                             </div>
                             
-                        </div>
+                        </_motions.div>
                     ) 
                     
                 }
                 {
                     category==="import" && (
-                        <div className="flex flex-col w-full">
+                        <_motions.div initial={{ opacity: 0, x: 20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            exit={{ opacity: 0, x: -20 }}
+                            transition={{ duration:0.8 }}
+                            className="flex flex-col w-full">
                             <div className="flex justify-center items-center gap-4 p-4 "> 
                                 <button className={`hover:text-shadow-sm hover:text-shadow-stone-300 transition text-stone-200  p-1 overflow-hidden rounded ${activeImport==="havi"?"bg-gray-800 text-sky-300 ":""}`} onClick={()=>{setCategory("import"); setActiveImport("havi")}}>HEAVEY MACHINERY </button> 
                             <button onClick={()=>{setCategory("import"); setActiveImport("bul")}} className={`hover:text-shadow-sm hover:text-shadow-stone-300 transition rounded text-stone-200 p-1 overflow-hidden ${activeImport==="bul"?"bg-gray-800 text-sky-300 ":""}`}>BUILDING FINISHING PRODUCT</button>
@@ -202,13 +214,17 @@ const Services = () => {
                                 }
                             </div>
                             
-                        </div>
+                        </_motions.div>
                     ) 
                     
                 }
                 {
                     category==="export" && (
-                        <div>
+                        <_motions.div initial={{ opacity: 0, x: 20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            exit={{ opacity: 0, x: -20 }}
+                            transition={{ duration:0.8 }}>
+
                             <div className="flex justify-center items-center gap-4 p-4"> 
                                 <button className={`hover:text-shadow-sm rounded hover:text-shadow-stone-300 text-stone-200  p-1 overflow-hidden ${activeExport==="pu"?"bg-gray-800 text-sky-300 ":""}`} onClick={()=>{setCategory("export"); setActiveExport("pu")}}>PULSES </button> 
                     <button onClick={()=>{setCategory("export"); setActiveExport("oil")}} className={`hover:text-shadow-sm hover:text-shadow-stone-300 transition rounded text-stone-200 p-1 overflow-hidden ${activeExport==="oil"?"bg-gray-800 text-sky-300 ":""}`}>OIL SEEDS</button>
@@ -250,13 +266,14 @@ const Services = () => {
                                 }
                             </div>
                             
-                        </div>
+                        </_motions.div>
                     ) 
                     
                 }
                 
                     
                 </div> 
+                </AnimatePresence>
             </div>
             
             

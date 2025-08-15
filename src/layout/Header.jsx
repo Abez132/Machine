@@ -17,7 +17,7 @@ const Head=()=>{
     return(
         <div className="flex justify-between items-center p-2 transition-colors   text-gray-100  duration-300">
             <div className="w-1/2 px-4 flex items-center justify-start gap-2 text-white">
-                <Link to=""><img src={logo} alt="LOGO" loading="lazy" className="w-24 h-14 "/></Link>
+                <Link to=""><img src={logo} alt="LOGO" loading="lazy" className="w-32 h-20 "/></Link>
                 <span className="   "> Trading PLC</span>
             </div>
             <div className=" w-1/3 h-10  rounded-3xl flex justify-center p-2 flex-wrap sticky top-4 z-50 gap-2">
@@ -37,7 +37,7 @@ const Head=()=>{
                     </Link>
                     <Link to="/contact"><li 
                         onClick={() => {setSelected("Contact"); }}
-                        className={`hover:border-b-2 text-xs md:text-base lg:text-lg text-cyan-50 transition-colors origin-left transform rounded-l ease-in-out hover:cursor-pointer hover:border-blue-100 ${selected === "Contact" ? "border-b-2 border-blue-100" : ""}`}>Contact</li>
+                        className={`hover:bg-sky-600 text-xs md:text-base lg:text-lg text-cyan-50 rounded bg-sky-700 p-1 px-4 transition-colors origin-left transform rounded-l ease-in-out hover:cursor-pointer hover:border-blue-100 ${selected === "Contact" ? "" : ""}`}>Contact</li>
                     </Link>
                 </ul>
                 <div className="flex items-center justify-center md:hidden">
@@ -53,7 +53,7 @@ const Head=()=>{
                             className="absolute top-4 right-2  text-white text-2xl"
                             onClick={() => setIsOpen(false)}
                         >
-                            x
+                           <b>x</b>
                         </button>
                         <ul className="flex flex-col items-center justify-center h-full space-y-4 ">
                             <Link to="/" onClick={() => setIsOpen(false)}><li className=" text-white active:scale-95 active:bg-sky-800 transition rounded-2xl text-3xl m-2 "><TiHomeOutline/></li></Link>
