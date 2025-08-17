@@ -7,7 +7,7 @@ import { IoPeople } from "react-icons/io5";
 import { LuPackage2 } from "react-icons/lu";
 import { RiContactsBook2Fill } from "react-icons/ri";
 const Burger = () => {
-    const [isOpen, setIsOpen] = useState(true);
+    const [isOpen, setIsOpen] = useState(false);
     const [isHovered, setIsHovered] = useState("");
     return (
         <div className=" flex items-center justify-center">
