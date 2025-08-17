@@ -31,12 +31,12 @@ const Contact=()=>{
         },
       );
   };
-    const scrollToForm = () => {
-    const formSection = document.getElementById("form-section");
-    if (formSection) {
-      formSection.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  //   const scrollToForm = () => {
+  //   const formSection = document.getElementById("form-section");
+  //   if (formSection) {
+  //     formSection.scrollIntoView({ behavior: "smooth" });
+  //   }
+  // };
 
     return(
         <div className=" flex flex-col justify-center items-center  p-4">
@@ -113,7 +113,7 @@ const Contact=()=>{
             <input
               type="submit"
               className="bg-sky-700 text-white m-3 ml-0 rounded-3xl w-40 h-10 hover:bg-sky-400 transition active:scale-95 hover:cursor-pointer"
-              value="Post Comment" onSubmit={scrollToForm}
+              value="Post Comment" 
             />
           </form>
         </div>
