@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import { useState } from 'react';
 
 import { MdEmail } from "react-icons/md";
 import { FaPhone } from "react-icons/fa6";
@@ -10,6 +11,7 @@ import { FaLocationDot } from "react-icons/fa6";
 // import image from "../assets/cons.jpg"
 const Contact=()=>{
     const form = useRef();
+    const [notification, setNotification] = useState({ message: "", type: "" });
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -20,10 +22,11 @@ const Contact=()=>{
       })
       .then(
         () => {
+          setNotification({ message: "Email sent successfully!", type: "success" });
           console.log('SUCCESS!');
         },
         (error) => {
-          alert('Failed to send: ' + error.text);
+          setNotification({ message: "Failed to send email.", type: "error" });
           console.log('FAILED...', error.text);
         },
       );
@@ -34,6 +37,7 @@ const Contact=()=>{
       formSection.scrollIntoView({ behavior: "smooth" });
     }
   };
+
     return(
         <div className=" flex flex-col justify-center items-center  p-4">
           <div className="w-full md:w-2xl  p-4">
@@ -57,6 +61,17 @@ const Contact=()=>{
               {notification.message}
             </div>
           )} */}
+          {
+            notification.message && (
+              <div
+                className={`p-4 mb-4 rounded ${
+                  notification.type === "success" ? "bg-green-100 text-green-800" : "bg-red-100 text-red-800"
+                }`}
+              >
+                {notification.message}
+              </div>
+            )
+          }
 
           <form  className="w-full " onSubmit={sendEmail} ref={form}>
             <label htmlFor="comment">Comment:</label>
