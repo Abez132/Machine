@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Head from "./layout/Header";
+import Head from "./layout/components/Header";
 import Footer from "./layout/Footer";
 import Home from "./layout/Home";
 import Services from "./layout/Sevices";
@@ -33,7 +33,7 @@ function App() {
     <div id="top" className="relative p-0 m-0 text-white bg-gray-950">
       {/* <Analytics/> */}
       <Router>
-        <div className="top-0 left-0 w-full z-20"><Head /></div>
+        
         
         <Routes>
           <Route path="/" element={<Home />} />

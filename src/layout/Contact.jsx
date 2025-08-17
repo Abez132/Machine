@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { useState } from 'react';
+import Burger from "./components/Burger";
 
 import { MdEmail } from "react-icons/md";
 import { FaPhone } from "react-icons/fa6";
@@ -40,6 +41,7 @@ const Contact=()=>{
 
     return(
         <div className=" flex flex-col justify-center items-center  p-4">
+           <Burger/>
           <div className="w-full md:w-2xl  p-4">
             <h1 className="text-3xl font-bold text-center mb-4">Contact Us</h1>
             <p className="text-lg mb-4 font-medium">We would love to hear from you! Please reach us using the below form or  through the provided contact details.</p>

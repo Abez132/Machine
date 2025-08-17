@@ -1,7 +1,6 @@
 // import foot from "../assets/foot.jpg"
 import { MdEmail } from "react-icons/md";
 import { FaPhone } from "react-icons/fa6";
-import logo from "../assets/LOGO.png";
 import { FaFacebookF } from "react-icons/fa6";
 import { RiTwitterXFill } from "react-icons/ri";
 import { FaInstagram } from "react-icons/fa6";
@@ -19,7 +18,7 @@ const Footer=()=>{
         // }}
         >
             <div className="flex justify-center items-center  md:mb-0">
-                <img className="h-12 md:h-24" src={logo} alt="logo" />
+                <img className="h-12 md:h-24" src="LOGO.png" alt="logo" />
                 <p className="ml-2 text-sm md:text-base lg:text-lg"> Trading PLC</p>
             </div>
             

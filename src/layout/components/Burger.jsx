@@ -1,49 +1,19 @@
-import { useState} from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/LOGO.png";
+
 import { RxHamburgerMenu } from "react-icons/rx";
 import { TiHomeOutline } from "react-icons/ti";
 import { IoPeople } from "react-icons/io5";
 import { LuPackage2 } from "react-icons/lu";
 import { RiContactsBook2Fill } from "react-icons/ri";
-
-
-const Head=()=>{
-
-    const [selected, setSelected] = useState("Home");
+const Burger = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isHovered, setIsHovered] = useState("");
-
-    return(
-        <div className="flex justify-between items-center p-2 transition-colors   text-gray-100  duration-300">
-            <div className="w-1/2 px-4 flex items-center justify-start gap-2 text-white">
-                <Link to=""><img src={logo} alt="LOGO" loading="lazy" className="w-32 h-20 "/></Link>
-                <span className="   "> Trading PLC</span>
-            </div>
-            <div className=" w-1/3 h-10  rounded-3xl flex justify-center p-2 flex-wrap sticky top-4 z-50 gap-2">
-                <ul className="space-x-4 hidden md:opacity-100 md:flex md:items-center md:justify-center">
-                    <Link to="/"><li 
-                        onClick={() =>{setSelected("Home"); }}
-                        className={`hover:border-b-2 text-xs md:text-base lg:text-lg text-cyan-50 transition-colors origin-left transform rounded-l ease-in-out hover:cursor-pointer hover:border-blue-100 ${selected === "Home" ? "border-b-2 border-blue-100" : ""}`}>Home</li>
-                    </Link>
-                    
-                    <Link to="/services"><li 
-                        onClick={() => { setSelected("Services"); }}
-                        className={`hover:border-b-2 text-xs md:text-base lg:text-lg text-cyan-50 transition-colors origin-left transform rounded-l ease-in-out hover:cursor-pointer hover:border-blue-100 ${selected === "Services" ? "border-b-2 border-blue-100" : ""}`}>Services</li>
-                    </Link>
-                    <Link to="/about"><li 
-                        onClick={() => { setSelected("About Us"); }}
-                        className={`hover:border-b-2 text-xs md:text-base lg:text-lg text-cyan-50 transition-colors origin-left transform rounded-l ease-in-out hover:cursor-pointer hover:border-blue-100 ${selected === "About Us" ? "border-b-2 border-blue-100" : ""} `}>About Us</li>
-                    </Link>
-                    <Link to="/contact"><li 
-                        onClick={() => {setSelected("Contact"); }}
-                        className={`hover:bg-sky-600 text-xs md:text-base lg:text-lg text-cyan-50 rounded bg-sky-700 p-1 px-4 transition-colors origin-left transform rounded-l ease-in-out hover:cursor-pointer hover:border-blue-100 ${selected === "Contact" ? "" : ""}`}>Contact</li>
-                    </Link>
-                </ul>
-                <div className="flex items-center justify-center md:hidden">
-                    <RxHamburgerMenu
-                        className="text-3xl  text-white  cursor-pointer"
-                        onClick={() => setIsOpen(true)}/>
+    return (
+        <div className="flex items-center justify-center">
+            <RxHamburgerMenu
+                className="text-3xl  text-white  cursor-pointer"
+                onClick={() => setIsOpen(true)} />
                     <div
                         className={`fixed top-0 right-0 h-full w-10  bg-gray-950/90 z-50 transform transition-transform duration-300
                             ${isOpen ? "translate-x-0" : "translate-x-full"}`
@@ -95,8 +65,7 @@ const Head=()=>{
                         </ul>
                     </div>
                 </div>
-            </div>
-        </div>
     );
 };
-export default Head;
+
+export default Burger;

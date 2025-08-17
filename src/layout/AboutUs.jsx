@@ -1,6 +1,7 @@
 import onePiece from "../assets/N23.jpg"
 // import { Link } from "react-router-dom";
 import {motion as _motion} from "framer-motion";
+import Burger from "./components/Burger";
 
 const AboutUs = () => {
 
@@ -14,6 +15,7 @@ const AboutUs = () => {
                 //                  imageRendering: "auto"
                 //               }}
             >
+                <Burger/>
                 <_motion.div initial={{ opacity: 0, x: -100 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: 100 }} transition={{ duration: 0.5 }} className="m-2 w-full md:w-dvw h-full md:h-svh  ">
                     <img src={onePiece} alt="picture" className="h-full w-full rounded object-cover" />
                 </_motion.div>

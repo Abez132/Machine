@@ -1,5 +1,8 @@
 import Cards from "./components/Cards";
 import Detail from "./Detaile";
+
+
+import Burger from "./components/Burger";
 import { useLocation,Link } from "react-router-dom";
 import { useEffect,useState } from "react";
 import {motion as _motions} from "framer-motion";
@@ -22,7 +25,7 @@ import { pulses } from "./data/pulse";
 import { coffees } from "./data/coffee";
 import { pluses } from "./data/pluse.js";
 import { roasts } from "./data/coffeeRoast.js";
-import { DiJava } from "react-icons/di";
+
 
 const Services = () => {
     const { state } = useLocation();
@@ -54,6 +57,7 @@ const Services = () => {
 
     return (
         <div className="flex flex-col justify-center transition-all duration-300 items-center">
+            <Burger />
             {state && showDetail && (
                 <div id="top" className="transition-all">
                     <div className="absolute m-4 text-4xl text-red-100 hover:text-red-600 backdrop-blur-3xl hover:scale-105 hover:cursor-pointer transition right-4 " 
