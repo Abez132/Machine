@@ -12,7 +12,7 @@ const Head=()=>{
 
     const [selected, setSelected] = useState("Home");
     const [isOpen, setIsOpen] = useState(false);
-  
+    const [isHovered, setIsHovered] = useState("");
 
     return(
         <div className="flex justify-between items-center p-2 transition-colors   text-gray-100  duration-300">
@@ -45,24 +45,53 @@ const Head=()=>{
                         className="text-3xl  text-white  cursor-pointer"
                         onClick={() => setIsOpen(true)}/>
                     <div
-                        className={`fixed top-0 right-0 h-full w-10 bg-black backdrop-blur-md z-50 transform transition-transform duration-300
+                        className={`fixed top-0 right-0 h-full w-10  bg-gray-950/90 z-50 transform transition-transform duration-300
                             ${isOpen ? "translate-x-0" : "translate-x-full"}`
                         }
                     >
                         <button
-                            className="absolute top-4 right-2  text-white text-2xl"
+                            className="absolute top-4 right-3 cursor-pointer text-white text-2xl"
                             onClick={() => setIsOpen(false)}
                         >
-                           <b>x</b>
+                           <b>X</b>
                         </button>
                         <ul className="flex flex-col items-center justify-center h-full space-y-4 ">
-                            <Link to="/" onClick={() => setIsOpen(false)}><li className=" text-white active:scale-95 active:bg-sky-800 transition rounded-2xl text-3xl m-2 "><TiHomeOutline/></li></Link>
-                            <Link to="/about" onClick={() => setIsOpen(false)}><li className="text-white active:scale-95
-                            active:bg-sky-800 rounded-2xl text-3xl m-2  "><IoPeople/></li></Link>
-                            <Link to="/services" onClick={() => setIsOpen(false)}><li className="text-white active:scale-95
-                            active:bg-sky-800 rounded-2xl text-3xl m-2   "><LuPackage2/></li></Link>
-                            <Link to="/contact" onClick={() => setIsOpen(false)}><li className="text-white active:scale-95
-                            active:bg-sky-800 rounded-2xl text-3xl m-2 "><RiContactsBook2Fill/></li></Link>
+                            
+                            <div className="relative">
+                                <Link to="/" onClick={() => setIsOpen(false)}><li className=" text-white active:scale-95 active:bg-sky-800 transition rounded-2xl text-3xl m-2 "onMouseEnter={() => setIsHovered("home")} onMouseLeave={() => setIsHovered("")}><TiHomeOutline/></li></Link>
+                                {isHovered === 'home' && (
+                            <span className="absolute z-10 right-full top-3 ml-3 px-3 py-1 text-sm font-medium bg-gray-700  rounded-lg shadow-lg whitespace-nowrap">
+                             <b>Home</b>
+                            </span>
+                        )}
+                            </div>
+                            <div className="relative">
+                                <Link to="/about" onClick={() => setIsOpen(false)}><li className="text-white active:scale-95
+                            active:bg-sky-800 rounded-2xl text-3xl m-2  "onMouseEnter={() => setIsHovered("about")} onMouseLeave={() => setIsHovered("")}><IoPeople/></li></Link>
+                            {isHovered === 'about' && (
+                            <span className="absolute z-10 right-full top-3 ml-3 px-3 py-1 text-sm font-medium bg-gray-700  rounded-lg shadow-lg whitespace-nowrap">
+                            <b>About</b>
+                            </span>
+                        )}
+                            </div>
+                            <div className="relative">
+                                <Link to="/services" onClick={() => setIsOpen(false)}><li className="text-white active:scale-95
+                            active:bg-sky-800 rounded-2xl text-3xl m-2   "onMouseEnter={() => setIsHovered("services")} onMouseLeave={() => setIsHovered("")}><LuPackage2/></li></Link>
+                            {isHovered === 'services' && (
+                                <span className="absolute z-10 right-full top-3 ml-3 px-3 py-1 text-sm font-medium bg-gray-700  rounded-lg shadow-lg whitespace-nowrap">
+                                    <b>Services</b>
+                                </span>
+                            )}
+                            </div>
+                            <div className="relative">
+                                <Link to="/contact" onClick={() => setIsOpen(false)}><li className="text-white active:scale-95
+                            active:bg-sky-800 rounded-2xl text-3xl m-2 "onMouseEnter={() => setIsHovered("contact")} onMouseLeave={() => setIsHovered("")}><RiContactsBook2Fill/></li></Link>
+                                {isHovered === 'contact' && (
+                                <span className="absolute z-10 right-full top-3 ml-3 px-3 py-1 text-sm font-medium bg-gray-700  rounded-lg shadow-lg whitespace-nowrap">
+                                    <b>Contact</b>
+                                </span>
+                            )}
+                            </div>
                         </ul>
                     </div>
                 </div>

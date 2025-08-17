@@ -8,27 +8,6 @@ import { motion as _motions } from "framer-motion";
 
 const Home=()=>{
 
-    // const cards = [
-    //     {
-    //         image: image1,
-    //         title: "Great team work",
-    //         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    //         detail:"lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ea maxime porro doloribus praesentium ipsa vero possimus hic modi voluptatem esse, fugiat itaque saepe quia, obcaecati iusto quam, qui facilis."
-    //     },
-    //     {
-    //         image: image2,
-    //         title: "Our vision",
-    //         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    //         detail:"lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ea maxime porro doloribus praesentium ipsa vero possimus hic modi voluptatem esse, fugiat itaque saepe quia, obcaecati iusto quam, qui facilis."
-    //     },
-    //     {
-    //         image: image3,
-    //         title: "Our mission",
-    //         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    //         detail:"lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ea maxime porro doloribus praesentium ipsa vero possimus hic modi voluptatem esse, fugiat itaque saepe quia, obcaecati iusto quam, qui facilis."
-    //     }
-    // ];
-
     const acards = [
     {
       image: <HiUserGroup />,
