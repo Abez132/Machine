@@ -1,5 +1,6 @@
 import onePiece from "../assets/N23.jpg"
 // import { Link } from "react-router-dom";
+import {motion as _motion} from "framer-motion";
 
 const AboutUs = () => {
 
@@ -13,11 +14,11 @@ const AboutUs = () => {
                 //                  imageRendering: "auto"
                 //               }}
             >
-                <div className="m-2 w-full md:w-dvw h-full md:h-svh  ">
+                <_motion.div initial={{ opacity: 0, x: -100 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: 100 }} transition={{ duration: 0.5 }} className="m-2 w-full md:w-dvw h-full md:h-svh  ">
                     <img src={onePiece} alt="picture" className="h-full w-full rounded object-cover" />
-                </div>
-                <div className="p-8 ">
-                    <h1 className="text-4xl text-center  font-bold m-4 mt-0 italic " >About Us</h1>
+                </_motion.div>
+                <_motion.div  className="p-8 ">
+                    <_motion.h1 initial={{ opacity: 0, y: -100 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="text-4xl text-center  font-bold m-4 mt-0 italic " >About Us</_motion.h1>
                     <p className="text-xl"><span className="text-6xl">O</span>ur company which was established in 2022 has set its self the goal of completing the works it has undertaken in a timely quality controlled & complete manner by doing the job effectively.
                         <br />
                         <br />
@@ -33,7 +34,7 @@ const AboutUs = () => {
                         </div> */}
 
                     </p>
-                </div>
+                </_motion.div>
                 
             </div>
     );
