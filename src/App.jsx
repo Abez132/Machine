@@ -30,7 +30,14 @@ function App() {
     
 
   return (
-    <div id="top" className="relative p-0 m-0 text-white bg-gradient-to-b from-amber-700 to-amber-500">
+    <div id="top" className="relative p-0 m-0 text-white bg-gradient-to-b from-amber-700 to-amber-500"
+    style={{
+                      backgroundImage:`url(https://i.pinimg.com/1200x/d4/3b/45/d43b451a2ccee9a3aa13eaa7fb062df6.jpg)`,
+                      backgroundSize: "cover",
+                      backgroundRepeat: "no-repeat",
+                      backgroundPosition: "center",
+                      imageRendering: "auto"
+                   }}>
       {/* <Analytics/> */}
       <Router>
         
