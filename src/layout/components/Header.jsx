@@ -28,7 +28,7 @@ const Head=()=>{
                         className={`hover:border-b-2 text-xs md:text-base lg:text-lg text-cyan-50 transition-colors origin-left transform rounded-l ease-in-out hover:cursor-pointer hover:border-blue-100  `}>About Us</li>
                     </Link>
                     <Link to="/contact"><li 
-                                               className={`hover:bg-sky-600 text-xs md:text-base lg:text-lg text-cyan-50 rounded bg-sky-700 p-1 px-4 transition-colors origin-left transform rounded-l ease-in-out hover:cursor-pointer hover:border-blue-100 }`}>Contact</li>
+                                               className={`hover:bg-sky-600 text-xs md:text-base lg:text-lg text-cyan-50 rounded bg-gradient-to-l from-amber-600  p-1 px-4 transition-colors origin-left transform rounded-l ease-in-out hover:cursor-pointer hover:border-blue-100 }`}>Contact</li>
                     </Link>
                 </ul>
                 <div className="md:hidden flex items-center justify-center">
