@@ -35,7 +35,7 @@ const Home=()=>{
                 {acards.map((card, index) => (
                   <_motions.div whileInView={{ opacity: 1 , scale:1}} initial={{ opacity: 0, scale:0.9 }} transition={{duration:0.3,delay:0.1 * index, ease: "linear", type: "tween"}} key={index} className="max-w-sm flex  hover:scale-110 border-r-4 border-b-2 border-r-amber-700 border-b-amber-600 transition delay-1 rounded p-2 flex-col justify-center items-center space-y-4">
                         <div className="text-6xl  ">{card.image}</div>
-                            <h3 className="text-2xl  text-amber-300 font-bold">{card.title}</h3>
+                            <h3 className="text-3xl   font-bold">{card.title}</h3>
                             <p className=" text-sm font-medium leading-relaxed">{card.desc}</p>
                     </_motions.div>
                 ))}
