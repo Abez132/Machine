@@ -57,7 +57,7 @@ const Services = () => {
 
     return (
         <div className="flex flex-col justify-center transition-all duration-300 items-center">
-            <Burger />
+           <div className="m-4 my-8 md:my-2"><Burger /></div> 
             {state && showDetail && (
                 <div id="top" className="transition-all">
                     <div className="absolute m-4 text-4xl text-red-100 hover:text-red-600 backdrop-blur-3xl hover:scale-105 hover:cursor-pointer transition right-4 " 
