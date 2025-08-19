@@ -103,7 +103,7 @@ const Services = () => {
                                             <div className="absolute z-1 opacity-0 md:opacity-100 text-2xl text-sky-950 active:scale-100 hover:scale-110 p-1 rounded-full bg-gray-600/40 cursor-pointer top-1/2 right-8" onClick={goToRight}><FaChevronRight/>
                                             </div>
                                             <div className="absolute z-1 opacity-0 md:opacity-100 text-2xl text-sky-950 active:scale-100 hover:scale-110 p-1 rounded-full bg-gray-600/40 cursor-pointer top-1/2 left-8" onClick={goToLeft}><FaChevronLeft/></div>
-                                            <div className="flex flex-col transition h-full w-full md:w-2xl " 
+                                            <div className="flex flex-col transition h-full w-full ld:w-2xl " 
                                                           style={{
                                                               backgroundImage:`url(${images[index].url})`,
                                                               backgroundSize: "contain",
@@ -126,9 +126,9 @@ const Services = () => {
                                             
                                             
                                         </div>
-                                        
-                                        <div className="m-4">
-                                           
+
+                                        <div className="flex justify-center flex-col items-center m-4 w-full">
+
                                             <p>A specialized seed-cleaning machine that uses controlled airflow and vibration to separate seeds from lighter impurities such as husks, dried leaves, broken shells, and dust. The process works by allowing lighter materials to be blown away while the heavier, clean seeds fall into a collection chamber. This ensures high-quality seed output, reduces contamination, and prepares seeds for further processing, storage, or packaging. It is widely used for grains, pulses, and oil seeds to maintain purity and improve market value.</p>
                                             <Link to="/contact"><button className="bg-sky-700 hover:bg-sky-400 hover:scale-105 active:scale-95 transition text-white px-4 py-2 m-2 rounded">Contact Us</button></Link>
                                         </div>
