@@ -30,7 +30,7 @@ function App() {
     
 
   return (
-    <div id="top" className="bg-dot-pattern">
+    <div id="top" className="bg-blob-pattern bg-cyan-800">
       {/* <Analytics/> */}
       <Router>
         
