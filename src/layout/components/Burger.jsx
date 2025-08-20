@@ -11,15 +11,15 @@ const Burger = () => {
     const [isHovered, setIsHovered] = useState("");
     return (
         <div className=" flex items-center justify-center">
-            <div className="absolute z-10 top-4 left-1">
+            <div className="absolute z-10 top-4 right-1 md:left-1">
                <RxHamburgerMenu
                 className="text-3xl  text-white m-4 cursor-pointer"
                 onClick={() => setIsOpen(!isOpen)} /> 
             </div>
             
                     <div
-                        className={`fixed top-0 left-0 h-full w-16  backdrop-blur-2xl z-1 transform transition-transform duration-300
-                            ${isOpen ? "translate-x-0" : "-translate-x-full"}`
+                        className={`fixed top-0 right-0 md:left-0 h-full w-16  backdrop-blur-2xl z-1 transform transition-transform duration-300
+                            ${isOpen ? "translate-x-0" : "translate-x-full md:-translate-x-full"}`
                         }
                     >
                         
