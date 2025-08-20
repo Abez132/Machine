@@ -1,9 +1,24 @@
 @import "tailwindcss";
 @layer utilities {
   .bg-dot-pattern {
-    background-color: #000000;
-    background-image: radial-gradient(#e5e5e5 1px, transparent 1px);
+    background-color: #5a5551;
+    background-image: radial-gradient(#eba14c 1px, transparent 1px);
     background-size: 30px 30px;
-    color: #fafafa;
+    color: #ffffff;
+  }
+}
+@layer utilities {
+  .bg-blob-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 1000'%3E%3Cdefs%3E%3Cfilter id='a'%3E%3CfeGaussianBlur stdDeviation='20'/%3E%3C/filter%3E%3C/defs%3E%3Ccircle filter='url(%23a)' cx='200' cy='200' r='150' fill='%23DBEAFE' opacity='0.5'/%3E%3Ccircle filter='url(%23a)' cx='700' cy='700' r='170' fill='%23BFDBFE' opacity='0.4'/%3E%3Ccircle filter='url(%23a)' cx='800' cy='300' r='120' fill='%2393C5FD' opacity='0.2'/%3E%3C/svg%3E");
+    background-size: 1000px 1000px;
+  }
+}
+@layer utilities {
+  .bg-grid-pattern {
+    background-color: #e0751c6b;
+    background-image:
+      linear-gradient(to right, #e5e5e5 1px, transparent 1px),
+      linear-gradient(to bottom, #e5e5e5 1px, transparent 1px);
+    background-size: 24px 24px;
   }
 }
