@@ -12,7 +12,7 @@ const Cards = ({ title, description, image, detail }) => {
     };
 
     return (
-        <div className="group relative flex flex-col h-[420px] w-full md:w-80 bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 m-2 border border-gray-100">
+        <div className="group relative flex flex-col h-[420px] w-full md:w-80 bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 m-2 ">
             {/* Image container with gradient overlay */}
             <div className="h-48 overflow-hidden relative">
                 <img 
