@@ -72,7 +72,7 @@ const Services = () => {
             )}
             
             <div>
-                <div className="flex  justify-center items-center gap-4 p-4">
+                <div className="flex w-full justify-center items-center gap-4 p-4">
                     <button className={` cursor-pointer hover:text-shadow-sm rounded hover:text-shadow-stone-300 text-stone-200 z-10 p-1  ${active==="mani"?"bg-gray-800 text-sky-300 ":""}`} onClick={()=>{setCategory("mani"); setActive("mani");}}>PRODUCTION</button> 
                     <button onClick={()=>{ console.log('import clicked'); setCategory("import"); setActive("import");}} className={`z-10 cursor-pointer hover:text-shadow-sm hover:text-shadow-stone-300 transition rounded text-stone-200 p-1  ${active==="import"?"bg-gray-800 text-sky-300 ":""}`}>IMPORT ITEMS</button> 
                     <button onClick={()=>{setCategory("export"); setActive("export")}} className={` z-10 cursor-pointer hover:text-shadow-sm hover:text-shadow-stone-300 transition rounded text-stone-200 p-1  ${active==="export"?"bg-gray-800 text-sky-300":""}`}>EXPORT ITEMS</button>
@@ -89,10 +89,10 @@ const Services = () => {
                             transition={{ duration:0.8 }}
                             className="flex flex-col w-full   h-full">
                             <div className="flex flex-wrap w-full justify-center items-center gap-4  p-4 "> 
-                                <button className={` cursor-pointer hover:text-shadow-sm hover:text-shadow-stone-300 transition text-stone-200 rounded   p-1  ${activeProduction==="win"?"bg-gray-800 text-sky-300 ":""}`} onClick={()=>{setCategory("mani"); setActiveProduction("win")}}>WINNOWING MACHINE </button> 
-                            <button onClick={()=>{setCategory("mani"); setActiveProduction("dis")}} className={` cursor-pointer hover:text-shadow-sm hover:text-shadow-stone-300 transition rounded text-stone-200 p-1   ${activeProduction==="dis"?"bg-gray-800 text-sky-300 ":""}`}>DISTONER</button>
-                            <button onClick={()=>{setCategory("mani"); setActiveProduction("plus")}} className={` cursor-pointer hover:text-shadow-sm hover:text-shadow-stone-300 transition rounded text-stone-200 p-1  ${activeProduction==="plus"?"bg-gray-800 text-sky-300 ":""}`}>WINNOWING + DISTONER</button>
-                            <button onClick={()=>{setCategory("mani"); setActiveProduction("cofff")}} className={` cursor-pointer hover:text-shadow-sm hover:text-shadow-stone-300 transition rounded text-stone-200 p-1  ${activeProduction==="cofff"?"bg-gray-800 text-sky-300 ":""}`}>COFFEE ROASTER AND GRINDER</button>
+                                <button className={` cursor-pointer hover:text-shadow-sm hover:text-shadow-stone-300 transition text-stone-200 rounded border-2  p-1  ${activeProduction==="win"?"bg-gray-800 text-sky-300 border-none transition":""}`} onClick={()=>{setCategory("mani"); setActiveProduction("win")}}>WINNOWING MACHINE </button> 
+                            <button onClick={()=>{setCategory("mani"); setActiveProduction("dis")}} className={` cursor-pointer hover:text-shadow-sm hover:text-shadow-stone-300 transition rounded text-stone-200 p-1 border-2   ${activeProduction==="dis"?"bg-gray-800 text-sky-300 border-none transition":""}`}>DISTONER</button>
+                            <button onClick={()=>{setCategory("mani"); setActiveProduction("plus")}} className={` cursor-pointer hover:text-shadow-sm hover:text-shadow-stone-300 transition rounded text-stone-200 p-1 border-2 ${activeProduction==="plus"?"bg-gray-800 text-sky-300 border-none transition":""}`}>WINNOWING + DISTONER</button>
+                            <button onClick={()=>{setCategory("mani"); setActiveProduction("cofff")}} className={` cursor-pointer hover:text-shadow-sm hover:text-shadow-stone-300 transition rounded text-stone-200 p-1 border-2 ${activeProduction==="cofff"?"bg-gray-800 text-sky-300 border-none transition":""}`}>COFFEE ROASTER AND GRINDER</button>
                            
                             </div>
                             <div className="flex flex-wrap w-full justify-center items-center gap-4 p-4">
@@ -127,7 +127,9 @@ const Services = () => {
                                             
                                         </div>
 
-                                        <div className="flex justify-center flex-col items-center m-4 w-full">
+                                        <div className="flex justify-center flex-col  m-4 w-full">
+
+                                            <h1 className="text-4xl text-amber-300"><b>Winnowing Machine</b></h1>
 
                                             <p>A specialized seed-cleaning machine that uses controlled airflow and vibration to separate seeds from lighter impurities such as husks, dried leaves, broken shells, and dust. The process works by allowing lighter materials to be blown away while the heavier, clean seeds fall into a collection chamber. This ensures high-quality seed output, reduces contamination, and prepares seeds for further processing, storage, or packaging. It is widely used for grains, pulses, and oil seeds to maintain purity and improve market value.</p>
                                             <Link to="/contact"><button className="bg-sky-700 hover:bg-sky-400 hover:scale-105 active:scale-95 transition text-white px-4 py-2 m-2 rounded">Contact Us</button></Link>
