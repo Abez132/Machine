@@ -43,7 +43,7 @@ const Contact=()=>{
         <div className=" flex flex-col justify-center items-center  p-4">
            <Burger/>
           <div className="w-full md:w-2xl  p-4">
-            <h1 className="text-3xl font-bold text-center mb-4">Contact Us</h1>
+            <h1 className="text-5xl font-bold text-center mb-4">Contact Us</h1>
             <p className="text-lg mb-4 font-medium">We would love to hear from you! Please reach us using the below form or  through the provided contact details.</p>
           </div>
           <div className="flex flex-col md:flex-row justify-center items-center gap-4 w-full  ">
