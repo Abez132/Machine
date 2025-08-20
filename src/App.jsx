@@ -30,7 +30,7 @@ function App() {
     
 
   return (
-    <div id="top" class="bg-dot-pattern">
+    <div id="top" className="bg-dot-pattern">
       {/* <Analytics/> */}
       <Router>
         

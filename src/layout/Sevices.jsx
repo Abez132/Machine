@@ -60,7 +60,7 @@ const Services = () => {
            <div className="m-4 my-8 md:my-2"><Burger /></div> 
             {state && showDetail && (
                 <div id="top" className="transition-all">
-                    <div className="absolute m-4 text-4xl text-red-100 hover:text-red-600 backdrop-blur-3xl hover:scale-105 hover:cursor-pointer transition right-4 " 
+                    <div className="absolute m-4 text-4xl z-10 text-red-100 hover:text-red-600 backdrop-blur-3xl hover:scale-105 hover:cursor-pointer transition right-4 " 
                     onClick={()=>setShowDetail(false)}
                     >x</div>
                     <Detail
@@ -72,10 +72,10 @@ const Services = () => {
             )}
             
             <div>
-                <div className="flex justify-center items-center gap-4 p-4">
-                    <button className={`hover:text-shadow-sm rounded hover:text-shadow-stone-300 text-stone-200  p-1 overflow-hidden ${active==="mani"?"bg-gray-800 text-sky-300 ":""}`} onClick={()=>{setCategory("mani"); setActive("mani")}}>PRODUCTION</button> 
-                    <button onClick={()=>{setCategory("import"); setActive("import")}} className={`hover:text-shadow-sm hover:text-shadow-stone-300 transition rounded text-stone-200 p-1 overflow-hidden ${active==="import"?"bg-gray-800 text-sky-300 ":""}`}>IMPORT ITEMS</button> 
-                    <button onClick={()=>{setCategory("export"); setActive("export")}} className={`hover:text-shadow-sm hover:text-shadow-stone-300 transition rounded text-stone-200 p-1 overflow-hidden ${active==="export"?"bg-gray-800 text-sky-300":""}`}>EXPORT ITEMS</button>
+                <div className="flex  justify-center items-center gap-4 p-4">
+                    <button className={` cursor-pointer hover:text-shadow-sm rounded hover:text-shadow-stone-300 text-stone-200 z-10 p-1  ${active==="mani"?"bg-gray-800 text-sky-300 ":""}`} onClick={()=>{setCategory("mani"); setActive("mani");}}>PRODUCTION</button> 
+                    <button onClick={()=>{ console.log('import clicked'); setCategory("import"); setActive("import");}} className={`z-10 cursor-pointer hover:text-shadow-sm hover:text-shadow-stone-300 transition rounded text-stone-200 p-1  ${active==="import"?"bg-gray-800 text-sky-300 ":""}`}>IMPORT ITEMS</button> 
+                    <button onClick={()=>{setCategory("export"); setActive("export")}} className={` z-10 cursor-pointer hover:text-shadow-sm hover:text-shadow-stone-300 transition rounded text-stone-200 p-1  ${active==="export"?"bg-gray-800 text-sky-300":""}`}>EXPORT ITEMS</button>
                 </div>
                 <AnimatePresence mode="wait">
                     
@@ -89,10 +89,10 @@ const Services = () => {
                             transition={{ duration:0.8 }}
                             className="flex flex-col w-full   h-full">
                             <div className="flex flex-wrap w-full justify-center items-center gap-4  p-4 "> 
-                                <button className={`hover:text-shadow-sm hover:text-shadow-stone-300 transition text-stone-200 rounded   p-1 overflow-hidden ${activeProduction==="win"?"bg-gray-800 text-sky-300 ":""}`} onClick={()=>{setCategory("mani"); setActiveProduction("win")}}>WINNOWING MACHINE </button> 
-                            <button onClick={()=>{setCategory("mani"); setActiveProduction("dis")}} className={`hover:text-shadow-sm hover:text-shadow-stone-300 transition rounded text-stone-200 p-1  overflow-hidden ${activeProduction==="dis"?"bg-gray-800 text-sky-300 ":""}`}>DISTONER</button>
-                            <button onClick={()=>{setCategory("mani"); setActiveProduction("plus")}} className={`hover:text-shadow-sm hover:text-shadow-stone-300 transition rounded text-stone-200 p-1 overflow-hidden ${activeProduction==="plus"?"bg-gray-800 text-sky-300 ":""}`}>WINNOWING + DISTONER</button>
-                            <button onClick={()=>{setCategory("mani"); setActiveProduction("cofff")}} className={`hover:text-shadow-sm hover:text-shadow-stone-300 transition rounded text-stone-200 p-1 overflow-hidden ${activeProduction==="cofff"?"bg-gray-800 text-sky-300 ":""}`}>COFFEE ROASTER AND GRINDER</button>
+                                <button className={` cursor-pointer hover:text-shadow-sm hover:text-shadow-stone-300 transition text-stone-200 rounded   p-1  ${activeProduction==="win"?"bg-gray-800 text-sky-300 ":""}`} onClick={()=>{setCategory("mani"); setActiveProduction("win")}}>WINNOWING MACHINE </button> 
+                            <button onClick={()=>{setCategory("mani"); setActiveProduction("dis")}} className={` cursor-pointer hover:text-shadow-sm hover:text-shadow-stone-300 transition rounded text-stone-200 p-1   ${activeProduction==="dis"?"bg-gray-800 text-sky-300 ":""}`}>DISTONER</button>
+                            <button onClick={()=>{setCategory("mani"); setActiveProduction("plus")}} className={` cursor-pointer hover:text-shadow-sm hover:text-shadow-stone-300 transition rounded text-stone-200 p-1  ${activeProduction==="plus"?"bg-gray-800 text-sky-300 ":""}`}>WINNOWING + DISTONER</button>
+                            <button onClick={()=>{setCategory("mani"); setActiveProduction("cofff")}} className={` cursor-pointer hover:text-shadow-sm hover:text-shadow-stone-300 transition rounded text-stone-200 p-1  ${activeProduction==="cofff"?"bg-gray-800 text-sky-300 ":""}`}>COFFEE ROASTER AND GRINDER</button>
                            
                             </div>
                             <div className="flex flex-wrap w-full justify-center items-center gap-4 p-4">
@@ -190,8 +190,8 @@ const Services = () => {
                             transition={{ duration:0.8 }}
                             className="flex flex-col w-full">
                             <div className="flex justify-center items-center gap-4 p-4 "> 
-                                <button className={`hover:text-shadow-sm hover:text-shadow-stone-300 transition text-stone-200  p-1 overflow-hidden rounded ${activeImport==="havi"?"bg-gray-800 text-sky-300 ":""}`} onClick={()=>{setCategory("import"); setActiveImport("havi")}}>HEAVEY MACHINERY </button> 
-                            <button onClick={()=>{setCategory("import"); setActiveImport("bul")}} className={`hover:text-shadow-sm hover:text-shadow-stone-300 transition rounded text-stone-200 p-1 overflow-hidden ${activeImport==="bul"?"bg-gray-800 text-sky-300 ":""}`}>BUILDING FINISHING PRODUCT</button>
+                                <button className={` cursor-pointer hover:text-shadow-sm hover:text-shadow-stone-300 transition text-stone-200  p-1  rounded ${activeImport==="havi"?"bg-gray-800 text-sky-300 ":""}`} onClick={()=>{setCategory("import"); setActiveImport("havi")}}>HEAVEY MACHINERY </button> 
+                            <button onClick={()=>{setCategory("import"); setActiveImport("bul")}} className={` cursor-pointer hover:text-shadow-sm hover:text-shadow-stone-300 transition rounded text-stone-200 p-1  ${activeImport==="bul"?"bg-gray-800 text-sky-300 ":""}`}>BUILDING FINISHING PRODUCT</button>
                             </div>
                             <div className="flex flex-wrap">
 
@@ -230,9 +230,9 @@ const Services = () => {
                             transition={{ duration:0.8 }}>
 
                             <div className="flex justify-center items-center gap-4 p-4"> 
-                                <button className={`hover:text-shadow-sm rounded hover:text-shadow-stone-300 text-stone-200  p-1 overflow-hidden ${activeExport==="pu"?"bg-gray-800 text-sky-300 ":""}`} onClick={()=>{setCategory("export"); setActiveExport("pu")}}>PULSES </button> 
-                    <button onClick={()=>{setCategory("export"); setActiveExport("oil")}} className={`hover:text-shadow-sm hover:text-shadow-stone-300 transition rounded text-stone-200 p-1 overflow-hidden ${activeExport==="oil"?"bg-gray-800 text-sky-300 ":""}`}>OIL SEEDS</button>
-                    <button onClick={()=>{setCategory("export"); setActiveExport("cof")}} className={`hover:text-shadow-sm hover:text-shadow-stone-300 transition rounded text-stone-200 p-1 overflow-hidden ${activeExport==="cof"?"bg-gray-800 text-sky-300 ":""}`}>PROCCESSED COFFEE</button>
+                                <button className={` cursor-pointer hover:text-shadow-sm rounded hover:text-shadow-stone-300 text-stone-200  p-1  ${activeExport==="pu"?"bg-gray-800 text-sky-300 ":""}`} onClick={()=>{setCategory("export"); setActiveExport("pu")}}>PULSES </button> 
+                    <button onClick={()=>{setCategory("export"); setActiveExport("oil")}} className={` cursor-pointer hover:text-shadow-sm hover:text-shadow-stone-300 transition rounded text-stone-200 p-1  ${activeExport==="oil"?"bg-gray-800 text-sky-300 ":""}`}>OIL SEEDS</button>
+                    <button onClick={()=>{setCategory("export"); setActiveExport("cof")}} className={` cursor-pointer hover:text-shadow-sm hover:text-shadow-stone-300 transition rounded text-stone-200 p-1  ${activeExport==="cof"?"bg-gray-800 text-sky-300 ":""}`}>PROCCESSED COFFEE</button>
                             </div>
                             <div className="flex flex-wrap">
 
