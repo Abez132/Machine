@@ -33,7 +33,7 @@ const Home=()=>{
             <Hero/>
             <div className="flex flex-wrap justify-center gap-16 px-6 py-16 text-center ">
                 {acards.map((card, index) => (
-                  <_motions.div whileInView={{ opacity: 1 , scale:1}} initial={{ opacity: 0, scale:0.9 }} transition={{duration:0.3,delay:0.1 * index, ease: "linear", type: "tween"}} key={index} className="max-w-sm flex  hover:scale-110 border-r-4 border-b-2 border-r-gray-200 border-b-gray-200 transition delay-1 rounded p-2 flex-col justify-center items-center space-y-4">
+                  <_motions.div whileInView={{ opacity: 1 , scale:1}} initial={{ opacity: 0, scale:0.9 }} transition={{duration:0.3,delay:0.1 * index, ease: "linear", type: "tween"}} key={index} className="max-w-sm flex  hover:scale-110  transition delay-1 rounded p-2 flex-col justify-center items-center space-y-4">
                         <div className="text-6xl  ">{card.image}</div>
                             <h3 className="text-3xl   font-bold">{card.title}</h3>
                             <p className=" text-sm font-medium leading-relaxed">{card.desc}</p>
