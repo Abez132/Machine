@@ -18,7 +18,7 @@ const Burger = () => {
             </div>
             
                     <div
-                        className={`fixed top-0 right-0 md:left-0 h-full w-16  backdrop-blur-2xl z-1 transform transition-transform duration-300
+                        className={`fixed top-0 right-0 md:left-0 h-full w-16  backdrop-blur-2xl z-2 transform transition-transform duration-300
                             ${isOpen ? "translate-x-0" : "translate-x-full md:-translate-x-full"}`
                         }
                     >
@@ -32,7 +32,7 @@ const Burger = () => {
                         <ul className="flex flex-col items-center justify-center h-full space-y-4 ">
                             
                             <div className="relative">
-                                <Link to="/" onClick={() => setIsOpen(false)}><li className=" text-white active:scale-95 active:bg-sky-800 transition rounded-2xl text-3xl m-2 "onMouseEnter={() => setIsHovered("home")} onMouseLeave={() => setIsHovered("")}><TiHomeOutline/></li></Link>
+                                <Link to="/" onClick={() => setIsOpen(false)}><li className="flex flex-col justify-center items-center text-white active:scale-90 transition hover:scale-105  transition rounded-2xl text-3xl m-2 "onMouseEnter={() => setIsHovered("home")} onMouseLeave={() => setIsHovered("")}><TiHomeOutline/><span className="text-sm">Home</span></li></Link>
                                 {isHovered === 'home' && (
                             <span className="absolute z-10 left-full top-3 ml-3 px-3 py-1 text-sm font-medium bg-gray-700  rounded-lg shadow-lg whitespace-nowrap">
                              <b>Home</b>
@@ -40,8 +40,8 @@ const Burger = () => {
                         )}
                             </div>
                             <div className="relative">
-                                <Link to="/about" onClick={() => setIsOpen(false)}><li className="text-white active:scale-95
-                            active:bg-sky-800 rounded-2xl text-3xl m-2  "onMouseEnter={() => setIsHovered("about")} onMouseLeave={() => setIsHovered("")}><IoPeople/></li></Link>
+                                <Link to="/about" onClick={() => setIsOpen(false)}><li className="flex flex-col justify-center items-center text-white active:scale-90 transition hover:scale-105
+                             rounded-2xl text-3xl m-2  "onMouseEnter={() => setIsHovered("about")} onMouseLeave={() => setIsHovered("")}><IoPeople/><span className="text-sm">About</span></li></Link>
                             {isHovered === 'about' && (
                             <span className="absolute z-10 left-full top-3 ml-3 px-3 py-1 text-sm font-medium bg-gray-700  rounded-lg shadow-lg whitespace-nowrap">
                             <b>About</b>
@@ -49,8 +49,8 @@ const Burger = () => {
                         )}
                             </div>
                             <div className="relative">
-                                <Link to="/services" onClick={() => setIsOpen(false)}><li className="text-white active:scale-95
-                            active:bg-sky-800 rounded-2xl text-3xl m-2   "onMouseEnter={() => setIsHovered("services")} onMouseLeave={() => setIsHovered("")}><LuPackage2/></li></Link>
+                                <Link to="/services" onClick={() => setIsOpen(false)}><li className="flex flex-col justify-center items-center text-white active:scale-90 transition hover:scale-105
+                             rounded-2xl text-3xl m-2   "onMouseEnter={() => setIsHovered("services")} onMouseLeave={() => setIsHovered("")}><LuPackage2/><span className="text-sm">Services</span></li></Link>
                             {isHovered === 'services' && (
                                 <span className="absolute z-10 left-full top-3 ml-3 px-3 py-1 text-sm font-medium bg-gray-700  rounded-lg shadow-lg whitespace-nowrap">
                                     <b>Services</b>
@@ -58,8 +58,8 @@ const Burger = () => {
                             )}
                             </div>
                             <div className="relative">
-                                <Link to="/contact" onClick={() => setIsOpen(false)}><li className="text-white active:scale-95
-                            active:bg-sky-800 rounded-2xl text-3xl m-2 "onMouseEnter={() => setIsHovered("contact")} onMouseLeave={() => setIsHovered("")}><RiContactsBook2Fill/></li></Link>
+                                <Link to="/contact" onClick={() => setIsOpen(false)}><li className="flex flex-col justify-center items-center text-white active:scale-90 transition hover:scale-105
+                             rounded-2xl text-3xl m-2 "onMouseEnter={() => setIsHovered("contact")} onMouseLeave={() => setIsHovered("")}><RiContactsBook2Fill/><span className="text-sm">Contact</span></li></Link>
                                 {isHovered === 'contact' && (
                                 <span className="absolute z-10 left-full top-3 ml-3 px-3 py-1 text-sm font-medium bg-gray-700  rounded-lg shadow-lg whitespace-nowrap">
                                     <b>Contact</b>
