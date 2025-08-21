@@ -5,7 +5,7 @@ const Detail=({image,detail,name})=>{
         <div className="flex md:flex-row flex-col items-center  justify-center  w-full">
 
             <div className=" m-8">
-                <img src={image} alt="image" className=" object-cover h-screen rounded-lg" />
+                <img src={image} alt="image" className=" object-cover h-screen rounded-lg" loading="lazy"/>
             </div>
 
             <div className="md:w-1/2 w-full p-2 ">

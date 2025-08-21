@@ -89,10 +89,10 @@ const Services = () => {
                             transition={{ duration:0.8 }}
                             className="flex flex-col w-full   h-full">
                             <div className="flex flex-wrap w-full justify-center items-center gap-4  p-4 "> 
-                                <button className={` cursor-pointer hover:text-shadow-sm hover:text-shadow-stone-300 transition text-stone-200 rounded border-2  p-1  ${activeProduction==="win"?"bg-gray-800 text-sky-300 border-none transition":""}`} onClick={()=>{setCategory("mani"); setActiveProduction("win")}}>WINNOWING MACHINE </button> 
-                            <button onClick={()=>{setCategory("mani"); setActiveProduction("dis")}} className={` cursor-pointer hover:text-shadow-sm hover:text-shadow-stone-300 transition rounded text-stone-200 p-1 border-2   ${activeProduction==="dis"?"bg-gray-800 text-sky-300 border-none transition":""}`}>DISTONER</button>
-                            <button onClick={()=>{setCategory("mani"); setActiveProduction("plus")}} className={` cursor-pointer hover:text-shadow-sm hover:text-shadow-stone-300 transition rounded text-stone-200 p-1 border-2 ${activeProduction==="plus"?"bg-gray-800 text-sky-300 border-none transition":""}`}>WINNOWING + DISTONER</button>
-                            <button onClick={()=>{setCategory("mani"); setActiveProduction("cofff")}} className={` cursor-pointer hover:text-shadow-sm hover:text-shadow-stone-300 transition rounded text-stone-200 p-1 border-2 ${activeProduction==="cofff"?"bg-gray-800 text-sky-300 border-none transition":""}`}>COFFEE ROASTER AND GRINDER</button>
+                                <button className={` cursor-pointer hover:text-shadow-sm hover:text-shadow-stone-300 transition text-stone-200 rounded border-b-2  p-1  ${activeProduction==="win"?"bg-gray-800 text-sky-300 border-none transition":""}`} onClick={()=>{setCategory("mani"); setActiveProduction("win")}}>WINNOWING MACHINE </button> 
+                            <button onClick={()=>{setCategory("mani"); setActiveProduction("dis")}} className={` cursor-pointer hover:text-shadow-sm hover:text-shadow-stone-300 transition rounded text-stone-200 p-1 border-b-2   ${activeProduction==="dis"?"bg-gray-800 text-sky-300 border-none transition":""}`}>DISTONER</button>
+                            <button onClick={()=>{setCategory("mani"); setActiveProduction("plus")}} className={` cursor-pointer hover:text-shadow-sm hover:text-shadow-stone-300 transition rounded text-stone-200 p-1 border-b-2 ${activeProduction==="plus"?"bg-gray-800 text-sky-300 border-none transition":""}`}>WINNOWING + DISTONER</button>
+                            <button onClick={()=>{setCategory("mani"); setActiveProduction("cofff")}} className={` cursor-pointer hover:text-shadow-sm hover:text-shadow-stone-300 transition rounded text-stone-200 p-1 border-b-2 ${activeProduction==="cofff"?"bg-gray-800 text-sky-300 border-none transition":""}`}>COFFEE ROASTER AND GRINDER</button>
                            
                             </div>
                             <div className="flex flex-wrap w-full justify-center items-center gap-4 p-4">
@@ -192,8 +192,8 @@ const Services = () => {
                             transition={{ duration:0.8 }}
                             className="flex flex-col w-full">
                             <div className="flex justify-center items-center gap-4 p-4 "> 
-                                <button className={` cursor-pointer hover:text-shadow-sm hover:text-shadow-stone-300 transition text-stone-200  p-1  rounded ${activeImport==="havi"?"bg-gray-800 text-sky-300 ":""}`} onClick={()=>{setCategory("import"); setActiveImport("havi")}}>HEAVEY MACHINERY </button> 
-                            <button onClick={()=>{setCategory("import"); setActiveImport("bul")}} className={` cursor-pointer hover:text-shadow-sm hover:text-shadow-stone-300 transition rounded text-stone-200 p-1  ${activeImport==="bul"?"bg-gray-800 text-sky-300 ":""}`}>BUILDING FINISHING PRODUCT</button>
+                                <button className={` cursor-pointer hover:text-shadow-sm hover:text-shadow-stone-300 transition text-stone-200  p-1 border-b-2  rounded ${activeImport==="havi"?"bg-gray-800 text-sky-300 border-none":""}`} onClick={()=>{setCategory("import"); setActiveImport("havi")}}>HEAVEY MACHINERY </button> 
+                            <button onClick={()=>{setCategory("import"); setActiveImport("bul")}} className={` cursor-pointer hover:text-shadow-sm hover:text-shadow-stone-300 transition rounded text-stone-200 p-1 border-b-2 ${activeImport==="bul"?"bg-gray-800 text-sky-300 border-none":""}`}>BUILDING FINISHING PRODUCT</button>
                             </div>
                             <div className="flex flex-wrap">
 
@@ -232,9 +232,9 @@ const Services = () => {
                             transition={{ duration:0.8 }}>
 
                             <div className="flex justify-center items-center gap-4 p-4"> 
-                                <button className={` cursor-pointer hover:text-shadow-sm rounded hover:text-shadow-stone-300 text-stone-200  p-1  ${activeExport==="pu"?"bg-gray-800 text-sky-300 ":""}`} onClick={()=>{setCategory("export"); setActiveExport("pu")}}>PULSES </button> 
-                    <button onClick={()=>{setCategory("export"); setActiveExport("oil")}} className={` cursor-pointer hover:text-shadow-sm hover:text-shadow-stone-300 transition rounded text-stone-200 p-1  ${activeExport==="oil"?"bg-gray-800 text-sky-300 ":""}`}>OIL SEEDS</button>
-                    <button onClick={()=>{setCategory("export"); setActiveExport("cof")}} className={` cursor-pointer hover:text-shadow-sm hover:text-shadow-stone-300 transition rounded text-stone-200 p-1  ${activeExport==="cof"?"bg-gray-800 text-sky-300 ":""}`}>PROCCESSED COFFEE</button>
+                                <button className={` cursor-pointer border-b-2  hover:text-shadow-sm rounded hover:text-shadow-stone-300 text-stone-200  p-1  ${activeExport==="pu"?"bg-gray-800 text-sky-300 border-none":""}`} onClick={()=>{setCategory("export"); setActiveExport("pu")}}>PULSES </button> 
+                    <button onClick={()=>{setCategory("export"); setActiveExport("oil")}} className={` cursor-pointer  border-b-2  hover:text-shadow-sm hover:text-shadow-stone-300 transition rounded text-stone-200 p-1  ${activeExport==="oil"?"bg-gray-800 text-sky-300 border-none":""}`}>OIL SEEDS</button>
+                    <button onClick={()=>{setCategory("export"); setActiveExport("cof")}} className={` cursor-pointer hover:text-shadow-sm border-b-2  hover:text-shadow-stone-300 transition rounded text-stone-200 p-1  ${activeExport==="cof"?"bg-gray-800 text-sky-300 border-none":""}`}>PROCCESSED COFFEE</button>
                             </div>
                             <div className="flex flex-wrap">
 
