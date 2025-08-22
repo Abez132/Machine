@@ -135,16 +135,135 @@ const Services = () => {
                                             <Link to="/contact"><button className="bg-sky-700 hover:bg-sky-400 hover:scale-105 active:scale-95 transition text-white px-4 py-2 m-2 rounded">Contact Us</button></Link>
                                         </div>
                                     </div>
-                                    <div className="flex flex-col md:flex-row justify-center m-4 w-full h-full items-start">
-                                        <div>
-                                            <video src="vid1.MOV" className="w-124 h-96" controls></video>
-                                            <video src="vid2.MOV"  className="w-124  h-96" controls></video>
-                                        </div>
-                                        <div>
-                                            <p>This are a demo of our winnowing machine in action</p>
-                                        </div>
-                                        
-                                    </div>
+                                    <div className="flex flex-col lg:flex-row justify-center items-start gap-8 m-8 w-full">
+                        <div className="flex flex-col gap-6 lg:w-2/3">
+                          <div className="relative group">
+                            <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
+                            <div className="relative bg-gray-900/50 backdrop-blur-sm rounded-2xl p-4 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300">
+                              <div className="flex items-center gap-3 mb-3">
+                                <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
+                                <h3 className="text-xl font-semibold text-white">
+                                  Live Demo - Winnowing Process
+                                </h3>
+                              </div>
+                              <video
+                                src="vid1.MOV"
+                                className="w-full h-80 rounded-xl object-cover shadow-2xl hover:shadow-blue-500/25 transition-all duration-300"
+                                controls
+                                poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23374151'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23fff' font-size='16'%3EWinnowing Machine Demo%3C/text%3E%3C/svg%3E"
+                              ></video>
+                              <div className="mt-3 flex items-center justify-between">
+                                <span className="text-sm text-gray-400">
+                                  Duration: 2:30
+                                </span>
+                                <div className="flex items-center gap-2">
+                                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                                  <span className="text-sm text-green-400">
+                                    HD Quality
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div className="relative group">
+                            <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 to-teal-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
+                            <div className="relative bg-gray-900/50 backdrop-blur-sm rounded-2xl p-4 border border-gray-700/50 hover:border-green-500/50 transition-all duration-300">
+                              <div className="flex items-center gap-3 mb-3">
+                                <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
+                                <h3 className="text-xl font-semibold text-white">
+                                  Advanced Cleaning Technology
+                                </h3>
+                              </div>
+                              <video
+                                src="vid2.MOV"
+                                className="w-full h-80 rounded-xl object-cover shadow-2xl hover:shadow-green-500/25 transition-all duration-300"
+                                controls
+                                poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23374151'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23fff' font-size='16'%3EAdvanced Cleaning Demo%3C/text%3E%3C/svg%3E"
+                              ></video>
+                              <div className="mt-3 flex items-center justify-between">
+                                <span className="text-sm text-gray-400">
+                                  Duration: 1:45
+                                </span>
+                                <div className="flex items-center gap-2">
+                                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                                  <span className="text-sm text-green-400">
+                                    HD Quality
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div className="lg:w-1/3 space-y-6">
+                          <div className="bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50">
+                            <h3 className="text-2xl font-bold text-amber-300 mb-4 flex items-center gap-2">
+                              <div className="w-2 h-2 bg-amber-400 rounded-full animate-pulse"></div>
+                              Machine Demonstrations
+                            </h3>
+                            <p className="text-gray-300 leading-relaxed mb-4">
+                              Watch our winnowing machine in action! These live
+                              demonstrations showcase the precision and
+                              efficiency of our seed cleaning technology.
+                            </p>
+                            <div className="space-y-3">
+                              <div className="flex items-center gap-3 p-3 bg-blue-500/10 rounded-lg border border-blue-500/20">
+                                <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
+                                  <span className="text-white text-sm font-bold">
+                                    1
+                                  </span>
+                                </div>
+                                <span className="text-blue-300 font-medium">
+                                  Seed Separation Process
+                                </span>
+                              </div>
+                              <div className="flex items-center gap-3 p-3 bg-green-500/10 rounded-lg border border-green-500/20">
+                                <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                                  <span className="text-white text-sm font-bold">
+                                    2
+                                  </span>
+                                </div>
+                                <span className="text-green-300 font-medium">
+                                  Advanced Cleaning Technology
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div className="bg-gradient-to-br from-amber-500/10 to-orange-500/10 backdrop-blur-sm rounded-2xl p-6 border border-amber-500/20">
+                            <h4 className="text-lg font-semibold text-amber-300 mb-3">
+                              Key Features Demonstrated:
+                            </h4>
+                            <ul className="space-y-2 text-gray-300">
+                              <li className="flex items-center gap-2">
+                                <div className="w-1.5 h-1.5 bg-amber-400 rounded-full"></div>
+                                High-efficiency seed cleaning
+                              </li>
+                              <li className="flex items-center gap-2">
+                                <div className="w-1.5 h-1.5 bg-amber-400 rounded-full"></div>
+                                Precision airflow control
+                              </li>
+                              <li className="flex items-center gap-2">
+                                <div className="w-1.5 h-1.5 bg-amber-400 rounded-full"></div>
+                                Minimal seed damage
+                              </li>
+                              <li className="flex items-center gap-2">
+                                <div className="w-1.5 h-1.5 bg-amber-400 rounded-full"></div>
+                                Easy operation & maintenance
+                              </li>
+                            </ul>
+                          </div>
+
+                          <div className="text-center">
+                            <Link to="/contact">
+                              <button className="w-full bg-gradient-to-r from-sky-500 to-cyan-500 hover:from-sky-600 hover:to-cyan-600 text-white font-semibold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg hover:shadow-sky-500/50">
+                                Request Live Demo
+                              </button>
+                            </Link>
+                          </div>
+                        </div>
+                      </div>
                                     
                                 </div>)
                                 }
