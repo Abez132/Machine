@@ -67,16 +67,14 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
-            className="mb-8"
+            className="mb-8 font-serif"
           >
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 leading-tight">
-              <span className="block text-white mb-2">Delivering</span>
-              <span className="block bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-                Excellence
-              </span>
-              <span className="block text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mt-2">
-                Since 2022
-              </span>
+            <h1 className="text-4xl w-full text-center sm:text-4xl md:text-4xl lg:text-5xl xl:text-7xl font-bold mb-6 leading-tight">
+              Delivering {" "}
+              <span className=" bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+                {" "}Excellence
+              </span>{" "}
+              Since 2022
             </h1>
           </_motions.div>
 
@@ -87,9 +85,9 @@ const Hero = () => {
             transition={{ duration: 1, delay: 0.4 }}
             className="mb-12"
           >
-            <p className="text-lg sm:text-xl md:text-2xl text-gray-200 font-medium max-w-4xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-200 font-medium max-w-4xl mx-auto leading-relaxed font-serif">
               At{" "}
-              <span className="text-cyan-400 font-semibold">
+              <span className="text-cyan-400 text font-semibold">
                 HABYAT Trading PLC
               </span>
               , we unite expertise, innovation, and integrity to deliver timely,
