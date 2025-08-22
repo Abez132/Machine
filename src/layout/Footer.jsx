@@ -17,7 +17,7 @@ const Footer = () => {
       </div>
 
       <div className="relative z-10 container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        <div className="flex flex-col md:flex-row justify-between px-8  gap-8  items-end">
           {/* Company Info */}
           <_motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -47,7 +47,7 @@ const Footer = () => {
           </_motion.div>
 
           {/* Contact Information */}
-          <_motion.div
+          {/* <_motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
@@ -92,41 +92,10 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-          </_motion.div>
+          </_motion.div> */}
 
           {/* Quick Links */}
-          <_motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="space-y-4"
-          >
-            <h4 className="text-lg md:text-xl font-semibold text-center lg:text-left mb-6 text-amber-300">
-              Quick Links
-            </h4>
-            <div className="flex flex-col items-center lg:items-start space-y-3">
-              <Link to="/"
-                className="text-sm md:text-base text-gray-300 hover:text-cyan-400 transition-colors duration-300 hover:translate-x-1 transform"
-              >
-                Home
-              </Link>
-              <Link to="/about"
-                className="text-sm md:text-base text-gray-300 hover:text-cyan-400 transition-colors duration-300 hover:translate-x-1 transform"
-              >
-                About Us
-              </Link>
-              <Link to="/services"
-                className="text-sm md:text-base text-gray-300 hover:text-cyan-400 transition-colors duration-300 hover:translate-x-1 transform"
-              >
-                Services
-              </Link>
-              <Link to="/contact"
-                className="text-sm md:text-base text-gray-300 hover:text-cyan-400 transition-colors duration-300 hover:translate-x-1 transform"
-              >
-                Contact
-              </Link>
-            </div>
-          </_motion.div>
+          
 
           {/* Social Media */}
           <_motion.div
@@ -163,6 +132,39 @@ const Footer = () => {
                 Stay connected for the latest updates on our products and
                 services.
               </p>
+            </div>
+          </_motion.div>
+
+          <_motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="space-y-4"
+          >
+            <h4 className="text-lg md:text-xl font-semibold text-center lg:text-left mb-6 text-amber-300">
+              Quick Links
+            </h4>
+            <div className="flex flex-col items-center lg:items-start space-y-3">
+              <Link to="/"
+                className="text-sm md:text-base text-gray-300 hover:text-cyan-400 transition-colors duration-300 hover:translate-x-1 transform"
+              >
+                Home
+              </Link>
+              <Link to="/about"
+                className="text-sm md:text-base text-gray-300 hover:text-cyan-400 transition-colors duration-300 hover:translate-x-1 transform"
+              >
+                About Us
+              </Link>
+              <Link to="/services"
+                className="text-sm md:text-base text-gray-300 hover:text-cyan-400 transition-colors duration-300 hover:translate-x-1 transform"
+              >
+                Services
+              </Link>
+              <Link to="/contact"
+                className="text-sm md:text-base text-gray-300 hover:text-cyan-400 transition-colors duration-300 hover:translate-x-1 transform"
+              >
+                Contact
+              </Link>
             </div>
           </_motion.div>
         </div>
