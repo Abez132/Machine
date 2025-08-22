@@ -5,6 +5,7 @@ import { RiTwitterXFill } from "react-icons/ri";
 import { FaInstagram } from "react-icons/fa6";
 import { FaLocationDot } from "react-icons/fa6";
 import { motion as _motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -104,30 +105,26 @@ const Footer = () => {
               Quick Links
             </h4>
             <div className="flex flex-col items-center lg:items-start space-y-3">
-              <a
-                href="/"
+              <Link to="/"
                 className="text-sm md:text-base text-gray-300 hover:text-cyan-400 transition-colors duration-300 hover:translate-x-1 transform"
               >
                 Home
-              </a>
-              <a
-                href="/about"
+              </Link>
+              <Link to="/about"
                 className="text-sm md:text-base text-gray-300 hover:text-cyan-400 transition-colors duration-300 hover:translate-x-1 transform"
               >
                 About Us
-              </a>
-              <a
-                href="/services"
+              </Link>
+              <Link to="/services"
                 className="text-sm md:text-base text-gray-300 hover:text-cyan-400 transition-colors duration-300 hover:translate-x-1 transform"
               >
                 Services
-              </a>
-              <a
-                href="/contact"
+              </Link>
+              <Link to="/contact"
                 className="text-sm md:text-base text-gray-300 hover:text-cyan-400 transition-colors duration-300 hover:translate-x-1 transform"
               >
                 Contact
-              </a>
+              </Link>
             </div>
           </_motion.div>
 
