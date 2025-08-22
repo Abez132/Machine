@@ -12,7 +12,7 @@ const Head=()=>{
     return(
         <div className="flex justify-between items-center p-2 transition-colors   text-gray-100  duration-300">
             <div className="w-1/2 px-4 flex items-center justify-start gap-2 text-white">
-                <Link to=""><img src="LOGO.png" alt="LOGO" loading="lazy" className="w-32 h-20 "/></Link>
+                <Link to=""><img src="LOGO.png" alt="LOGO" loading="lazy" className="w-44 h-28 "/></Link>
                 <span className="   "> Trading PLC</span>
             </div>
             <div className=" w-1/3 h-10  rounded-3xl flex justify-center p-2 flex-wrap sticky top-4 z-50 gap-2">

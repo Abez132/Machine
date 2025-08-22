@@ -95,7 +95,7 @@ const Services = () => {
                             <button onClick={()=>{setCategory("mani"); setActiveProduction("cofff")}} className={` cursor-pointer hover:text-shadow-sm hover:text-shadow-stone-300 transition rounded text-stone-200 p-1 border-b-2 ${activeProduction==="cofff"?"bg-gray-800 text-sky-300 border-none transition":""}`}>COFFEE ROASTER AND GRINDER</button>
                            
                             </div>
-                            <div className="flex flex-wrap w-full justify-center items-center gap-4 p-4">
+                            <div className="flex w-full justify-center items-center gap-4 p-4">
 
                                 {category==="mani" && activeProduction==="win" &&(<div className="w-full">
                                     <div className="w-full h-full  flex  flex-col md:flex-row justify-center ">
@@ -135,8 +135,8 @@ const Services = () => {
                                             <Link to="/contact"><button className="bg-sky-700 hover:bg-sky-400 hover:scale-105 active:scale-95 transition text-white px-4 py-2 m-2 rounded">Contact Us</button></Link>
                                         </div>
                                     </div>
-                                    <div className="flex flex-col lg:flex-row justify-center items-start gap-8 m-8 w-full">
-                        <div className="flex flex-col gap-6 lg:w-2/3">
+                                    <div className="flex flex-col lg:flex-row justify-center items-start gap-8  w-full ">
+                        <div className="flex flex-col gap-6  md:w-2/3">
                           <div className="relative group">
                             <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
                             <div className="relative bg-gray-900/50 backdrop-blur-sm rounded-2xl p-4 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300">

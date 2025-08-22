@@ -39,10 +39,10 @@ const Footer = () => {
                 </p>
               </div>
             </div>
-            <p className="text-sm md:text-base text-gray-300 text-center lg:text-left leading-relaxed max-w-xs">
+            {/* <p className="text-sm md:text-base text-gray-300 text-center lg:text-left leading-relaxed max-w-xs">
               Delivering excellence in import, export, and production since
               2022. Quality products, competitive prices.
-            </p>
+            </p> */}
           </_motion.div>
 
           {/* Contact Information */}

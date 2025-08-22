@@ -4,11 +4,12 @@ import { motion as _motions } from "framer-motion";
 import Head from "./Header";
 import {
   FaArrowRight,
-  FaPlay,
   FaShieldAlt,
   FaCog,
   FaGlobe,
 } from "react-icons/fa";
+import { BsFillTelephoneOutboundFill } from "react-icons/bs";
+
 
 
 const Hero = () => {
@@ -115,15 +116,16 @@ const Hero = () => {
               </button>
             </Link>
 
-            <button
-              
-              className="group relative px-8 py-4 bg-gray-800/50 backdrop-blur-sm border-2 border-gray-600/50 text-white font-semibold rounded-xl text-lg transition-all duration-300 hover:scale-105 active:scale-95 hover:border-cyan-500/50 hover:bg-gray-700/50 min-w-[200px]"
-            >
-              <span className="flex items-center justify-center gap-3">
-                <FaPlay className="group-hover:scale-110 transition-transform duration-300" />
-                Watch Demo
-              </span>
-            </button>
+            <Link to="/contact">
+              <button
+                className="group relative px-8 py-4 bg-gray-800/50 backdrop-blur-sm border-2 border-gray-600/50 text-white font-semibold rounded-xl text-lg transition-all duration-300 hover:scale-105 active:scale-95 hover:border-cyan-500/50 hover:bg-gray-700/50 min-w-[200px]"
+              >
+                <span className="flex items-center justify-center gap-3">
+                  <BsFillTelephoneOutboundFill  className="group-hover:scale-110 transition-transform duration-300" />
+                  Contact Us
+                </span>
+              </button>
+            </Link>
           </_motions.div>
 
           {/* Feature Cards */}
