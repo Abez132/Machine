@@ -1,43 +1,78 @@
 import { TfiEmail } from "react-icons/tfi";
 import { Link, useNavigate } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
-const Cards=({ title, description, image, detail }) => {
-    const navigate = useNavigate();
+import { FaWhatsapp, FaPhone } from "react-icons/fa6";
+import { MdEmail } from "react-icons/md";
 
-    const handleDetailClick = () => {
-        navigate("/services", {
-            state: { title, detail, image }
-        });
-    };
+const Cards = ({ title, description, image, detail }) => {
+  const navigate = useNavigate();
 
-    return (
+  const handleDetailClick = () => {
+    navigate("/services", {
+      state: { title, detail, image },
+    });
+  };
 
-        <div className="group relative h-70 flex-grow w-full md:w-96  overflow-hidden rounded-xl shadow-lg duration-500 m-2  transition">
+  return (
+    <div className="group relative h-70 flex-grow w-full md:w-96  overflow-hidden rounded-xl shadow-lg duration-500 m-2  transition hover:shadow-2xl hover:shadow-cyan-500/25">
+      <img
+        className="w-full h-full group-hover:-translate-y-12 transition object-cover"
+        src={image}
+        loading="lazy"
+        alt="places"
+      />
 
-            <img className="w-full h-full group-hover:-translate-y-12 transition object-cover" src={image} loading="lazy" alt="places" />
-            <Link to="/contact"><div
-                className="absolute top-[43%]  z-10 right-4 w-10 h-10 bg-cyan-100 rounded-full 
-                flex items-center justify-center text-4xl lg:opacity-0 md:group-hover:opacity-100 sm:opacity-100 
-                hover:scale-110 hover:text-sky-700 hover:cursor-pointer  transition duration-300">
-                    <TfiEmail className="m-2 text-gray-900 font-extrabold text-4xl" />
-                </div>
-            </Link>
-            <div className="flex-col font-['poppins'] text-[#000000] text-600 text-start justify-center p-3 h-auto  absolute bottom-0 left-0 w-full backdrop-blur-3xl lg:opacity-0 sm:opacity-100 md:group-hover:opacity-100 transition-opacity duration-300">
-                <p className="flex-start  font-['poppins'] md:text-xl text-lg font-semibold">
-                    {title}
-                </p>
-                <span className="md:text-md text-l font-medium flex-start text-black ">
-                    {description}
-                </span>
-                <br />
-                <button
-                    className=" group w-full flex justify-center items-center p-1 bg-sky-500 my-1  rounded right-0  transition hover:-translate-1 active:scale-100"
-                    onClick={handleDetailClick}
-                >
-                    More  <FaArrowRight className="right-0 text-l group-active:translate-x-36 transition duration-700" />
-                </button>
-            </div>
+      {/* Enhanced Contact Button with Multiple Options */}
+      <div className="absolute top-4 right-4 z-10 flex flex-col gap-2 lg:opacity-0 md:group-hover:opacity-100 sm:opacity-100 transition-all duration-300">
+        {/* WhatsApp Contact */}
+        <Link to="/contact">
+          <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-green-600 rounded-full flex items-center justify-center hover:scale-110 hover:rotate-12 active:scale-95 transition-all duration-300 shadow-lg hover:shadow-green-500/50">
+            <FaWhatsapp className="text-white text-xl" />
+          </div>
+        </Link>
+
+        {/* Phone Contact */}
+        <Link to="/contact">
+          <div className="w-12 h-12 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full flex items-center justify-center hover:scale-110 hover:rotate-12 active:scale-95 transition-all duration-300 shadow-lg hover:shadow-blue-500/50">
+            <FaPhone className="text-white text-lg" />
+          </div>
+        </Link>
+
+        {/* Email Contact */}
+        <Link to="/contact">
+          <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-purple-600 rounded-full flex items-center justify-center hover:scale-110 hover:rotate-12 active:scale-95 transition-all duration-300 shadow-lg hover:shadow-purple-500/50">
+            <MdEmail className="text-white text-xl" />
+          </div>
+        </Link>
+      </div>
+
+      <div className="flex-col font-['poppins'] text-[#000000] text-600 text-start justify-center p-3 h-auto  absolute bottom-0 left-0 w-full backdrop-blur-3xl lg:opacity-0 sm:opacity-100 md:group-hover:opacity-100 transition-opacity duration-300">
+        <p className="flex-start  font-['poppins'] md:text-xl text-lg font-semibold">
+          {title}
+        </p>
+        <span className="md:text-md text-l font-medium flex-start text-black ">
+          {description}
+        </span>
+        <br />
+
+        {/* Enhanced Action Buttons */}
+        <div className="flex gap-2 mt-2">
+          <button
+            className="flex-1 flex justify-center items-center p-2 bg-gradient-to-r from-sky-500 to-sky-600 hover:from-sky-600 hover:to-sky-700 rounded-lg transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg hover:shadow-sky-500/50"
+            onClick={handleDetailClick}
+          >
+            <span className="text-white font-medium">Details</span>
+            <FaArrowRight className="ml-2 text-white transition-transform duration-300 group-hover:translate-x-1" />
+          </button>
+
+          <Link to="/contact" className="flex-1">
+            <button className="w-full flex justify-center items-center p-2 bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 rounded-lg transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg hover:shadow-emerald-500/50">
+              <span className="text-white font-medium">Contact Now</span>
+            </button>
+          </Link>
         </div>
-    );
-}
+      </div>
+    </div>
+  );
+};
 export default Cards;
