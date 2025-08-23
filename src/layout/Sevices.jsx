@@ -154,7 +154,7 @@ const Services = () => {
                               ></video>
                               <div className="mt-3 flex items-center justify-between">
                                 <span className="text-sm text-gray-400">
-                                  Duration: 2:30
+                                  Duration: 0:59
                                 </span>
                                 <div className="flex items-center gap-2">
                                   <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
@@ -176,14 +176,14 @@ const Services = () => {
                                 </h3>
                               </div>
                               <video
-                                src="vid2.MOV"
+                                src="vid2.mp4"
                                 className="w-full h-80 rounded-xl object-cover shadow-2xl hover:shadow-green-500/25 transition-all duration-300"
                                 controls
                                 poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23374151'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23fff' font-size='16'%3EAdvanced Cleaning Demo%3C/text%3E%3C/svg%3E"
                               ></video>
                               <div className="mt-3 flex items-center justify-between">
                                 <span className="text-sm text-gray-400">
-                                  Duration: 1:45
+                                  Duration: 1:21
                                 </span>
                                 <div className="flex items-center gap-2">
                                   <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
