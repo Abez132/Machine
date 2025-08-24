@@ -44,7 +44,7 @@ function App() {
             <div className="w-20 h-20 border-4 border-gray-700 rounded-full animate-spin border-t-cyan-500 mb-4"></div>
             <div className="absolute inset-0 w-20 h-20 border-4 border-transparent rounded-full animate-ping border-t-cyan-400 opacity-20"></div>
           </div>
-          <h2 className="text-2xl font-bold gradient-text mb-2">
+          <h2 className="text-2xl text-blue-400 font-bold gradient-text mb-2">
             HABYAT Trading PLC
           </h2>
           <p className="text-gray-400 animate-pulse">Loading Excellence...</p>
