@@ -84,12 +84,12 @@ const AboutUs = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 pt-6">
               <Link to="/contact">
-                <button className="btn-primary w-full sm:w-auto">
+                <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg hover:shadow-cyan-500/50 w-full sm:w-auto">
                   Get In Touch
                 </button>
               </Link>
               <Link to="/services">
-                <button className="btn-secondary w-full sm:w-auto">
+                <button className="bg-gray-800/50 backdrop-blur-sm border-2 border-gray-600/50 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 active:scale-95 hover:border-cyan-500/50 hover:bg-gray-700/50 w-full sm:w-auto">
                   View Our Services
                 </button>
               </Link>
