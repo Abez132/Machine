@@ -13,7 +13,7 @@ const AboutUs = () => {
   ];
 
     return(
-        <div className="flex flex-col md:flex-row  w-full min-h-screen p-4 text-gray-100  justify-center items-center " id="about" 
+        <div className="  w-full min-h-screen p-4 text-gray-100  justify-center items-center " id="about" 
                 // style={{
                 //                  backgroundImage:`url(${onePiece})`,
                 //                  backgroundSize: "cover",
