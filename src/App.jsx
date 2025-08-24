@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Head from "./layout/components/Header";
+import NotFound from "./layout/NotFound";
 import Footer from "./layout/Footer";
 import Home from "./layout/Home";
 import Services from "./layout/Sevices";
@@ -66,6 +66,7 @@ function App() {
             <Route path="/about" element={<AboutUs />} />
             <Route path="/services" element={<Services />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </AnimatePresence>
 
