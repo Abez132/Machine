@@ -4,6 +4,12 @@ import {motion as _motion} from "framer-motion";
 import Burger from "./components/Burger";
 
 const AboutUs = () => {
+  const stats = [
+    { icon: <FaAward />, number: "2+", label: "Years Excellence" },
+    { icon: <FaUsers />, number: "100+", label: "Happy Clients" },
+    { icon: <FaGlobe />, number: "15+", label: "Countries Served" },
+    { icon: <FaHandshake />, number: "500+", label: "Successful Projects" },
+  ];
 
     return(
         <div className="flex flex-col md:flex-row  w-full min-h-screen p-4 text-gray-100  justify-center items-center " id="about" 
