@@ -38,16 +38,33 @@ function App() {
 
   if (isLoading) {
     return (
-      <div className="fixed inset-0 bg-gray-950 flex items-center justify-center z-50">
-        <div className="text-center">
-          <div className="relative">
-            <div className="w-20 h-20 border-4 border-gray-700 rounded-full animate-spin border-t-cyan-500 mb-4"></div>
-            <div className="absolute inset-0 w-20 h-20 border-4 border-transparent rounded-full animate-ping border-t-cyan-400 opacity-20"></div>
+      <div className="fixed inset-0 bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 flex items-center justify-center z-50">
+        <div className="text-center relative">
+          {/* Animated background elements */}
+          <div className="absolute -top-20 -left-20 w-40 h-40 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+
+          <div className="relative z-10">
+            <div className="relative mb-8">
+              <div className="w-24 h-24 border-4 border-gray-700 rounded-full animate-spin border-t-cyan-500 mb-4 mx-auto"></div>
+              <div className="absolute inset-0 w-24 h-24 border-4 border-transparent rounded-full animate-ping border-t-cyan-400 opacity-20 mx-auto"></div>
+              <div className="absolute inset-0 w-24 h-24 border-2 border-transparent rounded-full animate-pulse border-t-blue-500 opacity-30 mx-auto"></div>
+            </div>
+
+            <div className="space-y-4">
+              <h2 className="text-3xl md:text-4xl font-bold gradient-text mb-2 text-shadow">
+                HABYAT Trading PLC
+              </h2>
+              <div className="flex items-center justify-center space-x-2">
+                <div className="w-2 h-2 bg-cyan-400 rounded-full animate-bounce"></div>
+                <div className="w-2 h-2 bg-blue-400 rounded-full animate-bounce delay-100"></div>
+                <div className="w-2 h-2 bg-purple-400 rounded-full animate-bounce delay-200"></div>
+              </div>
+              <p className="text-gray-300 animate-pulse text-lg">
+                Loading Excellence...
+              </p>
+            </div>
           </div>
-          <h2 className="text-2xl font-bold gradient-text mb-2">
-            HABYAT Trading PLC
-          </h2>
-          <p className="text-gray-400 animate-pulse">Loading Excellence...</p>
         </div>
       </div>
     );
@@ -56,7 +73,7 @@ function App() {
   return (
     <div
       id="top"
-      className="bg-blob-pattern bg-gray-950 text-amber-50 min-h-screen"
+      className="bg-blob-pattern bg-mesh-gradient bg-gray-950 text-amber-50 min-h-screen relative overflow-x-hidden"
     >
       {/* <Analytics/> */}
       <Router>

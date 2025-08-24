@@ -46,11 +46,13 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-gray-950/90 via-transparent to-gray-900/50"></div>
       </div>
 
-      {/* Animated Background Elements */}
+      {/* Enhanced Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-cyan-500/5 to-blue-500/5 rounded-full blur-3xl animate-pulse delay-500"></div>
+        <div className="absolute top-20 left-10 w-80 h-80 bg-gradient-to-r from-cyan-500/12 to-blue-500/8 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-r from-blue-500/10 to-purple-500/6 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-gradient-to-r from-cyan-500/6 to-blue-500/4 rounded-full blur-3xl animate-pulse delay-500"></div>
+        <div className="absolute top-10 right-1/4 w-60 h-60 bg-gradient-to-r from-purple-500/8 to-pink-500/4 rounded-full blur-3xl animate-pulse delay-2000"></div>
+        <div className="absolute bottom-10 left-1/4 w-72 h-72 bg-gradient-to-r from-emerald-500/6 to-teal-500/4 rounded-full blur-3xl animate-pulse delay-1500"></div>
       </div>
 
       {/* Header */}
@@ -69,11 +71,13 @@ const Hero = () => {
             className="mb-8"
           >
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 leading-tight">
-              <span className="block text-white mb-2">Delivering</span>
-              <span className="block bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+              <span className="block text-white mb-2 text-shadow-lg">
+                Delivering
+              </span>
+              <span className="block bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent animate-shimmer">
                 Excellence
               </span>
-              <span className="block text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mt-2">
+              <span className="block text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mt-2 text-shadow">
                 Since 2022
               </span>
             </h1>

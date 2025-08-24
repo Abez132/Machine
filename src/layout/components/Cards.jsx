@@ -14,7 +14,7 @@ const Cards = ({ title, description, image, detail }) => {
   };
 
   return (
-    <div className="group relative h-70 flex-grow w-full md:w-96  overflow-hidden rounded-xl shadow-lg duration-500 m-2  transition hover:shadow-2xl hover:shadow-cyan-500/25">
+    <div className="group relative h-70 flex-grow w-full md:w-96 overflow-hidden rounded-2xl shadow-lg duration-500 m-2 transition hover:shadow-2xl hover:shadow-cyan-500/30 hover:scale-[1.02] border border-gray-700/30 hover:border-cyan-500/40">
       <img
         className="w-full h-full group-hover:-translate-y-12 transition object-cover"
         src={image}
@@ -46,7 +46,7 @@ const Cards = ({ title, description, image, detail }) => {
         </Link>
       </div>
 
-      <div className="flex-col font-['poppins'] text-[#000000] text-600 text-start justify-center p-3 h-auto  absolute bottom-0 left-0 w-full backdrop-blur-3xl lg:opacity-0 sm:opacity-100 md:group-hover:opacity-100 transition-opacity duration-300">
+      <div className="flex-col font-['poppins'] text-[#000000] text-600 text-start justify-center p-4 h-auto absolute bottom-0 left-0 w-full backdrop-blur-3xl bg-gradient-to-t from-white/95 to-white/85 lg:opacity-0 sm:opacity-100 md:group-hover:opacity-100 transition-all duration-500 rounded-b-2xl">
         <p className="flex-start  font-['poppins'] md:text-xl text-lg font-semibold">
           {title}
         </p>

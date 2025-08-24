@@ -8,11 +8,12 @@ import { motion as _motion } from "framer-motion";
 
 const Footer = () => {
   return (
-    <footer className="relative bg-gradient-to-br from-gray-900/95 to-gray-950/95 backdrop-blur-xl border-t border-gray-700/50 text-amber-50 overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]"></div>
+    <footer className="relative bg-gradient-to-br from-gray-900/98 to-gray-950/98 backdrop-blur-2xl border-t border-gray-600/50 text-amber-50 overflow-hidden">
+      {/* Enhanced Background Pattern */}
+      <div className="absolute inset-0 opacity-8">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/12 to-blue-500/8"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_40%,rgba(59,130,246,0.12),transparent_50%)]"></div>
+        <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_60%,rgba(6,182,212,0.08),transparent_50%)]"></div>
       </div>
 
       <div className="relative z-10 container mx-auto px-4 py-12">

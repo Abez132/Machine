@@ -18,7 +18,7 @@ const Head = () => {
               src="LOGO.png"
               alt="LOGO"
               loading="lazy"
-              className="relative w-32 h-20 rounded-xl shadow-lg group-hover:shadow-cyan-500/30 transition-shadow duration-300"
+              className="relative w-32 h-20 rounded-xl shadow-lg group-hover:shadow-cyan-500/40 transition-all duration-300 hover:scale-105"
             />
           </div>
           <span className="text-lg md:text-xl font-semibold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent group-hover:from-cyan-300 group-hover:to-blue-300 transition-all duration-300">

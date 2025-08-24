@@ -220,8 +220,8 @@ const Services = () => {
                       <div className="flex flex-col lg:flex-row justify-center items-start gap-8 m-8 w-full">
                         <div className="flex flex-col gap-6 lg:w-2/3">
                           <div className="relative group">
-                            <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-                            <div className="relative bg-gray-900/50 backdrop-blur-sm rounded-2xl p-4 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300">
+                            <div className="absolute inset-0 bg-gradient-to-r from-blue-500/25 to-purple-500/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                            <div className="relative bg-gray-900/60 backdrop-blur-xl rounded-3xl p-6 border border-gray-600/50 hover:border-blue-500/60 transition-all duration-500 hover:scale-[1.02]">
                               <div className="flex items-center gap-3 mb-3">
                                 <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
                                 <h3 className="text-xl font-semibold text-white">
@@ -249,8 +249,8 @@ const Services = () => {
                           </div>
 
                           <div className="relative group">
-                            <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 to-teal-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-                            <div className="relative bg-gray-900/50 backdrop-blur-sm rounded-2xl p-4 border border-gray-700/50 hover:border-green-500/50 transition-all duration-300">
+                            <div className="absolute inset-0 bg-gradient-to-r from-green-500/25 to-teal-500/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                            <div className="relative bg-gray-900/60 backdrop-blur-xl rounded-3xl p-6 border border-gray-600/50 hover:border-green-500/60 transition-all duration-500 hover:scale-[1.02]">
                               <div className="flex items-center gap-3 mb-3">
                                 <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
                                 <h3 className="text-xl font-semibold text-white">

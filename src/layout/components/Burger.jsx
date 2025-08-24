@@ -22,8 +22,8 @@ const Burger = () => {
       </div>
 
       <div
-        className={`fixed top-0 right-0 md:left-0 h-full w-20 bg-gradient-to-b from-gray-900/95 to-gray-950/95 backdrop-blur-2xl border-l md:border-r border-gray-700/50 z-2 transform transition-all duration-500 ease-out shadow-2xl
-                            ${isOpen ? "translate-x-0 shadow-cyan-500/20" : "translate-x-full md:-translate-x-full"}`}
+        className={`fixed top-0 right-0 md:left-0 h-full w-20 bg-gradient-to-b from-gray-900/98 to-gray-950/98 backdrop-blur-3xl border-l md:border-r border-gray-600/60 z-2 transform transition-all duration-500 ease-out shadow-2xl
+                            ${isOpen ? "translate-x-0 shadow-cyan-500/30" : "translate-x-full md:-translate-x-full"}`}
       >
         {/* Animated Background Pattern */}
         <div className="absolute inset-0 opacity-10">

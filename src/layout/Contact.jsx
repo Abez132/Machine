@@ -75,7 +75,7 @@ const Contact = () => {
       <div className="flex flex-col md:flex-row justify-center items-center gap-4 w-full  ">
         <div
           id="form-section"
-          className="m-4 rounded-2xl shadow-2xl w-full bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl border border-gray-700/50"
+          className="m-4 rounded-3xl shadow-2xl w-full bg-gradient-to-br from-gray-900/60 to-gray-800/60 backdrop-blur-2xl border border-gray-600/50 hover:border-cyan-500/30 transition-all duration-500"
         >
           <div className="m-2 p-4">
             <h2 className="font-bold text-3xl text-center bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-4">
@@ -172,7 +172,7 @@ const Contact = () => {
         </div>
 
         <div className="flex w-full justify-center items-center">
-          <div className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 w-full max-w-md">
+          <div className="bg-gradient-to-br from-gray-900/60 to-gray-800/60 backdrop-blur-2xl border border-gray-600/50 hover:border-cyan-500/30 transition-all duration-500 rounded-3xl p-8 w-full max-w-md">
             <h3 className="text-2xl font-bold text-center bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
               Get in Touch
             </h3>

@@ -1,21 +1,25 @@
 @import "tailwindcss";
 
-/* Custom scrollbar */
+/* Enhanced Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 12px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #1f2937;
+  background: linear-gradient(180deg, #1f2937, #111827);
+  border-radius: 6px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(45deg, #06b6d4, #3b82f6);
-  border-radius: 4px;
+  background: linear-gradient(45deg, #06b6d4, #3b82f6, #8b5cf6);
+  border-radius: 6px;
+  border: 2px solid #1f2937;
+  box-shadow: 0 0 10px rgba(6, 182, 212, 0.3);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(45deg, #0891b2, #2563eb);
+  background: linear-gradient(45deg, #0891b2, #2563eb, #7c3aed);
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.5);
 }
 
 /* Smooth scrolling */
@@ -115,16 +119,45 @@ body {
 
 /* Enhanced button styles */
 .btn-primary {
-  @apply bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg hover:shadow-cyan-500/50;
+  @apply relative bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg hover:shadow-cyan-500/50 overflow-hidden;
+}
+
+.btn-primary::before {
+  content: "";
+  @apply absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300;
 }
 
 .btn-secondary {
-  @apply bg-gray-800/50 backdrop-blur-sm border-2 border-gray-600/50 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 active:scale-95 hover:border-cyan-500/50 hover:bg-gray-700/50;
+  @apply relative bg-gray-800/50 backdrop-blur-sm border-2 border-gray-600/50 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 active:scale-95 hover:border-cyan-500/50 hover:bg-gray-700/50 overflow-hidden;
 }
 
-/* Card styles */
+.btn-secondary::before {
+  content: "";
+  @apply absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 opacity-0 hover:opacity-100 transition-opacity duration-300;
+}
+
+/* Enhanced Card styles */
 .card {
-  @apply bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20;
+  @apply relative bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 overflow-hidden;
+}
+
+.card::before {
+  content: "";
+  @apply absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 opacity-0 hover:opacity-100 transition-opacity duration-500;
+}
+
+.card-premium {
+  @apply relative bg-gradient-to-br from-gray-900/90 to-gray-800/90 backdrop-blur-2xl border border-gray-600/50 rounded-3xl p-8 hover:border-cyan-400/60 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-cyan-500/25 overflow-hidden;
+}
+
+.card-premium::before {
+  content: "";
+  @apply absolute inset-0 bg-gradient-to-br from-cyan-500/8 to-blue-500/8 opacity-0 hover:opacity-100 transition-opacity duration-500;
+}
+
+.card-premium::after {
+  content: "";
+  @apply absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-500 to-blue-600 opacity-0 hover:opacity-100 transition-opacity duration-500;
 }
 
 /* Responsive container */
@@ -143,9 +176,35 @@ body {
 
 @layer utilities {
   .bg-blob-pattern {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 1000'%3E%3Cdefs%3E%3Cfilter id='a'%3E%3CfeGaussianBlur stdDeviation='20'/%3E%3C/filter%3E%3C/defs%3E%3Ccircle filter='url(%23a)' cx='200' cy='200' r='150' fill='%2306b6d4' opacity='0.1'/%3E%3Ccircle filter='url(%23a)' cx='700' cy='700' r='170' fill='%233b82f6' opacity='0.08'/%3E%3Ccircle filter='url(%23a)' cx='800' cy='300' r='120' fill='%238b5cf6' opacity='0.06'/%3E%3C/svg%3E");
-    background-size: 1200px 1200px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 1000'%3E%3Cdefs%3E%3Cfilter id='a'%3E%3CfeGaussianBlur stdDeviation='25'/%3E%3C/filter%3E%3C/defs%3E%3Ccircle filter='url(%23a)' cx='200' cy='200' r='180' fill='%2306b6d4' opacity='0.12'/%3E%3Ccircle filter='url(%23a)' cx='700' cy='700' r='200' fill='%233b82f6' opacity='0.1'/%3E%3Ccircle filter='url(%23a)' cx='800' cy='300' r='150' fill='%238b5cf6' opacity='0.08'/%3E%3Ccircle filter='url(%23a)' cx='400' cy='600' r='120' fill='%2310b981' opacity='0.06'/%3E%3Ccircle filter='url(%23a)' cx='100' cy='800' r='140' fill='%23f59e0b' opacity='0.05'/%3E%3C/svg%3E");
+    background-size: 1400px 1400px;
     background-attachment: fixed;
+  }
+
+  .bg-mesh-gradient {
+    background: radial-gradient(
+        circle at 20% 80%,
+        rgba(6, 182, 212, 0.15) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        circle at 80% 20%,
+        rgba(59, 130, 246, 0.15) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        circle at 40% 40%,
+        rgba(139, 92, 246, 0.1) 0%,
+        transparent 50%
+      );
+  }
+
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .text-shadow-lg {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   }
 }
 
@@ -162,18 +221,45 @@ body {
   }
 }
 
-/* Mobile optimizations */
+/* Enhanced Mobile optimizations */
 @media (max-width: 768px) {
+  .container-responsive {
+    @apply px-4;
+  }
+
+  .text-responsive {
+    @apply text-sm leading-relaxed;
+  }
+
+  .card {
+    @apply p-5 rounded-xl;
+  }
+
+  .card-premium {
+    @apply p-6 rounded-2xl;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    @apply py-3 px-6 text-sm;
+  }
+
+  .gradient-text {
+    @apply text-2xl;
+  }
+}
+
+@media (max-width: 640px) {
   .container-responsive {
     @apply px-3;
   }
 
-  .text-responsive {
-    @apply text-sm;
-  }
-
   .card {
     @apply p-4;
+  }
+
+  .card-premium {
+    @apply p-5;
   }
 }
 
