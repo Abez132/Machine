@@ -1,7 +1,8 @@
 import onePiece from "../assets/N23.jpg"
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import {motion as _motion} from "framer-motion";
 import Burger from "./components/Burger";
+import { FaAward, FaUsers, FaGlobe, FaHandshake } from "react-icons/fa";
 
 const AboutUs = () => {
   const stats = [
