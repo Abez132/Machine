@@ -60,7 +60,7 @@ const Services = () => {
            <div className="m-4 my-8 md:my-2"><Burger /></div> 
             {state && showDetail && (
                 <div id="top" className="transition-all">
-                    <div className="absolute m-4 text-4xl z-10 text-red-100 hover:text-red-600 backdrop-blur-3xl hover:scale-105 hover:cursor-pointer transition right-4 " 
+                    <div className="absolute m-4 text-4xl z-10 text-red-100 hover:text-red-600 bg-transparent hover:scale-105 hover:cursor-pointer transition right-4 " 
                     onClick={()=>setShowDetail(false)}
                     >x</div>
                     <Detail

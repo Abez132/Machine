@@ -16,7 +16,7 @@ const Cards=({ title, description, image, detail }) => {
 
             <img className="w-full h-full group-hover:-translate-y-12 transition object-cover" src={image} loading="lazy" alt="places" />
             <Link to="/contact"><div
-                className="absolute top-[43%]  z-10 right-4 w-10 h-10 bg-cyan-100 rounded-full 
+                className="absolute top-[43%]  z-1 right-4 w-10 h-10 bg-cyan-100 rounded-full 
                 flex items-center justify-center text-4xl lg:opacity-0 md:group-hover:opacity-100 sm:opacity-100 
                 hover:scale-110 hover:text-sky-700 hover:cursor-pointer  transition duration-300">
                     <TfiEmail className="m-2 text-gray-900 font-extrabold text-4xl" />
