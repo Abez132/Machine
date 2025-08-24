@@ -74,7 +74,7 @@ const Home=()=>{
                 </p>
 
                 {/* Decorative Line */}
-                <div className="w-16 h-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full opacity-0 group-hover:opacity-100 group-hover:w-24 transition-all duration-500"></div>
+                <div className="w-16 h-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full opacity-0 group-hover:opacity-100 group-hover:w-32 transition-all duration-500"></div>
               </div>
 
               {/* Corner Decorations */}
