@@ -128,6 +128,7 @@ const Contact=()=>{
                   type="text"
                   id="name"
                   name="name"
+                  required
                   placeholder="Enter your full name"
                   className="w-full h-12 border-2 border-gray-600 bg-gray-800/50 text-white rounded-xl px-4 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300 backdrop-blur-sm"
                 />
@@ -144,6 +145,7 @@ const Contact=()=>{
                   type="email"
                   id="email"
                   name="user_email"
+                  required
                   placeholder="Enter your email address"
                   className="w-full h-12 border-2 border-gray-600 bg-gray-800/50 text-white rounded-xl px-4 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300 backdrop-blur-sm"
                 />
