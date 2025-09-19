@@ -72,7 +72,7 @@ const Services = () => {
             )}
             
             <div>
-                <div className="flex w-full justify-center items-center gap-4 p-4">
+                <div className="flex w-full text-xl font-semibold font-serif justify-center items-center gap-4 p-4">
                     <button className={` cursor-pointer hover:text-shadow-sm rounded hover:text-shadow-stone-300 text-stone-200 z-10 p-1  ${active==="mani"?"bg-gray-800 text-sky-300 ":""}`} onClick={()=>{setCategory("mani"); setActive("mani");}}>PRODUCTION</button> 
                     <button onClick={()=>{ console.log('import clicked'); setCategory("import"); setActive("import");}} className={`z-10 cursor-pointer hover:text-shadow-sm hover:text-shadow-stone-300 transition rounded text-stone-200 p-1  ${active==="import"?"bg-gray-800 text-sky-300 ":""}`}>IMPORT ITEMS</button> 
                     <button onClick={()=>{setCategory("export"); setActive("export")}} className={` z-10 cursor-pointer hover:text-shadow-sm hover:text-shadow-stone-300 transition rounded text-stone-200 p-1  ${active==="export"?"bg-gray-800 text-sky-300":""}`}>EXPORT ITEMS</button>
