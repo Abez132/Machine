@@ -19,13 +19,13 @@ const Home=()=>{
       image: <FaRegEye />,
       title: "Our vision",
       desc:
-        "Our company aims to contribute positively to countries economy's economy & employment even to the development by making the following trades effectively.",
+        "To be a leading trading and manufacturing company in Ethiopia by providing innovative, high-quality, and affordable products that contribute to economic growth, employment creation, and sustainable development",
     },
     {
       image: <GiStairsGoal />,
       title: "Our mission",
       desc:
-        "To contribute to customer satisfaction and the economy of our country by making export, Import, trade & production accordance with national and international quality standard in the sectors. In which we operate and to ensure competition In the sector without sacrificing quality in the production we made and export.",
+        "To deliver exceptional value to our customers and stakeholders by engaging in import, export, and manufacturing activities that meet both national and international quality standards. We strive to maintain competitiveness, adopt advanced technology, and uphold integrity and quality in every product and service we provide.",
     },
   ];
     return(
