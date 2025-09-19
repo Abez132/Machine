@@ -5,6 +5,7 @@ import Home from "./layout/Home";
 import Services from "./layout/Sevices";
 import Contact from "./layout/Contact";
 import AboutUs from "./layout/AboutUs";
+import NotFound from "./pages/NotFound";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -83,6 +84,7 @@ function App() {
             <Route path="/about" element={<AboutUs />} />
             <Route path="/services" element={<Services />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </AnimatePresence>
 
